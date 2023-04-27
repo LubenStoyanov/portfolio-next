@@ -7,8 +7,8 @@ const ScrollLink = Scroll.Link;
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center mx-5 sm:mx-20 text-[3vw] sm:text-[1vw]  bg-white/30 backdrop-blur-sm">
-      <Link href="/" className="text-gray-500  hover:text-black">
+    <nav className="flex justify-between items-center mx-5 pt-2 sm:mx-20 text-[3vw] sm:text-[1.2vw]  bg-white/30 backdrop-blur-sm text-gray-600 ">
+      <Link href="/" className="hover:text-black">
         LUBEN STOYANOV
       </Link>
       <ul className="flex space-x-4">
@@ -16,9 +16,9 @@ export default function Navbar() {
           <ScrollLink
             to="about"
             smooth={true}
-            offset={-100}
+            offset={-50}
             href="#about"
-            className="link text-gray-500 hover:text-black hover:underline underline-offset-1"
+            className="hover:text-black hover:underline underline-offset-2"
           >
             ABOUT
           </ScrollLink>
@@ -27,9 +27,9 @@ export default function Navbar() {
           <ScrollLink
             to="works"
             smooth={true}
-            offset={-100}
+            offset={-50}
             href="#works"
-            className="text-gray-500 hover:text-black hover:underline underline-offset-1"
+            className=" hover:text-black hover:underline underline-offset-2"
           >
             WORKS
           </ScrollLink>
@@ -38,9 +38,8 @@ export default function Navbar() {
           <ScrollLink
             to="contact"
             smooth={true}
-            offset={-100}
             href="#contact"
-            className="text-gray-500 hover:text-black hover:underline underline-offset-1"
+            className=" hover:text-black hover:underline underline-offset-2"
           >
             CONTACT
           </ScrollLink>

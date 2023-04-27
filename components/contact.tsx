@@ -14,7 +14,7 @@ export default function Contact() {
         <em className="text-orange-500">VISION</em> TO LIFE!
       </p>
       <button className="btn mt-10 sm:my-20 max-w-fit text-[5vw] font-bold">
-        <p className="text-blue-500 text-left sm:mb-5 text-[3.5vw] sm:text-[2.5vw]">
+        <p className="text-blue-500 text-left sm:mb-5 text-[3.5vw] sm:text-[2.5vw] grayscale-[50%]">
           Connect anytime :)
         </p>
         <a

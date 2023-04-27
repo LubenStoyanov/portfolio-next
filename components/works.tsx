@@ -4,7 +4,7 @@ export default function Works() {
   return (
     <section id="works" className="flex flex-col min-h-screen mt-5">
       <h2 className="mt-5 font-bold sm:text-[5vw]">Works</h2>
-      <ul className="flex flex-col my-5 sm:my-10 sm:gap-y-4 text-[4.5vw] sm:text-[3vw]">
+      <ul className="flex flex-col my-5 sm:my-10 sm:gap-y-4 text-[4.5vw] sm:text-[2.2vw]">
         <li>
           <a
             className="flex flex-row underline underline-offset-4 text-blue-500"

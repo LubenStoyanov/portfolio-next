@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="pt-[50.55px]">
+      <body>
         <Main />
         <NextScript />
       </body>

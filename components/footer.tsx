@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col justify-center max-w-screen mt-20 sm:text-[2vw]">
       <div className="flex justify-center border-b border-black w-full">
-        <ul className="flex gap-x-5 mb-10">
+        <ul className="flex gap-x-5 mb-10 text-blue-500 grayscale-[50%]">
           <Link
             href="https://www.linkedin.com/in/luben-stoyanov/"
             target="_blank"
@@ -31,7 +31,7 @@ export default function Footer() {
           </Link>
         </ul>
       </div>
-      <div className="flex justify-between leading-1 tracking-tighter sm:text-[1.5vw]">
+      <div className="flex justify-between leading-1 tracking-tighter sm:text-[1.2vw] text-gray-400">
         <small className="my-5 pt-0">
           <time>{YEAR}</time> © Luben Stoyanov.
         </small>
