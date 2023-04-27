@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section id="about" className="flex flex-col min-h-screen">
-      <h2 className="mt-5">About</h2>
+      <h2 className="mt-5 font-bold">About</h2>
       <p className="mt-5">
         {/* BUILDING WEBSITES IS A CRAFT THAT I AM PASSIONATE ABOUT, AND I THRIVE
           ON CHALLENGES THAT PUSH ME TO GROW AS A DEVELOPER. I BELIEVE THAT THE

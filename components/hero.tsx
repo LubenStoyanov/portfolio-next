@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <section className="mt-20 min-h-screen">
-      <h1 className="">
+    <section className="flex flex-col min-h-[95vh] sm:min-h-[97vh]">
+      <h1 className="mt-20">
         HELLO, I&apos;M{" "}
         <a href="#about">
           <em className="text-orange-500">LUBEN</em>

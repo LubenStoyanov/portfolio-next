@@ -16,11 +16,10 @@ export default function Home() {
           content="Portfolio Website of Luben Stoyanov"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative mx-5 md:mx-20 text-gray-800 ">
+      <div className="relative mx-5 sm:mx-20">
         <Header />
-        <main className="flex flex-col gap-y-20 text-[7vw] md:text-[4vw] leading-[7vw] md:leading-[4vw] divide-y-4 divide-blue-500">
+        <main className="flex flex-col text-[7vw] sm:text-[4vw] leading-[7vw] sm:leading-[4vw]  divide-y-2 divide-black">
           <Hero />
           <About />
           <Works />

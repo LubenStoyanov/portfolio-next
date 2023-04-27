@@ -3,56 +3,56 @@ import { RxExternalLink } from "react-icons/rx";
 export default function Works() {
   return (
     <section id="works" className="flex flex-col min-h-screen mt-5">
-      <h2 className="mt-5 mdtext-[5vw]">Works</h2>
-      <ul className="flex flex-col my-5 md:my-10 md:gap-y-4 text-[4vw] md:text-[3vw]">
+      <h2 className="mt-5 font-bold sm:text-[5vw]">Works</h2>
+      <ul className="flex flex-col my-5 sm:my-10 sm:gap-y-4 text-[4.5vw] sm:text-[3vw]">
         <li>
           <a
-            className="flex flex-row underline underline-offset-4"
+            className="flex flex-row underline underline-offset-4 text-blue-500"
             href="https://github.com/LubenStoyanov/speech-blender-frontend"
             target="_blank"
           >
             Speech Blender
-            <RxExternalLink />
+            <RxExternalLink className="place-self-center ml-1 " />
           </a>
         </li>
         <li>
           <a
-            className="flex flex-row underline underline-offset-4"
+            className="flex flex-row underline underline-offset-4 text-blue-500"
             href="https://github.com/LubenStoyanov/fine-arts-express"
             target="_blank"
           >
             The Fine Art
-            <RxExternalLink />
+            <RxExternalLink className="place-self-center ml-1 " />
           </a>
         </li>
         <li>
           <a
-            className="flex flex-row underline underline-offset-4"
+            className="flex flex-row underline underline-offset-4 text-blue-500"
             href="https://github.com/LubenStoyanov/drum-kit"
             target="_blank"
           >
             Drum Kit
-            <RxExternalLink />
+            <RxExternalLink className="place-self-center ml-1 " />
           </a>
         </li>
         <li>
           <a
-            className="flex flex-row underline underline-offset-4"
+            className="flex flex-row underline underline-offset-4 text-blue-500"
             href="https://github.com/LubenStoyanov/pokefight-frontend"
             target="_blank"
           >
             Pokéfight
-            <RxExternalLink />
+            <RxExternalLink className="place-self-center ml-1 " />
           </a>
         </li>
         <li>
           <a
-            className="flex flex-row underline underline-offset-4"
+            className="flex flex-row underline underline-offset-4 text-blue-500"
             href="https://github.com/LubenStoyanov/hacker-news-replica"
             target="_blank"
           >
             Hacker News Replica
-            <RxExternalLink />
+            <RxExternalLink className="place-self-center ml-1 " />
           </a>
         </li>
       </ul>
