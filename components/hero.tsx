@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <section className=" min-h-screen">
-      <h1 className="text-[7vw] md:text-[5vw] leading-[7vw] md:leading-[5vw]">
+    <section className="mt-20 min-h-screen">
+      <h1 className="">
         HELLO, I&apos;M{" "}
         <a href="#about">
           <em className="text-orange-500">LUBEN</em>

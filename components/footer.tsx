@@ -9,7 +9,7 @@ export default function Footer() {
           <Link
             href="https://www.linkedin.com/in/luben-stoyanov/"
             target="_blank"
-            className="underline underline-offset-2"
+            className="underline underline-offset-4 decoration-2"
           >
             LinkedIn
           </Link>
@@ -17,7 +17,7 @@ export default function Footer() {
           <Link
             href="https://github.com/LubenStoyanov"
             target="_blank"
-            className="underline underline-offset-2"
+            className="underline underline-offset-4 decoration-2"
           >
             GitHub
           </Link>
@@ -25,7 +25,7 @@ export default function Footer() {
           <Link
             href="https://www.twitter.com/luben_stoyanov"
             target="_blank"
-            className="underline underline-offset-2"
+            className="underline underline-offset-4 decoration-2"
           >
             Twitter
           </Link>

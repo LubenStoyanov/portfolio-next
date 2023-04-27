@@ -1,10 +1,7 @@
 export default function Works() {
   return (
-    <section
-      id="works"
-      className="flex flex-col min-h-screen scroll-mt-20 md:scroll-mt-20 text-[7vw] md:text-[5vw] leading-[7vw] md:leading-[5vw]"
-    >
-      <h2>Works</h2>
+    <section id="works" className="flex flex-col min-h-screen">
+      <h2 className="mt-5">Works</h2>
       <p className="mt-5">
         WHEN IT COMES TO MY <em className="text-orange-500">WORK</em>, I LIKE TO
         PLAY LEGO WITH <em className="text-orange-500">IDEAS</em> AND{" "}

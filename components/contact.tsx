@@ -1,10 +1,7 @@
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="flex flex-col min-h-screen scroll-mt-20 md:scroll-mt-20 text-[7vw] md:text-[5vw] leading-[7vw] md:leading-[5vw]"
-    >
-      <h2>Contact</h2>
+    <section id="contact" className="flex flex-col min-h-screen mt-10">
+      <h2 className="mt-5">Contact</h2>
       <p className="mt-5">
         IF YOU&apos;RE LOOKING FOR A WEB DEVELOPER WHO&apos;S{" "}
         <em className="text-orange-500">PASSIONATE</em> ABOUT THEIR WORK AND
@@ -13,7 +10,7 @@ export default function Contact() {
         <em className="text-orange-500">WORK TOGETHER</em> TO BRING YOUR{" "}
         <em className="text-orange-500">VISION</em> TO LIFE!
       </p>
-      <button className="btn border border-black max-w-fit rounded-lg md:rounded-xl">
+      <button className="btn mt-10 border-4 border-orange-500 max-w-fit rounded-lg md:rounded-xl hover:bg-orange-500 hover:text-white">
         <a href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry">
           Email Me
         </a>
