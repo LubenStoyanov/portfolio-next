@@ -13,7 +13,7 @@ export default function Contact() {
         <em className="text-orange-500">WORK TOGETHER</em> TO BRING YOUR{" "}
         <em className="text-orange-500">VISION</em> TO LIFE!
       </p>
-      <button>
+      <button className="btn border border-black max-w-fit rounded-lg md:rounded-xl">
         <a href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry">
           Email Me
         </a>
