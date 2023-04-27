@@ -17,14 +17,15 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col justify-center min-h-screen max-w-screen"
+      className="flex flex-col justify-center min-h-screen max-w-screen "
     >
-      <h2 className="mt-5 font-bold">About Me</h2>
+      <h2 className="mt-5 font-bold text-center">About Me</h2>
       <div className="sm:flex gap-x-12 mt-2 text-[4vw] sm:text-[2vw]">
         <Image
           src={profileImage}
           alt="Profile picture of Luben Stoyanov"
-          className="sm:w-96 sm:h-96 sm:mr-28 object-cover rounded-2xl grayscale-[100%]"
+          className="sm:w-96 sm:h-96 sm:mr-28 object-cover rounded-2xl grayscale-[100%] "
+          style={{ zIndex: -999 }}
         />
       </div>
       <div className="justify-self-start">
@@ -42,11 +43,14 @@ export default function About() {
           <em className="text-orange-500">JOY</em>ABLE USER EXPERIENCES.
         </p>
       </div>
-      <div className="sm:flex sm:flex-col mt-10  text-blue-500 grayscale-[60%] leading-[4.5vw]">
-        {/* <h3 className="text-blue-500 grayscale-[60%] mt-2 font-bold">
-            SKILLS
-          </h3> */}
-        <ul className="flex flex-wrap text-[10vw] gap-5">
+      <h3 className="text-blue-500 grayscale-[60%] mt-10 font-bold text-center">
+        SKILLS
+      </h3>
+      <div
+        className="flex sm:flex sm:flex-col mt-10  text-blue-500 grayscale-[60%] leading-[4.5vw] "
+        style={{ zIndex: -9999 }}
+      >
+        <ul className="flex flex-wrap justify-center text-[10vw] gap-5">
           <li>
             <SiHtml5 />
           </li>

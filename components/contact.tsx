@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section id="contact" className="flex flex-col mt-10 md:mt-56">
       <h2 className="mt-5 font-bold">Contact</h2>
-      <p className="mt-5 text-[5vw] sm:text-[3vw]">
+      <p className="mt-5 sm:text-[3vw]">
         IF YOU&apos;RE LOOKING FOR A WEB DEVELOPER WHO&apos;S{" "}
         <em className="text-orange-500">PASSIONATE</em> ABOUT THEIR WORK AND
         COMMITTED TO PROVIDING <em className="text-orange-500">VALUABLE</em> AND
