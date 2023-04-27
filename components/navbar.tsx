@@ -6,7 +6,7 @@ const ScrollLink = Scroll.Link;
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center text-[3vw] md:text-[1vw] py-4 mx-4 bg-white/30 backdrop-blur-sm">
+    <nav className="flex justify-between items-center py-4 mx-5 md:mx-20 text-[3vw] md:text-[1vw]  bg-white/30 backdrop-blur-sm">
       <Link href="/" className="text-gray-500  hover:text-black">
         LUBEN STOYANOV
       </Link>

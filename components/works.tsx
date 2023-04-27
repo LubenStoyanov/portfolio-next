@@ -1,7 +1,61 @@
+import { RxExternalLink } from "react-icons/rx";
+
 export default function Works() {
   return (
-    <section id="works" className="flex flex-col min-h-screen">
-      <h2 className="mt-5">Works</h2>
+    <section id="works" className="flex flex-col min-h-screen mt-5">
+      <h2 className="mt-5 mdtext-[5vw]">Works</h2>
+      <ul className="flex flex-col my-5 md:my-10 md:gap-y-4 text-[4vw] md:text-[3vw]">
+        <li>
+          <a
+            className="flex flex-row underline underline-offset-4"
+            href="https://github.com/LubenStoyanov/speech-blender-frontend"
+            target="_blank"
+          >
+            Speech Blender
+            <RxExternalLink />
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex flex-row underline underline-offset-4"
+            href="https://github.com/LubenStoyanov/fine-arts-express"
+            target="_blank"
+          >
+            The Fine Art
+            <RxExternalLink />
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex flex-row underline underline-offset-4"
+            href="https://github.com/LubenStoyanov/drum-kit"
+            target="_blank"
+          >
+            Drum Kit
+            <RxExternalLink />
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex flex-row underline underline-offset-4"
+            href="https://github.com/LubenStoyanov/pokefight-frontend"
+            target="_blank"
+          >
+            Pokéfight
+            <RxExternalLink />
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex flex-row underline underline-offset-4"
+            href="https://github.com/LubenStoyanov/hacker-news-replica"
+            target="_blank"
+          >
+            Hacker News Replica
+            <RxExternalLink />
+          </a>
+        </li>
+      </ul>
       <p className="mt-5">
         WHEN IT COMES TO MY <em className="text-orange-500">WORK</em>, I LIKE TO
         PLAY LEGO WITH <em className="text-orange-500">IDEAS</em> AND{" "}

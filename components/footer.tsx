@@ -3,9 +3,9 @@ const YEAR = new Date().getFullYear();
 
 export default function Footer() {
   return (
-    <footer className="flex  flex-col items-center mx-4">
-      <div className="border-b border-black">
-        <ul className="flex  gap-x-5 mb-10">
+    <footer className="flex flex-col justify-center max-w-screen mx-4 mt-20">
+      <div className="flex justify-center border-b border-black w-full">
+        <ul className="flex gap-x-5 mb-10">
           <Link
             href="https://www.linkedin.com/in/luben-stoyanov/"
             target="_blank"
@@ -31,9 +31,14 @@ export default function Footer() {
           </Link>
         </ul>
       </div>
-      <small className="my-5 pt-0">
-        <time>{YEAR}</time> © Luben Stoyanov.
-      </small>
+      <div className="flex justify-between">
+        <small className="my-5 pt-0">
+          <time>{YEAR}</time> © Luben Stoyanov.
+        </small>
+        <small className="my-5 pt-0">
+          Made with ❤ using Next.js and TailwindCSS
+        </small>
+      </div>
     </footer>
   );
 }

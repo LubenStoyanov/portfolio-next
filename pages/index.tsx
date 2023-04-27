@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <div className="relative mx-5 md:mx-20 text-gray-800 ">
         <Header />
-        <main className="flex flex-col gap-y-20 text-[7vw] md:text-[5vw] leading-[7vw] md:leading-[5vw] divide-y-4 divide-orange-500">
+        <main className="flex flex-col gap-y-20 text-[7vw] md:text-[4vw] leading-[7vw] md:leading-[4vw] divide-y-4 divide-blue-500">
           <Hero />
           <About />
           <Works />
