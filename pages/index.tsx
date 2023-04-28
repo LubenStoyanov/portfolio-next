@@ -30,5 +30,3 @@ export default function Home() {
     </>
   );
 }
-
-//divide-y-2 divide-black

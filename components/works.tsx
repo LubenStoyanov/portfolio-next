@@ -4,11 +4,11 @@ export default function Works() {
   return (
     <section id="works" className="flex flex-col min-h-screen sm:mt-5">
       <div>
-        <h2 className="font-bold sm:text-[4vw] mt-10 sm:mt-20 text-center">
+        <h2 className="font-bold sm:text-[3.5vw] mt-10 sm:mt-20 text-center">
           &lt;WORKS /&gt;
         </h2>
       </div>
-      <div className="sm:flex mt-5 sm:mt-20">
+      <div className="sm:flex mt-5 sm:mt-20 gap-x-5">
         <p className=" sm:text-[2.5vw] sm:max-w-[40ch] sm:leading-[2.5vw]">
           WHEN IT COMES TO MY <em className="text-orange-500">WORK</em>, I LIKE
           TO PLAY LEGO WITH <em className="text-orange-500">IDEAS</em> AND{" "}
@@ -25,7 +25,7 @@ export default function Works() {
           <em className="text-orange-500">INTUITIVE</em>, EASY TO USE, AND
           EXCITING TO <em className="text-orange-500">INTERACT</em> WITH.
         </p>
-        <ul className="grid grid-cols-2 justify-items-center sm:grid-cols-none sm:flex sm:flex-col sm:gap-y-5 text-[4.5vw] sm:text-[2.2vw] my-5 sm:my-0 sm:border-l-2 sm:pl-5">
+        <ul className="grid grid-cols-2 justify-items-center sm:grid-cols-none sm:flex sm:flex-col sm:gap-y-5 text-[4.5vw] sm:text-[2vw] sm:leading-[2vw] my-5 sm:my-0 sm:border-l-2 sm:pl-5">
           <li className="">
             <a
               className="flex flex-row underline underline-offset-2 sm:underline-offset-4 text-blue-500"
@@ -70,16 +70,6 @@ export default function Works() {
             </a>
           </li>
           <span className="hidden">/</span>
-          {/* <li>
-          <a
-            className="flex flex-row underline underline-offset-2 sm:underline-offset-4 text-blue-500"
-            href="https://github.com/LubenStoyanov/hacker-news-replica"
-            target="_blank"
-          >
-            Hacker News Replica
-            <SiGithub className="place-self-center ml-1 text-[3.5vw]" />
-          </a>
-        </li> */}
         </ul>
       </div>
     </section>

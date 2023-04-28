@@ -7,7 +7,7 @@ export default function Contact() {
       id="contact"
       className="flex flex-col sm:items-center mt-10 sm:mt-36"
     >
-      <h2 className="font-bold sm:text-[4vw] text-center sm:mb-20">
+      <h2 className="font-bold sm:text-[3.5vw] text-center sm:mb-20">
         &lt;CONTACT /&gt;
       </h2>
       <p className="mt-5 sm:text-[2.5vw] sm:leading-[2.5vw] max-w-[40ch]">

@@ -16,7 +16,7 @@ import profileImage from "../public/images/profile-white.png";
 export default function About() {
   return (
     <section id="about" className="flex flex-col min-h-screen mt-10 ">
-      <h2 className=" font-bold sm:text-[4vw] mt-10 sm:mt-20 text-center">
+      <h2 className=" font-bold sm:text-[3.5vw] mt-10 sm:mt-20 text-center">
         &lt;ABOUT /&gt;
       </h2>
       <div className="flex flex-col sm:flex-row mt-5 sm:gap-x-5 sm:mt-10">
@@ -45,52 +45,52 @@ export default function About() {
         </div>
       </div>
       <div
-        className="flex sm:flex flex-col mt-10 sm:mt-36 text-blue-500 grayscale-[60%] leading-[4.5vw]"
+        className="flex sm:flex flex-col mt-10 sm:mt-20 text-blue-500 grayscale-[60%]sm:text-[2.5] leading-[4.5vw]"
         style={{ zIndex: -9999 }}
       >
         <h3 className="text-blue-500 grayscale-[60%] mb-5 font-bold text-[4vw] sm:text-[2vw] text-center">
           SKILLS
         </h3>
         <ul className="flex flex-wrap justify-center gap-5">
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <SiHtml5 />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">HTML5</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">HTML5</small>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <SiCss3 />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">CSS3</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">CSS3</small>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <SiJavascript />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">JavaScript</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">JavaScript</small>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <SiTypescript />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">TypeScript</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">TypeScript</small>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <SiReact />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">React</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">React</small>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <TbBrandNextjs />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">Next.js</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">Next.js</small>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <SiNodedotjs />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">Node.js</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">Node.js</small>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <SiExpress />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">Express</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">Express</small>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <SiMongodb />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">MongoDB</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">MongoDB</small>
           </li>
-          <li className="flex flex-col items-center">
+          <li className="flex flex-col items-center grayscale-[60%] gap-y-2 ">
             <SiPostgresql />
-            <small className="text-[2.5vw] sm:text-[1.5vw]">Postgresql</small>
+            <small className="text-[4vw] sm:text-[1.5vw]">Postgresql</small>
           </li>
         </ul>
       </div>

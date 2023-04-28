@@ -1,15 +1,15 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Roboto_Flex } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const roboto_flex = Roboto_Flex({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-roboto-flex",
+  variable: "--font-inter",
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${roboto_flex.className} font-sans`}>
+    <div className={`${inter.variable} font-sans`}>
       <Component {...pageProps} />
     </div>
   );
