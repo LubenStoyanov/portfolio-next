@@ -9,7 +9,7 @@ export default function Works() {
         </h2>
       </div>
       <div className="sm:flex mt-5 sm:mt-20">
-        <p className=" sm:text-[3vw] sm:max-w-[40ch]">
+        <p className=" sm:text-[2.5vw] sm:max-w-[40ch] sm:leading-[2.5vw]">
           WHEN IT COMES TO MY <em className="text-orange-500">WORK</em>, I LIKE
           TO PLAY LEGO WITH <em className="text-orange-500">IDEAS</em> AND{" "}
           <em className="text-orange-500">CONCEPTS</em> IN PROGRAMMING. I LOVE{" "}

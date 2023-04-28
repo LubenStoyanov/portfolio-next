@@ -41,6 +41,7 @@ export default function Navbar() {
           <Scroll.Link
             to="contact"
             smooth={true}
+            offset={-100}
             href="#contact"
             className=" hover:text-black hover:underline underline-offset-2"
           >

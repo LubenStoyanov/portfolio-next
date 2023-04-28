@@ -29,7 +29,7 @@ export default function About() {
           />
         </div>
         <div className="justify-self-end sm:border-l-2 sm:pl-5">
-          <p className="mt-5 max-w-[60ch] sm:text-[3vw]">
+          <p className="mt-5 max-w-[60ch] sm:text-[2.5vw] sm:leading-[2.5vw]">
             AS AN <em className="text-orange-500">ENTHUSIASTIC</em> WEB
             DEVELOPER, I VIEW BUILDING WEBSITES AS A{" "}
             <em className="text-orange-500">CRAFT</em> AND I THRIVE ON
