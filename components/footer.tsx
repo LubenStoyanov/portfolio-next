@@ -3,7 +3,7 @@ const YEAR = new Date().getFullYear();
 
 export default function Footer({ translate }: { translate: Function }) {
   return (
-    <footer className="flex flex-col justify-center max-w-screen mt-20 sm:text-[2vw]">
+    <footer className="flex flex-col justify-center max-w-screen mb-10 sm:mb-0 mt-20 sm:text-[2vw]">
       <div className="flex justify-center border-b border-black w-full">
         <ul className="flex gap-x-5 mb-10 text-blue-500 grayscale-[50%]">
           <Link
