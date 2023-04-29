@@ -8,10 +8,14 @@ export default function TypewriterComponent({ hero }: { hero: string }) {
       if (typewriterRef.current) {
         typewriterRef.current.deleteAll();
         hero.startsWith("I'M")
-          ? typewriterRef.current.deleteAll().typeString("Welcome Traveler")
+          ? typewriterRef.current
+              .deleteAll()
+              .typeString("Welcome Traveler")
+              .pauseFor(500)
           : typewriterRef.current
               .deleteAll()
-              .typeString("Willkommen Reisender");
+              .typeString("Willkommen Reisender")
+              .pauseFor(500);
         typewriterRef.current.deleteAll().typeString(hero);
         typewriterRef.current.start();
       }
@@ -30,8 +34,11 @@ export default function TypewriterComponent({ hero }: { hero: string }) {
       onInit={(typewriter) => {
         typewriterRef.current = typewriter;
         hero.startsWith("I'M")
-          ? typewriter.deleteAll().typeString("Welcome Traveler")
-          : typewriter.deleteAll().typeString("Willkommen Reisender");
+          ? typewriter.deleteAll().typeString("Welcome Traveler").pauseFor(500)
+          : typewriter
+              .deleteAll()
+              .typeString("Willkommen Reisender")
+              .pauseFor(500);
         typewriter.deleteAll().typeString(hero);
 
         if (typewriterRef.current) {
