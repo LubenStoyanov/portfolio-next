@@ -1,10 +1,11 @@
+import { SlArrowDownCircle } from "react-icons/sl";
 import TypewriterComponent from "./Typewriter";
 
 export default function Hero({ translate }: { translate: Function }) {
   const hero: string = translate("hero");
 
   return (
-    <section className=" flex flex-col items-center min-h-screen sm:min-h-screen ">
+    <section className="grid min-h-screen sm:min-h-screen ">
       <div className="pt-52 text-5xl sm:text-8xl  max-w-[22ch] scroll-smooth">
         <div>
           <TypewriterComponent hero={hero} />
@@ -13,9 +14,16 @@ export default function Hero({ translate }: { translate: Function }) {
           </button> */}
         </div>
       </div>
-      <div className="flex items-center justify-self-center text-sm mt-96 animate-bounce">
-        <span className="text-2xl "> &#x2B07;</span> <p>SCROLL DOWN</p>{" "}
-        <span className="text-2xl "> &#x2B07;</span>
+      <div className="flex justify-self-center items-center  text-sm animate-bounce">
+        <span className="text-2xl ">
+          {" "}
+          <SlArrowDownCircle />
+        </span>{" "}
+        <p className="mx-2">SCROLL DOWN</p>{" "}
+        <span className="text-2xl ">
+          {" "}
+          <SlArrowDownCircle />
+        </span>
       </div>
     </section>
   );
