@@ -1,28 +1,32 @@
 {
-  "aboutNavLink": "PROFILE",
-  "worksNavLink": "WORKS",
-  "contactNavLink": "CONTACT",
+  "homeNavLink": "Home",
+  "aboutNavLink": "Profile",
+  "worksNavLink": "Craft",
+  "contactNavLink": "Contact",
 
-  "hero": "I'M<em class='text-orange-500'> LUBEN</em>, A <em class='text-orange-500'>WEB DEVELOPER</em>.",
+  "hero": "I'm<em class='text-orange-500'> Luben</em>, <br/> a <em class='text-orange-500'>web developer</em>.",
 
   "about": {
-    "title": "PROFILE",
-    "1": "AS AN ",
-    "enthusiastic": "ENTHUSIASTIC ",
-    "2": "WEB DEVELOPER, I VIEW BUILDING WEBSITES AS A ",
-    "craft": "CRAFT",
-    "3": "AND I THRIVE ON CHALLENGES THAT PUSH ME TO ",
-    "grow": "GROW ",
-    "4": ". I BELIEVE THAT TAKING ON PROJECTS OUTSIDE OF MY COMFORT ZONE IS THE BEST WAY TO IMPROVE. THIS ",
-    "mindset": "MINDSET ",
-    "5": "ENCOURAGES ME TO THINK ",
-    "creative": "CREATIVE ",
-    "6": "AND SOLVE PROBLEMS IN NEW WAYS, RESULTING IN MORE ",
-    "effective": "EFFECTIVE",
-    "7": "AND EN ",
-    "joy": "JOY ",
-    "8": "USER EXPERIENCES.",
+    "title": "Profile",
+    "1": "As an ",
+    "enthusiastic": "enthusiastic ",
+    "2": "web developer, i view building websites as a ",
+    "craft": "craft ",
+    "3": "and i thrive on challenges that push me to ",
+    "grow": "grow",
+    "4": ". I believe that taking on projects outside of my comfort zone is the best way to improve. This ",
+    "mindset": "mindset ",
+    "5": "encourages me to think ",
+    "creative": "creative ",
+    "6": "and solve problems in new ways, resulting in more ",
+    "effective": "effective ",
+    "7": "and en",
+    "joy": "joy ",
+    "8": "user experiences."
+  },
 
-    "skills": "SKILSS"
-  }
+  "skills": { "title": "Skills" },
+  "works": { "title": "Craft" },
+
+  "contact": { "title": "Contact" }
 }

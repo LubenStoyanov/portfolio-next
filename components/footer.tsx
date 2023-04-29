@@ -3,13 +3,13 @@ const YEAR = new Date().getFullYear();
 
 export default function Footer({ translate }: { translate: Function }) {
   return (
-    <footer className="flex flex-col justify-center max-w-screen mb-10 sm:mb-0 mt-20 sm:text-[2vw]">
-      <div className="flex justify-center border-b border-black w-full">
-        <ul className="flex gap-x-5 mb-10 text-blue-500 grayscale-[50%]">
+    <footer className="flex flex-col justify-center ">
+      <div className="flex justify-center pt-10">
+        <ul className="flex gap-x-2 text-blue-500 grayscale-[50%]">
           <Link
             href="https://www.linkedin.com/in/luben-stoyanov/"
             target="_blank"
-            className="underline underline-offset-4 decoration-2"
+            className="underline underline-offset-2 decoration-2"
           >
             LinkedIn
           </Link>
@@ -17,7 +17,7 @@ export default function Footer({ translate }: { translate: Function }) {
           <Link
             href="https://github.com/LubenStoyanov"
             target="_blank"
-            className="underline underline-offset-4 decoration-2"
+            className="underline underline-offset-2 decoration-2"
           >
             GitHub
           </Link>
@@ -25,17 +25,14 @@ export default function Footer({ translate }: { translate: Function }) {
           <Link
             href="https://www.twitter.com/luben_stoyanov"
             target="_blank"
-            className="underline underline-offset-4 decoration-2"
+            className="underline underline-offset-2 decoration-2"
           >
             Twitter
           </Link>
         </ul>
       </div>
-      <div className="flex justify-between leading-1 tracking-tighter sm:text- text-gray-400">
-        <small className="my-5 pt-0">
-          <time>{YEAR}</time> © Luben Stoyanov.
-        </small>
-        <small className="my-5 pt-0">
+      <div className="flex flex-col place-items-center text-gray-400 pt-20 pb-[20%] sm:pb-[1%]">
+        <small className="">
           Made with ❤ using{" "}
           <a
             href="https://www.nextjs.org"
@@ -53,6 +50,9 @@ export default function Footer({ translate }: { translate: Function }) {
             TailwindCSS
           </a>
           .
+        </small>
+        <small className="">
+          <time>{YEAR}</time> © Luben Stoyanov.
         </small>
       </div>
     </footer>

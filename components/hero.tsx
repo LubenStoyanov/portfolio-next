@@ -5,26 +5,27 @@ export default function Hero({ translate }: { translate: Function }) {
   const hero: string = translate("hero");
 
   return (
-    <section className="grid min-h-screen sm:min-h-screen ">
-      <div className="pt-52 text-5xl sm:text-8xl  max-w-[22ch] scroll-smooth">
-        <div>
-          <TypewriterComponent hero={hero} />
-          {/* <button className="text-sm font-bold border-2 px-2 border-gray-700 rounded-md animate-pulse">
-            LEARN MORE
-          </button> */}
-        </div>
-      </div>
-      <div className="flex justify-self-center items-center  text-sm animate-bounce">
-        <span className="text-2xl ">
-          {" "}
-          <SlArrowDownCircle />
-        </span>{" "}
-        <p className="mx-2">SCROLL DOWN</p>{" "}
-        <span className="text-2xl ">
-          {" "}
-          <SlArrowDownCircle />
+    <section className="min-h-[200px] text-5xl pt-10">
+      <div className="min-h-[200px] ">
+        <span className="text-xs font-semibold">&lt;h1&gt;</span>{" "}
+        <TypewriterComponent hero={hero} />
+        <span className="text-xs font-semibold relative bottom-6">
+          &lt;/h1&gt;
         </span>
       </div>
+      <p className="text-lg pt-5">
+        <span className="text-xs font-semibold relative bottom-[2px]">
+          &lt;p&gt;
+        </span>
+        I en
+        <em className="text-orange-500 mr-1">joy</em> building{" "}
+        <em className="text-orange-500">great</em> looking websites that provide
+        a <em className="text-orange-500 mr-1">meaning</em>ful experience for
+        their user.
+        <span className="text-xs font-semibold relative bottom-[2px]">
+          &lt;/p&gt;
+        </span>
+      </p>
     </section>
   );
 }
@@ -47,7 +48,7 @@ export default function Hero({ translate }: { translate: Function }) {
 // // const hero: string = translate("hero");
 
 // const [hero, setHero] = useState(translate("hero"));
-// const typewriterRef = useRef<TypewriterClass | null>(null);
+// const typewriterRef = useRef<TypewriterClassN| null>(null);
 
 // useEffect(() => {
 //   typewriterRef.current?.pauseFor(500).deleteAll().typeString(hero).start();

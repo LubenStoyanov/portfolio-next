@@ -9,34 +9,40 @@ export default function Contact({ translate }: { translate: Function }) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
-      className="flex flex-col sm:items-center mt-10 sm:mt-36"
+      className="flex flex-col sm:items-center"
     >
-      <h2 className="font-bold sm:text- text-center sm:mb-20">
-        &lt;CONTACT /&gt;
-      </h2>
-      <p className="mt-5 sm:text- sm:leading- max-w-[40ch]">
-        IF YOU&apos;RE LOOKING FOR A WEB DEVELOPER WHO&apos;S{" "}
-        <em className="text-orange-500">PASSIONATE</em> ABOUT THEIR WORK AND
-        COMMITTED TO PROVIDING <em className="text-orange-500">VALUABLE</em> AND
-        DELIGHTFUL EXPERIENCES FOR USERS, THEN I&apos;D LOVE TO CHAT. LET&apos;S{" "}
-        <em className="text-orange-500">WORK TOGETHER</em> TO BRING YOUR{" "}
-        <em className="text-orange-500">VISION</em> TO LIFE!
+      <div className="flex place-items-center place-content-center gap-x-1 pt-20">
+        <span className="text-sm font-bold">&lt;h2&gt; </span>
+        <span className="border-t-2 w-16 border-black"></span>
+        <h2 className="font-bold sm:text-5xl text-3xl text-center">
+          {translate("contact.title")}
+        </h2>
+        <span className="border-t-2 w-16 border-black"></span>
+        <span className="text-sm font-bold">&lt;h2/&gt;</span>
+      </div>
+      <p className="pt-10 max-w-[40ch]">
+        If you&apos;re looking for a web developer who&apos;s{" "}
+        <em className="text-orange-500">passionate</em> about their work and
+        committed to providing <em className="text-orange-500">valuable</em> and
+        delightful experiences for users, then I&apos;d love to chat. Let&apos;s{" "}
+        <em className="text-orange-500">work together</em> to bring your{" "}
+        <em className="text-orange-500">vision</em> to life!
       </p>
       <a
         href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry"
         className="underline underline-offset-2 text-blue-500"
       >
-        <button className="btn mt-10 sm:my-20 max-w-fit text-[5vw] font-bold">
-          <p className="text-blue-500 text-left sm:mb-5 text- sm:text- grayscale-[50%]">
+        <button className="pt-5 max-w-fit font-bold">
+          <p className="text-blue-500 text-left grayscale-[50%] text-base">
             Connect anytime :&#41;
           </p>
           <div className="flex">
             <Image
               src={emailImage}
               alt="Mail couvert"
-              className="w-8 sm:w-24 self-center mr-1 shadow-lg transition delay-150 duration-300 ease-in-out hover:rotate-360"
+              className="w-8 self-center mr-1 shadow-lg transition delay-150 duration-300 ease-in-out hover:rotate-360 animate-pulse"
             />
-            <span className="place-self-center italic sm:text-[4vw] animate-pulse">
+            <span className="place-self-center italic">
               luben.stoyanov.ls@gmail.com
             </span>
           </div>

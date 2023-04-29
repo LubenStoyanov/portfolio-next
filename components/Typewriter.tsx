@@ -7,7 +7,7 @@ export default function TypewriterComponent({ hero }: { hero: string }) {
     const resetTypewriter = () => {
       if (typewriterRef.current) {
         typewriterRef.current.deleteAll();
-        hero.startsWith("I'M")
+        hero.startsWith("I'm")
           ? typewriterRef.current
               .deleteAll()
               .typeString("Welcome Traveler")
@@ -33,7 +33,7 @@ export default function TypewriterComponent({ hero }: { hero: string }) {
       }}
       onInit={(typewriter) => {
         typewriterRef.current = typewriter;
-        hero.startsWith("I'M")
+        hero.startsWith("I'm")
           ? typewriter.deleteAll().typeString("Welcome Traveler").pauseFor(500)
           : typewriter
               .deleteAll()

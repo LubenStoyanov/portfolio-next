@@ -2,8 +2,7 @@ import { useState } from "react";
 import * as Scroll from "react-scroll";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import zIndex from "@mui/material/styles/zIndex";
-
+import { SlClose } from "react-icons/sl";
 const scrollToTop = () => Scroll.animateScroll.scrollToTop();
 
 export default function Navbar({ translate }: { translate: Function }) {
@@ -22,14 +21,14 @@ export default function Navbar({ translate }: { translate: Function }) {
 
   return (
     <>
-      <nav className="hidden sm:flex justify-between items-center h-12 sm:pt-5 text-md sm:px-24  font-semibold sm:text-xl bg-white text-gray-600 border-t-2 sm:border-b-2">
+      <nav className="hidden md:flex justify-between items-center h-12 sm:pt-16 text-lg sm:px-16  font-semibold  bg-white text-gray-600 border-t-2 ">
         <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="ml-5  hover:text-black hover:underline underline-offset-2 cursor-pointer "
+          className="  hover:text-black hover:underline underline-offset-2 cursor-pointer "
         >
-          LUBEN STOYANOV
+          Luben Stoyanov
         </motion.a>
         <ul className="flex z-100 divide-x-2 divide">
           <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
@@ -38,7 +37,7 @@ export default function Navbar({ translate }: { translate: Function }) {
               smooth={true}
               offset={-50}
               href="#about"
-              className="hover:text-black hover:underline underline-offset-2 px-2"
+              className="hover:text-black hover:underline underline-offset-2 "
             >
               {translate("aboutNavLink")}
             </Scroll.Link>
@@ -49,7 +48,7 @@ export default function Navbar({ translate }: { translate: Function }) {
               smooth={true}
               offset={-50}
               href="#works"
-              className=" hover:text-black hover:underline underline-offset-2 px-2"
+              className=" hover:text-black hover:underline underline-offset-2 "
             >
               {translate("worksNavLink")}
             </Scroll.Link>
@@ -60,7 +59,7 @@ export default function Navbar({ translate }: { translate: Function }) {
               smooth={true}
               offset={-100}
               href="#contact"
-              className=" hover:text-black hover:underline underline-offset-2 px-2"
+              className=" hover:text-black hover:underline underline-offset-2 "
             >
               {translate("contactNavLink")}
             </Scroll.Link>
@@ -69,7 +68,7 @@ export default function Navbar({ translate }: { translate: Function }) {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={toggleLanguage}
-            className="mr-2 sm:mr-0 text-xs hover:text-black hover:underline underline-offset-2 px-2"
+            className="  text-xs hover:text-black hover:underline underline-offset-2 "
           >
             {locale === "en" ? "de" : "en"}
           </motion.button>
@@ -83,9 +82,9 @@ export default function Navbar({ translate }: { translate: Function }) {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="ml-5  hover:text-black hover:underline underline-offset-2 cursor-pointer "
+          className="  hover:text-black hover:underline underline-offset-2 cursor-pointer "
         >
-          LUBEN STOYANOV
+          Luben Stoyanov
         </motion.a>
         <button className="mr-5" onClick={showMenu}>
           Menu
@@ -94,65 +93,48 @@ export default function Navbar({ translate }: { translate: Function }) {
       <nav
         className={`${
           visibleMenu ? "block" : "hidden"
-        } sm:hidden flex items-center text-md font-semibold text-gray-700 h-16 bg-white border-t-2 border-gray-900 rounded-t-lg`}
+        } flex items-center justify-center  sm:hidden text-base font-semibold text-gray-700 h-32 bg-white border-t-2 border-gray-300 `}
       >
-        {/* <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={scrollToTop}
-          className="ml-5 cursor-pointer "
-        >
-          LUBEN STOYANOV
-        </motion.a> */}
-        <ul className="flex z-100 ">
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <Scroll.Link
-              to="about"
-              smooth={true}
-              offset={-50}
-              href="#about"
-              className=" px-2"
-            >
+        <ul className="grid grid-rows-2 grid-flow-col gap-5 justify-around z-100">
+          <li
+            onClick={scrollToTop}
+            className=" px-[2px] text-center underline underline-offset-2"
+          >
+            <a className=" cursor-pointer ">{translate("homeNavLink")}</a>
+          </li>
+          <li className=" px-[2px] text-center underline underline-offset-2">
+            <Scroll.Link to="about" smooth={true} offset={-50} href="#about">
               {translate("aboutNavLink")}
             </Scroll.Link>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <Scroll.Link
-              to="works"
-              smooth={true}
-              offset={-50}
-              href="#works"
-              className="  px-2"
-            >
+          </li>
+          <li className=" px-[2px] text-center underline underline-offset-2">
+            <Scroll.Link to="works" smooth={true} offset={-50} href="#works">
               {translate("worksNavLink")}
             </Scroll.Link>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          </li>
+          <li className=" px-[2px] text-center underline underline-offset-2">
             <Scroll.Link
               to="contact"
               smooth={true}
               offset={-100}
               href="#contact"
-              className="  px-2"
             >
               {translate("contactNavLink")}
             </Scroll.Link>
-          </motion.li>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+          </li>
+          <button
             onClick={toggleLanguage}
-            className="mr-2 sm:mr-0 text-sm  px-2"
+            className=" px-[2px] text-center underline underline-offset-2"
           >
             {locale === "en" ? "de" : "en"}
-          </motion.button>
+          </button>
+          <button
+            onClick={showMenu}
+            className="w-8 h-8 text-3xl fixed bottom-4 right-4"
+          >
+            <SlClose />
+          </button>
         </ul>
-        <motion.button
-          onClick={showMenu}
-          className="w-8 h-8 text-lg fixed bottom-4 right-4 border-2 border-gray-700 rounded-full animate-pulse"
-        >
-          X
-        </motion.button>
       </nav>
     </>
   );

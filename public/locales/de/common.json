@@ -1,28 +1,33 @@
 {
-  "aboutNavLink": "PROFIL",
-  "worksNavLink": "ARBEITEN",
-  "contactNavLink": "KONTAKT",
+  "homeNavLink": "Start",
+  "aboutNavLink": "Profil",
+  "worksNavLink": "Handwerk",
+  "contactNavLink": "Kontakt",
 
-  "hero": "ICH BIN <em class='text-orange-500'>LUBEN</em> , EIN <em class='text-orange-500'>WEB ENTWICKLER</em>.",
+  "hero": "Ich bin <em class='text-orange-500'>Luben</em>,<br/> ein <em class='text-orange-500'>Web Entwickler</em>.",
 
   "about": {
-    "title": "PROFIL",
-    "1": "ALS ",
-    "enthusiastic": "BEGEISTERT",
-    "2": "ER WEBENTWICKLER BETRACHTE ICH DIE ERSTELLUNG VON WEBSITES ALS EIN ",
-    "craft": "HANDWERK ",
-    "3": "UND FREUE MICH ÜBER HERAUSFORDERUNGEN, DIE MICH ZUM ",
-    "grow": "WACHSEN ",
-    "4": "BRINGEN. ICH GLAUBE, DASS DIE ÜBERNAHME VON PROJEKTEN AUSSERHALB MEINER KOMFORTZONE DER BESTE WEG IST, MICH ZU VERBESSERN. DIESE ",
-    "mindset": "DENKWEISE ",
-    "5": "ERMUTIGT MICH, ",
-    "creative": "KREATIV ",
-    "6": "ZU DENKEN UND PROBLEME AUF NEUE WEISE ZU LÖSEN, WAS ZU ",
-    "effective": "EFEKTIV",
-    "7": "EREN UND ",
-    "joy": "ANGENEHM",
-    "8": "EREN BENUTZERERFAHRUNGEN FÜHRT.",
+    "title": "Profil",
+    "1": "Als ",
+    "enthusiastic": "begeistert",
+    "2": "er Web Entwickler betrachte ich die Erstellung von Websites als ein ",
+    "craft": "Handwerk ",
+    "3": "und freue mich über Herausforderungen, die mich zum ",
+    "grow": "wachsen ",
+    "4": "bringen. Ich glaube, dass die Übernahme von Projekten ausserhalb meiner Komfortzone der beste Weg ist, mich zu verbessern. Diese ",
+    "mindset": "Denkweise ",
+    "5": "ermutigt mich, ",
+    "creative": "kreativ ",
+    "6": "zu denken und Probleme auf neue Weise zu lösen, was zu einer ",
+    "effective": "effektiv",
+    "7": "eren und ",
+    "joy": "angenehm",
+    "8": "eren Benutzererfahrung führt."
+  },
 
-    "skills": "FÄHIGKEITEN"
-  }
+  "skills": { "title": "Fähigkeiten" },
+
+  "works": { "title": "Handwerk" },
+
+  "contact": { "title": "Kontakt" }
 }
