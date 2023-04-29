@@ -1,0 +1,28 @@
+{
+  "aboutNavLink": "PROFILE",
+  "worksNavLink": "WORKS",
+  "contactNavLink": "CONTACT",
+
+  "hero": "I'M<em class='text-orange-500'> LUBEN</em>, A <em class='text-orange-500'>WEB DEVELOPER</em>.",
+
+  "about": {
+    "title": "PROFILE",
+    "1": "AS AN ",
+    "enthusiastic": "ENTHUSIASTIC ",
+    "2": "WEB DEVELOPER, I VIEW BUILDING WEBSITES AS A ",
+    "craft": "CRAFT",
+    "3": "AND I THRIVE ON CHALLENGES THAT PUSH ME TO ",
+    "grow": "GROW ",
+    "4": ". I BELIEVE THAT TAKING ON PROJECTS OUTSIDE OF MY COMFORT ZONE IS THE BEST WAY TO IMPROVE. THIS ",
+    "mindset": "MINDSET ",
+    "5": "ENCOURAGES ME TO THINK ",
+    "creative": "CREATIVE ",
+    "6": "AND SOLVE PROBLEMS IN NEW WAYS, RESULTING IN MORE ",
+    "effective": "EFFECTIVE",
+    "7": "AND EN ",
+    "joy": "JOY ",
+    "8": "USER EXPERIENCES.",
+
+    "skills": "SKILSS"
+  }
+}

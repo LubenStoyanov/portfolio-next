@@ -1,16 +1,20 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import emailImage from "../public/images/email-image.png";
 
-export default function Contact() {
+export default function Contact({ translate }: { translate: Function }) {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
       id="contact"
       className="flex flex-col sm:items-center mt-10 sm:mt-36"
     >
-      <h2 className="font-bold sm:text-[3.5vw] text-center sm:mb-20">
+      <h2 className="font-bold sm:text- text-center sm:mb-20">
         &lt;CONTACT /&gt;
       </h2>
-      <p className="mt-5 sm:text-[2.5vw] sm:leading-[2.5vw] max-w-[40ch]">
+      <p className="mt-5 sm:text- sm:leading- max-w-[40ch]">
         IF YOU&apos;RE LOOKING FOR A WEB DEVELOPER WHO&apos;S{" "}
         <em className="text-orange-500">PASSIONATE</em> ABOUT THEIR WORK AND
         COMMITTED TO PROVIDING <em className="text-orange-500">VALUABLE</em> AND
@@ -23,21 +27,21 @@ export default function Contact() {
         className="underline underline-offset-2 text-blue-500"
       >
         <button className="btn mt-10 sm:my-20 max-w-fit text-[5vw] font-bold">
-          <p className="text-blue-500 text-left sm:mb-5 text-[3.5vw] sm:text-[2.5vw] grayscale-[50%]">
+          <p className="text-blue-500 text-left sm:mb-5 text- sm:text- grayscale-[50%]">
             Connect anytime :&#41;
           </p>
           <div className="flex">
             <Image
               src={emailImage}
               alt="Mail couvert"
-              className="w-8 sm:w-24 self-center mr-1 border border-gray-300 rounded-sm shadow-lg"
+              className="w-8 sm:w-24 self-center mr-1 shadow-lg transition delay-150 duration-300 ease-in-out hover:rotate-360"
             />
-            <span className="place-self-center italic sm:text-[4vw]">
+            <span className="place-self-center italic sm:text-[4vw] animate-pulse">
               luben.stoyanov.ls@gmail.com
             </span>
           </div>
         </button>
       </a>
-    </section>
+    </motion.section>
   );
 }

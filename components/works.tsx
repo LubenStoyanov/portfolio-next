@@ -1,15 +1,22 @@
+import { motion } from "framer-motion";
 import { SiGithub } from "react-icons/si";
 
-export default function Works() {
+export default function Works({ translate }: { translate: Function }) {
   return (
-    <section id="works" className="flex flex-col min-h-screen sm:mt-5">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="works"
+      className="flex flex-col min-h-screen sm:mt-5"
+    >
       <div>
-        <h2 className="font-bold sm:text-[3.5vw] mt-10 sm:mt-20 text-center">
+        <h2 className="font-bold sm:text-5xl mt-10 sm:mt-20 text-center">
           &lt;WORKS /&gt;
         </h2>
       </div>
       <div className="sm:flex mt-5 sm:mt-20 gap-x-5">
-        <p className=" sm:text-[2.5vw] sm:max-w-[40ch] sm:leading-[2.5vw]">
+        <p className="  sm:max-w-[40ch] ">
           WHEN IT COMES TO MY <em className="text-orange-500">WORK</em>, I LIKE
           TO PLAY LEGO WITH <em className="text-orange-500">IDEAS</em> AND{" "}
           <em className="text-orange-500">CONCEPTS</em> IN PROGRAMMING. I LOVE{" "}
@@ -25,7 +32,7 @@ export default function Works() {
           <em className="text-orange-500">INTUITIVE</em>, EASY TO USE, AND
           EXCITING TO <em className="text-orange-500">INTERACT</em> WITH.
         </p>
-        <ul className="grid grid-cols-2 justify-items-center sm:grid-cols-none sm:flex sm:flex-col sm:gap-y-5 text-[4.5vw] sm:text-[2vw] sm:leading-[2vw] my-5 sm:my-0 sm:border-l-2 sm:pl-5">
+        <ul className="grid grid-cols-2 justify-items-center sm:grid-cols-none sm:flex sm:flex-col sm:gap-y-5 text- sm:text-[2vw] sm:leading-[2vw] my-5 sm:my-0 sm:border-l-2 sm:pl-5">
           <li className="">
             <a
               className="flex flex-row underline underline-offset-2 sm:underline-offset-4 text-blue-500"
@@ -33,7 +40,7 @@ export default function Works() {
               target="_blank"
             >
               Speech Blender
-              <SiGithub className="place-self-center ml-1 text-[3.5vw] sm:text-[1.5vw]" />
+              <SiGithub className="place-self-center ml-1 text-xl sm:text-xl" />
             </a>
           </li>
           <span className="hidden">/</span>
@@ -44,7 +51,7 @@ export default function Works() {
               target="_blank"
             >
               The Fine Art
-              <SiGithub className="place-self-center ml-1 text-[3.5vw] sm:text-[1.5vw]" />
+              <SiGithub className="place-self-center ml-1 text-xl sm:text-xl" />
             </a>
           </li>
           <span className="hidden">/</span>
@@ -55,7 +62,7 @@ export default function Works() {
               target="_blank"
             >
               Drum Kit
-              <SiGithub className="place-self-center ml-1 text-[3.5vw] sm:text-[1.5vw]" />
+              <SiGithub className="place-self-center ml-1 text-xl sm:text-xl" />
             </a>
           </li>
           <span className="hidden">/</span>
@@ -66,12 +73,12 @@ export default function Works() {
               target="_blank"
             >
               Pokéfight
-              <SiGithub className="place-self-center ml-1 text-[3.5vw] sm:text-[1.5vw]" />
+              <SiGithub className="place-self-center ml-1 text-xl sm:text-xl" />
             </a>
           </li>
           <span className="hidden">/</span>
         </ul>
       </div>
-    </section>
+    </motion.section>
   );
 }

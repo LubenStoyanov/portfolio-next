@@ -1,0 +1,28 @@
+{
+  "aboutNavLink": "PROFIL",
+  "worksNavLink": "ARBEITEN",
+  "contactNavLink": "KONTAKT",
+
+  "hero": "ICH BIN <em class='text-orange-500'>LUBEN</em> , EIN <em class='text-orange-500'>WEB ENTWICKLER</em>.",
+
+  "about": {
+    "title": "PROFIL",
+    "1": "ALS ",
+    "enthusiastic": "BEGEISTERT",
+    "2": "ER WEBENTWICKLER BETRACHTE ICH DIE ERSTELLUNG VON WEBSITES ALS EIN ",
+    "craft": "HANDWERK ",
+    "3": "UND FREUE MICH ÜBER HERAUSFORDERUNGEN, DIE MICH ZUM ",
+    "grow": "WACHSEN ",
+    "4": "BRINGEN. ICH GLAUBE, DASS DIE ÜBERNAHME VON PROJEKTEN AUSSERHALB MEINER KOMFORTZONE DER BESTE WEG IST, MICH ZU VERBESSERN. DIESE ",
+    "mindset": "DENKWEISE ",
+    "5": "ERMUTIGT MICH, ",
+    "creative": "KREATIV ",
+    "6": "ZU DENKEN UND PROBLEME AUF NEUE WEISE ZU LÖSEN, WAS ZU ",
+    "effective": "EFEKTIV",
+    "7": "EREN UND ",
+    "joy": "ANGENEHM",
+    "8": "EREN BENUTZERERFAHRUNGEN FÜHRT.",
+
+    "skills": "FÄHIGKEITEN"
+  }
+}

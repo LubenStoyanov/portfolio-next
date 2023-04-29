@@ -1,0 +1,43 @@
+import { useEffect, useRef } from "react";
+import Typewriter, { TypewriterClass } from "typewriter-effect";
+
+export default function TypewriterComponent({ hero }: { hero: string }) {
+  const typewriterRef = useRef<TypewriterClass | null>(null);
+  useEffect(() => {
+    const resetTypewriter = () => {
+      if (typewriterRef.current) {
+        typewriterRef.current.deleteAll();
+        hero.startsWith("I'M")
+          ? typewriterRef.current.deleteAll().typeString("Welcome Traveler")
+          : typewriterRef.current
+              .deleteAll()
+              .typeString("Willkommen Reisender");
+        typewriterRef.current.deleteAll().typeString(hero);
+        typewriterRef.current.start();
+      }
+    };
+
+    resetTypewriter();
+  }, [hero]);
+
+  return (
+    <Typewriter
+      options={{
+        // loop: true,
+        delay: 100,
+        autoStart: true,
+      }}
+      onInit={(typewriter) => {
+        typewriterRef.current = typewriter;
+        hero.startsWith("I'M")
+          ? typewriter.deleteAll().typeString("Welcome Traveler")
+          : typewriter.deleteAll().typeString("Willkommen Reisender");
+        typewriter.deleteAll().typeString(hero);
+
+        if (typewriterRef.current) {
+          typewriterRef.current.start();
+        }
+      }}
+    />
+  );
+}
