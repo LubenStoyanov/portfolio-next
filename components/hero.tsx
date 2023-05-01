@@ -1,4 +1,4 @@
-import TypewriterComponent from "./typewriter";
+import TypewriterComponent from "./Typewriter";
 
 export default function Hero({ translate }: { translate: Function }) {
   const hero: string = translate("hero");
