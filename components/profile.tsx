@@ -1,17 +1,10 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
 import profileImage from "../public/images/profile-white.png";
 
 export default function Profile({ translate }: { translate: Function }) {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      id="about"
-      className="flex flex-col"
-    >
-      <div className="flex place-items-center place-content-center gap-x-1 pt-20">
+    <section id="about" className="flex flex-col py-16">
+      <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-sm font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-16 border-black"></span>
         <h2 className="font-bold sm:text-5xl text-3xl text-center">
@@ -25,7 +18,7 @@ export default function Profile({ translate }: { translate: Function }) {
           <Image
             src={profileImage}
             alt="Profile picture of Luben Stoyanov"
-            className="w-64 sm:w-96 h-64 sm:h-96 object-cover rounded-2xl grayscale-[100%]"
+            className="w-64 sm:w-96 h-64 sm:h-96 object-cover rounded-2xl grayscale"
             style={{ zIndex: -999 }}
           />
         </div>
@@ -51,6 +44,6 @@ export default function Profile({ translate }: { translate: Function }) {
           </p>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

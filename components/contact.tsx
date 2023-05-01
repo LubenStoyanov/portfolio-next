@@ -1,17 +1,10 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
 import emailImage from "../public/images/email-image.png";
 
 export default function Contact({ translate }: { translate: Function }) {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      id="contact"
-      className="flex flex-col sm:items-center"
-    >
-      <div className="flex place-items-center place-content-center gap-x-1 pt-20">
+    <section id="contact" className="flex flex-col py-16">
+      <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-sm font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-16 border-black"></span>
         <h2 className="font-bold sm:text-5xl text-3xl text-center">
@@ -33,7 +26,7 @@ export default function Contact({ translate }: { translate: Function }) {
         className="underline underline-offset-2 text-blue-500"
       >
         <button className="pt-5 max-w-fit font-bold">
-          <p className="text-blue-500 text-left grayscale-[50%] text-base">
+          <p className="text-blue-500 text-left text-base">
             Connect anytime :&#41;
           </p>
           <div className="flex">
@@ -48,6 +41,6 @@ export default function Contact({ translate }: { translate: Function }) {
           </div>
         </button>
       </a>
-    </motion.section>
+    </section>
   );
 }

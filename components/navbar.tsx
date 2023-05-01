@@ -21,7 +21,7 @@ export default function Navbar({ translate }: { translate: Function }) {
 
   return (
     <>
-      <nav className="hidden md:flex justify-between items-center h-12 sm:pt-16 text-lg sm:px-16  font-semibold  bg-white text-gray-600 border-t-2 ">
+      <nav className="hidden md:flex justify-between items-center h-12 sm:pt-16 text-lg sm:px-16  font-semibold  bg-white border-t-2 ">
         <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -74,7 +74,20 @@ export default function Navbar({ translate }: { translate: Function }) {
           </motion.button>
         </ul>
       </nav>
-      <nav
+      <nav>
+        <ul className="flex justify-between text-sm pt-4">
+          <li></li>
+          <li className="justify-self-end">
+            <button
+              onClick={toggleLanguage}
+              className="text-center underline underline-offset-2"
+            >
+              {locale === "en" ? "DE" : "EN"}
+            </button>
+          </li>
+        </ul>
+      </nav>
+      {/* <nav
         style={{ zIndex: -999 }}
         className={`fixed bottom-0 left-0 right-0 sm:hidden flex justify-between items-center h-12 font-semibold bg-white border-t-2 border-gray`}
       >
@@ -89,8 +102,8 @@ export default function Navbar({ translate }: { translate: Function }) {
         <button className="mr-5" onClick={showMenu}>
           Menu
         </button>
-      </nav>
-      <nav
+      </nav> */}
+      {/* <nav
         className={`${
           visibleMenu ? "block" : "hidden"
         } flex items-center justify-center  sm:hidden text-base font-semibold text-gray-700 h-32 bg-white border-t-2 border-gray-300 `}
@@ -126,7 +139,7 @@ export default function Navbar({ translate }: { translate: Function }) {
             onClick={toggleLanguage}
             className=" px-[2px] text-center underline underline-offset-2"
           >
-            {locale === "en" ? "de" : "en"}
+            {locale === "de" ? "DE" : "EN"}
           </button>
           <button
             onClick={showMenu}
@@ -135,7 +148,7 @@ export default function Navbar({ translate }: { translate: Function }) {
             <SlClose />
           </button>
         </ul>
-      </nav>
+      </nav> */}
     </>
   );
 }

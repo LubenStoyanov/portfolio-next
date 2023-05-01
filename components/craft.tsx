@@ -1,17 +1,9 @@
-import { motion } from "framer-motion";
 import { SiGithub } from "react-icons/si";
 
 export default function Works({ translate }: { translate: Function }) {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      style={{ zIndex: -9999 }}
-      id="works"
-      className="flex flex-col"
-    >
-      <div className="flex place-items-center place-content-center gap-x-1 pt-20">
+    <section id="works" className="flex flex-col py-16">
+      <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-sm font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-16 border-black"></span>
         <h2 className="font-bold sm:text-5xl text-3xl text-center">
@@ -25,7 +17,7 @@ export default function Works({ translate }: { translate: Function }) {
           When it comes to my <em className="text-orange-500">work</em>, I like
           to play lego with <em className="text-orange-500">ideas</em> and{" "}
           <em className="text-orange-500">concepts</em> in programming. I love{" "}
-          <em className="text-orange-500">exploring</em> new technologies and
+          <em className="text-orange-500">exploring</em> new tools and
           experimenting with different approaches to find the best solutions for
           my clients. But for me, <em className="text-orange-500">building</em>{" "}
           a great website is about more than just the technology. it&apos;s
@@ -86,6 +78,6 @@ export default function Works({ translate }: { translate: Function }) {
           </ul>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

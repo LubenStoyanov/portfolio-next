@@ -1,60 +1,154 @@
 import Link from "next/link";
-const YEAR = new Date().getFullYear();
+import * as Scroll from "react-scroll";
+import { SlArrowUpCircle } from "react-icons/sl";
+import styled, { css, keyframes } from "styled-components";
+import { useEffect, useState } from "react";
 
-export default function Footer({ translate }: { translate: Function }) {
+const YEAR = new Date().getFullYear();
+const scrollToTop = () => Scroll.animateScroll.scrollToTop();
+
+interface ScrollTop {
+  visible: boolean;
+}
+
+const FooterContainer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px 0;
+`;
+
+const LinkList = styled.ul`
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  color: rgb(59 130 246);
+`;
+
+const StyledLink = styled.a`
+  text-decoration: underline;
+  text-underline-offset: 2px;
+`;
+
+const Attribution = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+
+  & > small {
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  & > small > time {
+    margin-right: 4px;
+  }
+`;
+
+const AttributionItem = styled.small``;
+
+const slidein = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+const slideout = keyframes`
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+`;
+
+const ScrollToTopButton = styled.button<ScrollTop>`
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  font-size: 2rem;
+
+  /* opacity: 0;
+  transform: translateY(100%); */
+
+  animation: ${(props) =>
+    props.visible
+      ? css`
+          ${slidein} 0.3s ease-in-out forwards
+        `
+      : css`
+          ${slideout} 0.3s ease-in-out forwards
+        `};
+`;
+
+export default function Footer() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <footer className="flex flex-col justify-center ">
-      <div className="flex justify-center pt-10">
-        <ul className="flex gap-x-2 text-blue-500 grayscale-[50%]">
+    <FooterContainer>
+      <div>
+        <LinkList>
           <Link
+            legacyBehavior
             href="https://www.linkedin.com/in/luben-stoyanov/"
-            target="_blank"
-            className="underline underline-offset-2 decoration-2"
           >
-            LinkedIn
+            <StyledLink target="_blank">LinkedIn</StyledLink>
           </Link>
           <span>/</span>
-          <Link
-            href="https://github.com/LubenStoyanov"
-            target="_blank"
-            className="underline underline-offset-2 decoration-2"
-          >
-            GitHub
+          <Link legacyBehavior href="https://github.com/LubenStoyanov">
+            <StyledLink target="_blank">GitHub</StyledLink>
           </Link>
           <span>/</span>
-          <Link
-            href="https://www.twitter.com/luben_stoyanov"
-            target="_blank"
-            className="underline underline-offset-2 decoration-2"
-          >
-            Twitter
+          <Link legacyBehavior href="https://www.twitter.com/luben_stoyanov">
+            <StyledLink target="_blank">Twitter</StyledLink>
           </Link>
-        </ul>
+        </LinkList>
       </div>
-      <div className="flex flex-col place-items-center text-gray-400 pt-20 pb-[20%] sm:pb-[1%]">
-        <small className="">
+      <Attribution>
+        <small>
           Made with ❤ using{" "}
-          <a
-            href="https://www.nextjs.org"
-            className="underline underline-offset-1"
-            target="_blank"
-          >
+          <StyledLink href="https://www.nextjs.org" target="_blank">
             Next.js
-          </a>{" "}
+          </StyledLink>{" "}
           and{" "}
-          <a
-            href="https://www.tailwindcss.com"
-            className="underline underline-offset-1"
-            target="_blank"
-          >
+          <StyledLink href="https://www.tailwindcss.com" target="_blank">
             TailwindCSS
-          </a>
+          </StyledLink>
           .
         </small>
-        <small className="">
+        <small>
           <time>{YEAR}</time> © Luben Stoyanov.
         </small>
-      </div>
-    </footer>
+      </Attribution>
+      <ScrollToTopButton onClick={scrollToTop} visible={visible}>
+        <SlArrowUpCircle />
+      </ScrollToTopButton>
+    </FooterContainer>
   );
 }

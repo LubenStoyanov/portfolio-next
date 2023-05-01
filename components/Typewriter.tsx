@@ -27,7 +27,6 @@ export default function TypewriterComponent({ hero }: { hero: string }) {
   return (
     <Typewriter
       options={{
-        // loop: true,
         delay: 100,
         autoStart: true,
       }}
