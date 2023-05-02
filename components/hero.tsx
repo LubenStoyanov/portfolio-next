@@ -1,5 +1,5 @@
 import TypewriterComponent from "./Typewriter";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const Button = styled.button`
   transition: 0.3s ease-in-out 100ms;
@@ -22,20 +22,22 @@ export default function Hero({ translate }: { translate: Function }) {
           &lt;p&gt;
         </span>
         {translate("hero.1")}
-        <em className="text-orange-500 mr-1">{translate("hero.joy")}</em>
+        <em className="text-orange-500 mr-[1px]">{translate("hero.joy")}</em>
         {translate("hero.2")}
         <em className="text-orange-500">{translate("hero.great")}</em>
         {translate("hero.3")}
-        <em className="text-orange-500 mr-1">
+        <em className="text-orange-500 mr-[2px]">
           {translate("hero.meaning")}
-        </em>{" "}
+        </em>
         {translate("hero.4")}
         <span className="text-xs font-semibold relative bottom-[2px]">
           &lt;/p&gt;
         </span>
       </p>
       <Button className="text-sm font-semibold border-2 border-black hover:border-orange-500 rounded-3xl px-5 py-3">
-        {translate("hero.cat-button")}
+        <a href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry">
+          {translate("hero.cat-button")}
+        </a>
       </Button>
     </section>
   );

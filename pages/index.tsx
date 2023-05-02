@@ -40,7 +40,7 @@ export default function Home() {
       <div className="relative ">
         <Header translate={translate} />
         <main
-          className={`flex flex-col text-lg sm:w[75ch] text`}
+          className={`flex flex-col text-lg sm:w[75ch] text bg-[#F9FAFE]`}
           style={{ color: "#0D0E13" }}
         >
           <Hero translate={translate} />

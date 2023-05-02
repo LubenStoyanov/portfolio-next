@@ -16,14 +16,16 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: center;
   padding: 64px 0;
-  margin: 0 28px;
+  /* margin: 0 28px; */
+  background-color: #212129;
+  color: white;
 `;
 
 const LinkList = styled.ul`
   display: flex;
   justify-content: center;
   gap: 8px;
-  color: rgb(59 130 246);
+  /* color: rgb(59 130 246); */
 `;
 
 const StyledLink = styled.a`
@@ -80,9 +82,8 @@ const ScrollToTopButton = styled.button<ScrollTop>`
   bottom: 16px;
   right: 16px;
   font-size: 2rem;
-
-  /* opacity: 0;
-  transform: translateY(100%); */
+  mix-blend-mode: difference;
+  z-index: 50;
 
   animation: ${(props) =>
     props.visible

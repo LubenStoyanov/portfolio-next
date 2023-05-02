@@ -40,7 +40,7 @@ export default function Profile({ translate }: { translate: Function }) {
             src={profileImage}
             alt="Profile picture of Luben Stoyanov"
             className="w-64 sm:w-96 h-64 sm:h-96 object-cover rounded-2xl grayscale "
-            style={{ zIndex: -999 }}
+            // style={{ zIndex: -999 }}
           />
         </div>
       </div>
