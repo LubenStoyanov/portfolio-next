@@ -3,7 +3,7 @@ import profileImage from "../public/images/profile-white.png";
 
 export default function Profile({ translate }: { translate: Function }) {
   return (
-    <section id="about" className="flex flex-col py-16">
+    <section id="about" className="flex flex-col py-16 mx-7">
       <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-sm font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-16 border-black"></span>
@@ -14,15 +14,7 @@ export default function Profile({ translate }: { translate: Function }) {
         <span className="text-sm font-bold">&lt;h2/&gt;</span>
       </div>
       <div className="flex flex-col sm:flex-row pt-10">
-        <div className="flex flex-col items-center ">
-          <Image
-            src={profileImage}
-            alt="Profile picture of Luben Stoyanov"
-            className="w-64 sm:w-96 h-64 sm:h-96 object-cover rounded-2xl grayscale"
-            style={{ zIndex: -999 }}
-          />
-        </div>
-        <div className="justify-self-end sm:border-l-2 pt-10">
+        <div className="justify-self-end sm:border-l-2">
           <p className=" max-w-[60ch]">
             {translate("about.1")}
             <em className="text-orange-500">
@@ -42,6 +34,14 @@ export default function Profile({ translate }: { translate: Function }) {
             <em className="text-orange-500">{translate("about.joy")}</em>
             {translate("about.8")}
           </p>
+        </div>
+        <div className="flex flex-col items-center mt-10">
+          <Image
+            src={profileImage}
+            alt="Profile picture of Luben Stoyanov"
+            className="w-64 sm:w-96 h-64 sm:h-96 object-cover rounded-2xl grayscale "
+            style={{ zIndex: -999 }}
+          />
         </div>
       </div>
     </section>

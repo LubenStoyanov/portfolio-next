@@ -16,6 +16,7 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: center;
   padding: 64px 0;
+  margin: 0 28px;
 `;
 
 const LinkList = styled.ul`

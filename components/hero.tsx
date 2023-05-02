@@ -1,10 +1,15 @@
-import TypewriterComponent from "./Typewriter";
+import TypewriterComponent from "./typewriter";
+import styled, { keyframes } from "styled-components";
+
+const Button = styled.button`
+  transition: 0.3s ease-in-out 100ms;
+`;
 
 export default function Hero({ translate }: { translate: Function }) {
-  const hero: string = translate("hero");
+  const hero: string = translate("hero.title");
 
   return (
-    <section className="min-h-[240px] text-5xl py-16">
+    <section className="min-h-[240px] text-5xl pb-16 pt-6 mx-7">
       <div className="min-h-[240px]">
         <span className="text-xs font-semibold">&lt;h1&gt;</span>
         <TypewriterComponent hero={hero} />
@@ -12,7 +17,7 @@ export default function Hero({ translate }: { translate: Function }) {
           &lt;/h1&gt;
         </span>
       </div>
-      <p className="text-lg pt-5">
+      <p className="text-lg pt-5 pb-8">
         <span className="text-xs font-semibold relative bottom-[2px]">
           &lt;p&gt;
         </span>
@@ -29,9 +34,9 @@ export default function Hero({ translate }: { translate: Function }) {
           &lt;/p&gt;
         </span>
       </p>
-      <button className="text-sm font-bold border-2 border-black hover:border-2 hover:border-orange-500 rounded-3xl px-5 py-3">
+      <Button className="text-sm font-semibold border-2 border-black hover:border-orange-500 rounded-3xl px-5 py-3">
         {translate("hero.cat-button")}
-      </button>
+      </Button>
     </section>
   );
 }

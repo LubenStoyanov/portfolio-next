@@ -37,7 +37,7 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className="relative mx-7 sm:mx-20">
+      <div className="relative ">
         <Header translate={translate} />
         <main
           className={`flex flex-col text-lg sm:w[75ch] text`}

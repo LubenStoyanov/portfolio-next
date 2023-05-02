@@ -5,13 +5,14 @@
   "contactNavLink": "Contact",
 
   "hero": {
-    "1": "I en",
+    "title": "I'm<em class='text-orange-500'> Luben</em>, <br/> a <em class='text-orange-500'>web developer</em>.",
+    "1": "It fills me with ",
     "joy": "joy",
-    "2": " building ",
-    "great": "great ",
-    "3": "looking websites that provide a ",
+    "2": " building websites that flourish with ",
+    "great": "creative ",
+    "3": "ideas and provide users with an ",
     "meaning": "meaning",
-    "4": "ful experience for their user.",
+    "4": "ful experience.",
     "cat-button": "GET IN TOUCH"
   },
 

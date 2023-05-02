@@ -6,7 +6,13 @@
 
   "hero": {
     "title": "Ich bin <em class='text-orange-500'>Luben</em>,<br/> ein <em class='text-orange-500'>Web Entwickler</em>.",
-    "text_html": "<span className='text-xs font-semibold relative bottom-[2px]'>  &lt;p&gt;</span>Mir bereitet es<em className='text-orange-500 mr-1'>Freude</em>Webseiten zu kreieren, die nicht nur <em className='text-orange-500'>großartig</em> aussehen, sondern auch ihren Nutzern eine <em className='text-orange-500 mr-1'>bedeutungsvolle</em> Nutzererfahrung bieten.<span className='text-xs font-semibold relative bottom-[2px]'>  &lt;/p&gt;</span>",
+    "1": "Es erfüllt mich mit ",
+    "joy": "Freude",
+    "2": " Webseiten zu erstellen, die mit ",
+    "great": "kreativen ",
+    "3": "Ideen blühen und den Nutzern eine ",
+    "meaning": "bedeutsamen",
+    "4": "Erfahrung bieten.",
     "cat-button": "SCHREIBEN SIE MIR"
   },
 

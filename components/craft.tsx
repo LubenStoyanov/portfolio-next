@@ -2,7 +2,7 @@ import { SiGithub } from "react-icons/si";
 
 export default function Works({ translate }: { translate: Function }) {
   return (
-    <section id="works" className="flex flex-col py-16">
+    <section id="works" className="flex flex-col py-16 mx-7">
       <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-sm font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-16 border-black"></span>

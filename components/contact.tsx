@@ -3,7 +3,7 @@ import emailImage from "../public/images/email-image.png";
 
 export default function Contact({ translate }: { translate: Function }) {
   return (
-    <section id="contact" className="flex flex-col py-16">
+    <section id="contact" className="flex flex-col py-16 mx-7">
       <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-sm font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-16 border-black"></span>
