@@ -4,7 +4,16 @@
   "worksNavLink": "Craft",
   "contactNavLink": "Contact",
 
-  "hero": "I'm<em class='text-orange-500'> Luben</em>, <br/> a <em class='text-orange-500'>web developer</em>.",
+  "hero": {
+    "1": "I en",
+    "joy": "joy",
+    "2": " building ",
+    "great": "great ",
+    "3": "looking websites that provide a ",
+    "meaning": "meaning",
+    "4": "ful experience for their user.",
+    "cat-button": "GET IN TOUCH"
+  },
 
   "about": {
     "title": "Profile",
