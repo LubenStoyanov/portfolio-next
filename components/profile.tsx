@@ -15,7 +15,7 @@ export default function Profile({ translate }: { translate: Function }) {
   return (
     <section ref={ref} id="about" className="flex flex-col py-16 mx-7">
       <div className="flex place-items-center justify-between">
-        <span className="text-sm font-bold">&lt;h2&gt; </span>
+        <span className="text-xs font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-20 border-black"></span>
         <h2 className="font-bold sm:text-5xl text-3xl text-center">
           {translate("about.title")}

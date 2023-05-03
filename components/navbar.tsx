@@ -1,37 +1,34 @@
-import { useState } from "react";
+// import { useState } from "react";
 import * as Scroll from "react-scroll";
-import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { SlClose } from "react-icons/sl";
+// import { SlClose } from "react-icons/sl";
 const scrollToTop = () => Scroll.animateScroll.scrollToTop();
 
 export default function Navbar({ translate }: { translate: Function }) {
   const { locale, push } = useRouter();
-  const [visibleMenu, setVisbileMenu] = useState(false);
+  // const [visibleMenu, setVisbileMenu] = useState(false);
 
   const toggleLanguage = () => {
     if (locale === "en") return push("/", undefined, { locale: "de" });
     if (locale === "de") return push("/", undefined, { locale: "en" });
   };
 
-  const showMenu = () => {
-    console.log(visibleMenu);
-    setVisbileMenu((v) => !v);
-  };
+  // const showMenu = () => {
+  //   console.log(visibleMenu);
+  //   setVisbileMenu((v) => !v);
+  // };
 
   return (
     <>
-      <nav className="hidden md:flex justify-between items-center h-12 sm:pt-16 text-lg sm:px-16  font-semibold  bg-white border-t-2 ">
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+      <nav className="hidden sm:flex justify-between sm:pt-10 sm:px-16 text-lg font-semibold border-t-2 ">
+        <a
           onClick={scrollToTop}
           className="  hover:text-black hover:underline underline-offset-2 cursor-pointer "
         >
           Luben Stoyanov
-        </motion.a>
-        <ul className="flex z-100 divide-x-2 divide">
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        </a>
+        <ul className="flex z-100 gap-x-4">
+          <li>
             <Scroll.Link
               to="about"
               smooth={true}
@@ -41,8 +38,8 @@ export default function Navbar({ translate }: { translate: Function }) {
             >
               {translate("aboutNavLink")}
             </Scroll.Link>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          </li>
+          <li>
             <Scroll.Link
               to="works"
               smooth={true}
@@ -52,8 +49,8 @@ export default function Navbar({ translate }: { translate: Function }) {
             >
               {translate("worksNavLink")}
             </Scroll.Link>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          </li>
+          <li>
             <Scroll.Link
               to="contact"
               smooth={true}
@@ -63,18 +60,16 @@ export default function Navbar({ translate }: { translate: Function }) {
             >
               {translate("contactNavLink")}
             </Scroll.Link>
-          </motion.li>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+          </li>
+          <button
             onClick={toggleLanguage}
-            className="  text-xs hover:text-black hover:underline underline-offset-2 "
+            className="text-sm hover:text-black hover:underline underline-offset-2 "
           >
-            {locale === "en" ? "de" : "en"}
-          </motion.button>
+            {locale === "en" ? "DE" : "EN"}
+          </button>
         </ul>
       </nav>
-      <nav>
+      <nav className="sm:hidden">
         <ul className="flex justify-between text-sm pt-4">
           <li></li>
           <li className="justify-self-end">
@@ -91,14 +86,13 @@ export default function Navbar({ translate }: { translate: Function }) {
         style={{ zIndex: -999 }}
         className={`fixed bottom-0 left-0 right-0 sm:hidden flex justify-between items-center h-12 font-semibold bg-white border-t-2 border-gray`}
       >
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        <a
+
           onClick={scrollToTop}
           className="  hover:text-black hover:underline underline-offset-2 cursor-pointer "
         >
           Luben Stoyanov
-        </motion.a>
+        </a>
         <button className="mr-5" onClick={showMenu}>
           Menu
         </button>
