@@ -11,6 +11,7 @@ const ViewSiteButton = styled.button`
   border: 2px solid black;
   border-radius: 25px;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 
   background-color: #15141a;
   color: white;
@@ -19,6 +20,19 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  height: 560px;
+
+  box-shadow: rgba(21, 20, 26, 0.1) 0px 30px 60px -12px,
+    rgba(21, 20, 26, 0.2) 0px 18px 36px -18px;
+`;
+
+const CardColor = styled.div`
+  background-color: ${(props) => props.color};
+  width: 100%;
+  height: 200px;
+  border-radius: 0 0 25px 25px;
 `;
 
 export default function Works({ translate }: { translate: Function }) {
@@ -29,7 +43,7 @@ export default function Works({ translate }: { translate: Function }) {
           <span className="text-sm font-bold">&lt;h2&gt; </span>
           <span className="border-t-2 w-16 border-white"></span>
           <h2 className="font-bold sm:text-5xl text-3xl text-center">
-            {translate("works.title")}
+            {translate("craft.title")}
           </h2>
           <span className="border-t-2 w-16 border-white"></span>
           <span className="text-sm font-bold">&lt;h2/&gt;</span>
@@ -37,20 +51,33 @@ export default function Works({ translate }: { translate: Function }) {
         <div className="sm:flex gap-x-5 pt-10">
           <div className="mx-7 pb-16">
             <p className="  sm:max-w-[40ch] ">
-              When it comes to my <em className="text-orange-500">work</em>, I
-              like to play lego with <em className="text-orange-500">ideas</em>{" "}
-              and <em className="text-orange-500">concepts</em> in programming.
-              I love <em className="text-orange-500">exploring</em> new tools
-              and experimenting with different approaches to find the best
-              solutions for my clients. But for me,{" "}
-              <em className="text-orange-500">building</em> a great website is
-              about more than just the technology. it&apos;s about creating a
-              joyful experience for the users of the website. That&apos;s why i
-              put a lot of <em className="text-orange-500">thought</em> into the{" "}
-              <em className="text-orange-500">user experience</em>, making sure
-              that every website i build is{" "}
-              <em className="text-orange-500">intuitive</em>, easy to use, and
-              exciting to <em className="text-orange-500">interact</em> with.
+              <span className="text-xs font-semibold relative bottom-[2px]">
+                &lt;p&gt;
+              </span>{" "}
+              {translate("craft.1")}
+              <b className="text-[#EF6706]">{translate("craft.work")}</b>
+              {translate("craft.2")}
+              <b className="text-[#EF6706]">{translate("craft.ideas")}</b>
+              {translate("craft.3")}
+              <b className="text-[#EF6706]">{translate("craft.concepts")}</b>
+              {translate("craft.4")}
+              <b className="text-[#EF6706]">{translate("craft.exploring")}</b>
+              {translate("craft.5")}
+              <b className="text-[#EF6706]">{translate("craft.learning")}</b>
+              {translate("craft.6")}
+              <b className="text-[#EF6706]">{translate("craft.building")}</b>
+              {translate("craft.7")}
+              <b className="text-[#EF6706]">{translate("craft.creating")}</b>
+              {translate("craft.8")}
+              <b className="text-[#EF6706]">{translate("craft.thought")}</b>
+              {translate("craft.9")}
+              <b className="text-[#EF6706]">{translate("craft.ux")}</b>
+              {translate("craft.10")}
+              <b className="text-[#EF6706]">{translate("craft.intuitive")}</b>
+              {translate("craft.11")}{" "}
+              <span className="text-xs font-semibold relative bottom-[2px]">
+                &lt;/p&gt;
+              </span>
             </p>
           </div>
         </div>
@@ -62,7 +89,7 @@ export default function Works({ translate }: { translate: Function }) {
           Some of the good stuff
         </p>
         <Swiper
-          spaceBetween={-2}
+          spaceBetween={-5}
           slidesPerView={"auto"}
           centeredSlides={true}
           loop={true}
@@ -70,8 +97,8 @@ export default function Works({ translate }: { translate: Function }) {
           grabCursor={true}
           className="mySwiper"
         >
-          <SwiperSlide className="card-shadow bg-white min-w-[300px] min-h-[560px] rounded-[25px]">
-            <CardWrapper className="flex flex-col items-center">
+          <SwiperSlide className="card-shadow bg-white rounded-[25px]">
+            <CardWrapper>
               <h3 className="text-center pt-8">Speech Blender</h3>
               <p className="px-5 py-2 text-base font-[500]">
                 A web app for blending multiple audio recordings into a cohesive
@@ -85,14 +112,15 @@ export default function Works({ translate }: { translate: Function }) {
                   href="https://github.com/LubenStoyanov/speech-blender-frontend"
                   target="_blank"
                 >
-                  <span className="mr-1">VIEW GITHUB</span>
+                  <span className="mr-1">VIEW SITE</span>
                   <SiGithub className="place-self-center" />
                 </a>
               </ViewSiteButton>
+              <CardColor color="#262228" />
             </CardWrapper>
           </SwiperSlide>
-          <SwiperSlide className="card-shadow bg-white min-w-[300px] min-h-[560px] rounded-[25px]">
-            <CardWrapper className="flex flex-col items-center">
+          <SwiperSlide className="card-shadow bg-white rounded-[25px]">
+            <CardWrapper>
               <h3 className="text-center pt-8">The Fine Art</h3>
               <p className="px-5 py-2 text-base font-[500]">
                 Discover inspiring works of art from around the world on the
@@ -106,14 +134,15 @@ export default function Works({ translate }: { translate: Function }) {
                   href="https://github.com/LubenStoyanov/fine-arts-express"
                   target="_blank"
                 >
-                  <span className="mr-1">VIEW GITHUB</span>
+                  <span className="mr-1">VIEW SITE</span>
                   <SiGithub className="place-self-center" />
                 </a>
               </ViewSiteButton>
+              <CardColor color="#007849" />
             </CardWrapper>
           </SwiperSlide>
-          <SwiperSlide className="card-shadow bg-white min-w-[300px] min-h-[560px] rounded-[25px]">
-            <CardWrapper className="flex flex-col items-center">
+          <SwiperSlide className="card-shadow bg-white rounded-[25px]">
+            <CardWrapper>
               <h3 className="text-center pt-8">Drum Kit</h3>
               <p className="px-5 py-2 text-base font-[500]">
                 The Drum Kit web app is an interactive tool that lets users play
@@ -127,20 +156,21 @@ export default function Works({ translate }: { translate: Function }) {
                   href="https://github.com/LubenStoyanov/drum-kit"
                   target="_blank"
                 >
-                  <span className="mr-1">VIEW GITHUB</span>
+                  <span className="mr-1">VIEW SITE</span>
                   <SiGithub className="place-self-center" />
                 </a>
               </ViewSiteButton>
+              <CardColor color="#0375b4" />
             </CardWrapper>
           </SwiperSlide>
-          <SwiperSlide className="card-shadow bg-white min-w-[300px] min-h-[560px] rounded-[25px]">
-            <CardWrapper className="flex flex-col items-center">
+          <SwiperSlide className="card-shadow bg-white rounded-[25px]">
+            <CardWrapper>
               <h3 className="text-center pt-8">Pokèfight</h3>
               <p className="px-5 py-2 text-base font-[500]">
                 Pokéfight is a fun web-based card game featuring Pokémon
-                characters and fight animations. As you battle your opponents in
-                the game, you&apos;ll encounter different pokémons. With
-                leaderboards you can show off your skills to other players.
+                characters and fight animations. Battling your opponents
+                confronts you with different pokémons. With leaderboards you can
+                show off your skills to other players.
               </p>
               <ViewSiteButton>
                 <a
@@ -148,10 +178,11 @@ export default function Works({ translate }: { translate: Function }) {
                   href="https://github.com/LubenStoyanov/pokefight-frontend"
                   target="_blank"
                 >
-                  <span className="mr-1">VIEW GITHUB</span>
+                  <span className="mr-1">VIEW SITE</span>
                   <SiGithub className="place-self-center" />
                 </a>
               </ViewSiteButton>
+              <CardColor color="#ffce00" />
             </CardWrapper>
           </SwiperSlide>
           <span className="hidden">/</span>

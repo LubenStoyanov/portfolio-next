@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 const Button = styled.button`
   transition: 0.3s ease-in-out 100ms;
+  accent-color: black;
+
+  &&:hover {
+    border-color: #ef6706;
+  }
 `;
 
 export default function Hero({ translate }: { translate: Function }) {
@@ -27,19 +32,21 @@ export default function Hero({ translate }: { translate: Function }) {
           &lt;p&gt;
         </span>
         {translate("hero.1")}
-        <em className="text-orange-500 mr-[1px]">{translate("hero.joy")}</em>
+        <b className="text-[#EF6706] font-semibold">{translate("hero.joy")}</b>
         {translate("hero.2")}
-        <em className="text-orange-500">{translate("hero.great")}</em>
+        <b className="text-[#EF6706] font-semibold">
+          {translate("hero.great")}
+        </b>
         {translate("hero.3")}
-        <em className="text-orange-500 mr-[2px]">
+        <b className="text-[#EF6706] font-semibold ">
           {translate("hero.meaning")}
-        </em>
+        </b>
         {translate("hero.4")}
         <span className="text-xs font-semibold relative bottom-[2px]">
           &lt;/p&gt;
         </span>
       </p>
-      <Button className="text-sm font-semibold border-2 border-black hover:border-orange-500 rounded-3xl px-5 py-3">
+      <Button className="text-sm font-semibold border-2 sm:border-[3px] border-black max-w-fit rounded-3xl px-5 py-3 sm:px-10 sm:py-4">
         <a href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry">
           {translate("hero.cat-button")}
         </a>

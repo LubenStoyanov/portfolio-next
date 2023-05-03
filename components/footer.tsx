@@ -3,6 +3,7 @@ import * as Scroll from "react-scroll";
 import { SlArrowUpCircle } from "react-icons/sl";
 import styled, { css, keyframes } from "styled-components";
 import { useEffect, useState } from "react";
+import { slidein, slideout } from "./keyframes/footer";
 
 const YEAR = new Date().getFullYear();
 const scrollToTop = () => Scroll.animateScroll.scrollToTop();
@@ -52,38 +53,12 @@ const Attribution = styled.div`
   }
 `;
 
-const AttributionItem = styled.small``;
-
-const slidein = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-const slideout = keyframes`
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-`;
-
 const ScrollToTopButton = styled.button<ScrollTop>`
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  right: 24px;
   font-size: 2rem;
   mix-blend-mode: difference;
-  z-index: 50;
+  z-index: 100;
 
   animation: ${(props) =>
     props.visible
@@ -100,7 +75,7 @@ export default function Footer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 2600) {
         setVisible(true);
       } else {
         setVisible(false);

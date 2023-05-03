@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.card-shadow {
-  box-shadow: rgba(21, 20, 26, 0.1) 0px 30px 60px -12px,
-    rgba(21, 20, 26, 0.2) 0px 18px 36px -18px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .swiper,
 .swiper-container {
   padding: 40px !important;

@@ -18,33 +18,42 @@ export default function Contact({ translate }: { translate: Function }) {
           <span className="text-sm font-bold">&lt;h2/&gt;</span>
         </div>
         <p className="pt-10 max-w-[40ch]">
-          If you&apos;re looking for a web developer who&apos;s{" "}
-          <em className="text-orange-500">passionate</em> about their work and
-          committed to providing <em className="text-orange-500">valuable</em>{" "}
-          and delightful experiences for users, then I&apos;d love to chat.
-          Let&apos;s <em className="text-orange-500">work together</em> to bring
-          your <em className="text-orange-500">vision</em> to life!
+          <span className="text-xs font-semibold relative bottom-[2px]">
+            &lt;p&gt;
+          </span>{" "}
+          {translate("contact.1")}
+          <b className="text-[#EF6706]">{translate("contact.passionate")}</b>
+          {translate("contact.2")}
+          <b className="text-[#EF6706]">{translate("contact.valuable")}</b>
+          {translate("contact.3")}
+          <b className="text-[#EF6706]">{translate("contact.workTogether")}</b>
+          {translate("contact.4")}
+          <b className="text-[#EF6706]">{translate("contact.vision")}</b>
+          {translate("contact.5")}{" "}
+          <span className="text-xs font-semibold relative bottom-[2px]">
+            &lt;/p&gt;
+          </span>
         </p>
-        <a
-          href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry"
-          className="underline underline-offset-2 text-blue-500"
-        >
-          <button className="pt-5 max-w-fit font-bold">
-            <p className="text-blue-500 text-left text-base">
-              Connect anytime :&#41;
-            </p>
+        <p className="text-left text-base text-white font-bold mt-10">
+          {/* {translate("contact.connect")} */}
+        </p>
+        <button className="max-w-fit font-bold">
+          <a
+            href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry"
+            className="no-underline"
+          >
             <div className="flex">
               <Image
                 src={emailImage}
                 alt="Mail couvert"
                 className="w-8 self-center mr-1 shadow-lg transition delay-150 duration-300 ease-in-out hover:rotate-360 animate-pulse"
               />
-              <span className="place-self-center italic">
+              <span className="place-self-center italic  text-white">
                 luben.stoyanov.ls@gmail.com
               </span>
             </div>
-          </button>
-        </a>
+          </a>
+        </button>
       </div>
     </section>
   );

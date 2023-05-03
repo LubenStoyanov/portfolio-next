@@ -5,13 +5,13 @@
   "contactNavLink": "Kontakt",
 
   "hero": {
-    "title": "Ich bin <em class='text-orange-500'>Luben</em>,<br/> ein <em class='text-orange-500'>Web Entwickler</em>.",
+    "title": "Ich bin <b class='text-[#EF6706]'>Luben</b>,<br/> ein <b class='text-[#EF6706]'>Web Entwickler</b>.",
     "1": "Es erfüllt mich mit ",
     "joy": "Freude",
     "2": " Webseiten zu erstellen, die mit ",
     "great": "kreativen ",
     "3": "Ideen blühen und den Nutzern eine ",
-    "meaning": "bedeutsamen",
+    "meaning": "bedeutsamen ",
     "4": "Erfahrung bieten.",
     "cat-button": "SCHREIBEN SIE MIR"
   },
@@ -35,9 +35,47 @@
     "8": "eren Benutzererfahrung führt."
   },
 
-  "tools": { "title": "Werkzeuge" },
+  "tools": {
+    "title": "Werkzeuge"
+  },
 
-  "works": { "title": "Handwerk" },
+  "craft": {
+    "title": "Handwerk",
+    "1": "Wenn es um meine ",
+    "work": "Arbeit",
+    "2": " geht, spiele ich gerne Lego mit ",
+    "ideas": "Ideen",
+    "3": " und ",
+    "concepts": "Konzepten",
+    "4": " in der Programmierung. Ich liebe es, neue Techniken zu ",
+    "exploring": "erkunden",
+    "5": " und verschiedene Ansätze zu ",
+    "learning": "lernen",
+    "6": " , um die besten Lösungen für meine Kunden zu finden. Aber für mich ist das ",
+    "building": "Erstellen",
+    "7": " einer großartigen Website mehr als nur Technologie. Es geht darum, ein freudiges Erlebnis für die Benutzer der Website zu ",
+    "creating": "schaffen.",
+    "8": " Deshalb investiere ich viele ",
+    "thought": "Gedanken",
+    "9": " in die ",
+    "ux": "Benutzererfahrung",
+    "10": ", um sicherzustellen, dass jede von mir erstellte Website ",
+    "intuitive": "intuitiv",
+    "11": ", einfach zu bedienen und aufregend zu interagieren ist."
+  },
 
-  "contact": { "title": "Kontakt" }
+  "contact": {
+    "title": "Kontakt",
+    "1": "Wenn Sie nach einem Webentwickler suchen, der ",
+    "passionate": "leidenschaftlich",
+    "2": " über seine Arbeit ist und sich dazu verpflichtet hat, ",
+    "valuable": "wertvolle",
+    "3": " und angenehme Benutzererlebnisse zu bieten, dann würde ich gerne sprechen. Lassen Sie uns ",
+    "workTogether": "zusammenarbeiten",
+    "4": " um Ihre ",
+    "vision": "Vision",
+    "5": " zum Leben zu erwecken!",
+
+    "connect": "Lassen Sie uns zusammen arbeiten"
+  }
 }

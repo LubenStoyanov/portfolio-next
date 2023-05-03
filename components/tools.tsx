@@ -42,7 +42,7 @@ const TechItem = styled.div`
 
 export default function Tools({ translate }: { translate: Function }) {
   return (
-    <section className="pt-16 ">
+    <section className="pt-16 mx-7">
       <div className="flex place-items-center place-content-center gap-x-1 ">
         <span className="text-sm font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-16 border-black"></span>

@@ -5,7 +5,7 @@
   "contactNavLink": "Contact",
 
   "hero": {
-    "title": "I'm<em class='text-orange-500'> Luben</em>, <br/> a <em class='text-orange-500'>web developer</em>.",
+    "title": "I'm<b class='text-[#EF6706]'> Luben</b>, <br/> a <b class='text-[#EF6706]'>web developer</b>.",
     "1": "It fills me with ",
     "joy": "joy",
     "2": " building websites that flourish with ",
@@ -20,7 +20,7 @@
     "title": "Profile",
     "1": "As an ",
     "enthusiastic": "enthusiastic ",
-    "2": "web developer, i view building websites as a ",
+    "2": "web developer, I view building websites as a ",
     "craft": "craft ",
     "3": "and I thrive on challenges that push me to ",
     "grow": "grow",
@@ -36,7 +36,45 @@
   },
 
   "tools": { "title": "Tools" },
-  "works": { "title": "Craft" },
 
-  "contact": { "title": "Contact" }
+  "craft": {
+    "title": "Craft",
+    "1": "When it comes to my ",
+    "work": "work",
+    "2": ", I like to play lego with ",
+    "ideas": "ideas",
+    "3": " and",
+    "concepts": "concepts",
+    "4": " in programming. I love ",
+    "exploring": "exploring",
+    "5": " new tools and ",
+    "learning": "learning",
+    "6": " different approaches to find the best solutions for my clients. But for me, ",
+    "building": "building",
+    "7": " a great website is about more than just the technology. It's about ",
+    "creating": "creating",
+    "8": " a joyful experience for the users of the website. That's whiy I put a lot of ",
+    "thought": "thought",
+    "9": " into the ",
+    "ux": "user experience",
+    "10": ", making sure that every website I build is ",
+    "intuitive": "intuitive",
+    "11": ",easy to use, and exciting to interact with."
+  },
+
+  "contact": {
+    "title": "Contact",
+
+    "1": "If you're looking for a web developer who's ",
+    "passionate": "passionate",
+    "2": " about their and committed to providing ",
+    "valuable": "valuable",
+    "3": " and delightful experiences for users, then I'd love to chat. Let's ",
+    "workTogether": "work together",
+    "4": " to bring your ",
+    "vision": "vision",
+    "5": " to life!",
+
+    "connect": "Let's Work Together"
+  }
 }
