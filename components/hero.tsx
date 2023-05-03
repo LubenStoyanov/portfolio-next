@@ -11,6 +11,11 @@ export default function Hero({ translate }: { translate: Function }) {
   return (
     <section className="min-h-[240px] text-5xl pb-16 pt-6 mx-7">
       <div className="min-h-[240px]">
+        <small className="hidden sm:block">
+          &lt;-- Desktop version is work in progress. Check out the mobile
+          version instead. <br />
+          Thank you for visiting my website. --&gt;
+        </small>
         <span className="text-xs font-semibold">&lt;h1&gt;</span>
         <TypewriterComponent hero={hero} />
         <span className="text-xs font-semibold relative bottom-6">
