@@ -20,7 +20,7 @@ export default function Navbar({ translate }: { translate: Function }) {
 
   return (
     <>
-      <nav className="hidden sm:flex justify-between sm:pt-10 sm:px-16 text-lg font-semibold border-t-2 ">
+      <nav className="hidden lg:flex justify-between lg:pt-10 lg:px-16 text-lg font-semibold border-t-2 ">
         <a
           onClick={scrollToTop}
           className="  hover:text-black hover:underline underline-offset-2 cursor-pointer "
@@ -69,7 +69,7 @@ export default function Navbar({ translate }: { translate: Function }) {
           </button>
         </ul>
       </nav>
-      <nav className="sm:hidden">
+      <nav className="lg:hidden mx-7">
         <ul className="flex justify-between text-sm pt-4">
           <li></li>
           <li className="justify-self-end">
@@ -84,7 +84,7 @@ export default function Navbar({ translate }: { translate: Function }) {
       </nav>
       {/* <nav
         style={{ zIndex: -999 }}
-        className={`fixed bottom-0 left-0 right-0 sm:hidden flex justify-between items-center h-12 font-semibold bg-white border-t-2 border-gray`}
+        className={`fixed bottom-0 left-0 right-0 lg:hidden flex justify-between items-center h-12 font-semibold bg-white border-t-2 border-gray`}
       >
         <a
 
@@ -100,7 +100,7 @@ export default function Navbar({ translate }: { translate: Function }) {
       {/* <nav
         className={`${
           visibleMenu ? "block" : "hidden"
-        } flex items-center justify-center  sm:hidden text-base font-semibold text-gray-700 h-32 bg-white border-t-2 border-gray-300 `}
+        } flex items-center justify-center  lg:hidden text-base font-semibold text-gray-700 h-32 bg-white border-t-2 border-gray-300 `}
       >
         <ul className="grid grid-rows-2 grid-flow-col gap-5 justify-around z-100">
           <li

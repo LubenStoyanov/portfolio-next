@@ -42,89 +42,118 @@ const TechItem = styled.div`
 
 export default function Tools({ translate }: { translate: Function }) {
   return (
-    <section className="pt-16 mx-7">
-      <div className="flex place-items-center place-content-center gap-x-1 ">
-        <span className="text-sm font-bold">&lt;h2&gt; </span>
-        <span className="border-t-2 w-16 border-black"></span>
-        <h2 className="font-bold sm:text-5xl text-3xl text-center">
-          {translate("tools.title")}
-        </h2>
-        <span className="border-t-2 w-16 border-black"></span>
-        <span className="text-sm font-bold">&lt;h2/&gt;</span>
+    <section className="pt-16 mx-7 lg:px-48">
+      <div className="lg:px-48">
+        <div className="flex place-items-center place-content-center gap-x-1 ">
+          <span className="text-sm font-bold">&lt;h2&gt; </span>
+          <span className="border-t-2 w-20 lg:w-4/12 border-black"></span>
+          <h2 className="font-bold lg:text-5xl text-3xl text-center">
+            {translate("tools.title")}
+          </h2>
+          <span className="border-t-2 w-20 lg:w-4/12 border-black"></span>
+          <span className="text-sm font-bold">&lt;h2/&gt;</span>
+        </div>
+        <Marquee
+          style={{ overflow: "visible" }}
+          className="select-none text-[48px] py-10"
+        >
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={html} alt="html logo" />
+            </div>
+            <small className="text-sm">HTML5</small>
+          </TechItem>
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={css} alt="css logo" />
+            </div>
+            <small className="text-sm">CSS3</small>
+          </TechItem>
+          <TechItem className="card-shadow rounded-md ">
+            <div className="flex justify-center ">
+              <Image src={tailwind} alt="express logo" className="mt-3" />
+            </div>
+            <small className="text-sm">Tailwind</small>
+          </TechItem>
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={javascript} alt="javascript logo" />
+            </div>
+            <small className="text-sm">JavaScript</small>
+          </TechItem>
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={typescript} alt="typescript logo" />
+            </div>
+            <small className="text-sm">TypeScript</small>
+          </TechItem>
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={react} alt="react logo" />
+            </div>
+            <small className="text-sm">React</small>
+          </TechItem>
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={nextjs} alt="nextjs logo" />
+            </div>
+            <small className="text-sm">Next.js</small>
+          </TechItem>
+          <TechItem className="hidden lg:block card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={node} alt="nodejs logo" />
+            </div>
+            <small className="text-sm">Node.js</small>
+          </TechItem>
+          <TechItem className="hidden lg:block card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={mongodb} alt="mongodb logo" />
+            </div>
+            <small className="text-sm">MongoDB</small>
+          </TechItem>
+          <TechItem className="hidden lg:block card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={postgresql} alt="postgresql logo" />
+            </div>
+            <small className="text-sm">Postgresql</small>
+          </TechItem>
+          <TechItem className="hidden lg:block card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={git} alt="git logo" />
+            </div>
+            <small className="text-sm">Git</small>
+          </TechItem>
+        </Marquee>
+        <Marquee
+          direction="right"
+          className="hidden select-none text-[48px] py-10"
+        >
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={node} alt="nodejs logo" />
+            </div>
+            <small className="text-sm">Node.js</small>
+          </TechItem>
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={mongodb} alt="mongodb logo" />
+            </div>
+            <small className="text-sm">MongoDB</small>
+          </TechItem>
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={postgresql} alt="postgresql logo" />
+            </div>
+            <small className="text-sm">Postgresql</small>
+          </TechItem>
+          <TechItem className="card-shadow rounded-md">
+            <div className="flex justify-center">
+              <Image src={git} alt="git logo" />
+            </div>
+            <small className="text-sm">Git</small>
+          </TechItem>
+        </Marquee>
       </div>
-      <Marquee
-        style={{ overflow: "visible" }}
-        className="select-none text-[48px] py-10"
-      >
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={html} alt="html logo" />
-          </div>
-          <small className="text-sm">HTML5</small>
-        </TechItem>
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={css} alt="css logo" />
-          </div>
-          <small className="text-sm">CSS3</small>
-        </TechItem>
-        <TechItem className="card-shadow rounded-md ">
-          <div className="flex justify-center ">
-            <Image src={tailwind} alt="express logo" className="mt-3" />
-          </div>
-          <small className="text-sm">Tailwind</small>
-        </TechItem>
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={javascript} alt="javascript logo" />
-          </div>
-          <small className="text-sm">JavaScript</small>
-        </TechItem>
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={typescript} alt="typescript logo" />
-          </div>
-          <small className="text-sm">TypeScript</small>
-        </TechItem>
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={react} alt="react logo" />
-          </div>
-          <small className="text-sm">React</small>
-        </TechItem>
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={nextjs} alt="nextjs logo" />
-          </div>
-          <small className="text-sm">Next.js</small>
-        </TechItem>
-      </Marquee>
-      <Marquee direction="right" className="select-none text-[48px] py-10">
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={node} alt="nodejs logo" />
-          </div>
-          <small className="text-sm">Node.js</small>
-        </TechItem>
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={mongodb} alt="mongodb logo" />
-          </div>
-          <small className="text-sm">MongoDB</small>
-        </TechItem>
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={postgresql} alt="postgresql logo" />
-          </div>
-          <small className="text-sm">Postgresql</small>
-        </TechItem>
-        <TechItem className="card-shadow rounded-md">
-          <div className="flex justify-center">
-            <Image src={git} alt="git logo" />
-          </div>
-          <small className="text-sm">Git</small>
-        </TechItem>
-      </Marquee>
     </section>
   );
 }

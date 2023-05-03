@@ -10,11 +10,11 @@ export default function Contact({ translate }: { translate: Function }) {
       <div className="contact-wrapper mx-7">
         <div className="flex place-items-center place-content-center gap-x-1">
           <span className="text-sm font-bold">&lt;h2&gt; </span>
-          <span className="border-t-2 w-16 border-white"></span>
-          <h2 className="font-bold sm:text-5xl text-3xl text-center">
+          <span className="border-t-2 w-20 lg:w-4/12 border-white"></span>
+          <h2 className="font-bold lg:text-5xl text-3xl text-center">
             {translate("contact.title")}
           </h2>
-          <span className="border-t-2 w-16 border-white"></span>
+          <span className="border-t-2 w-20 lg:w-4/12 border-white"></span>
           <span className="text-sm font-bold">&lt;h2/&gt;</span>
         </div>
         <p className="pt-10 max-w-[40ch]">
@@ -46,7 +46,7 @@ export default function Contact({ translate }: { translate: Function }) {
               <Image
                 src={emailImage}
                 alt="Mail couvert"
-                className="w-8 self-center mr-1 shadow-lg transition delay-150 duration-300 ease-in-out hover:rotate-360 animate-pulse"
+                className="w-8  self-center mr-1 shadow-lg transition delay-150 duration-300 ease-in-out hover:rotate-360 animate-pulse"
               />
               <span className="place-self-center italic  text-white">
                 luben.stoyanov.ls@gmail.com

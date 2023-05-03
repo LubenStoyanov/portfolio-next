@@ -41,16 +41,16 @@ export default function Works({ translate }: { translate: Function }) {
       <div className="bg-[#15141a] text-white pt-16">
         <div className="flex place-items-center place-content-center gap-x-1">
           <span className="text-sm font-bold">&lt;h2&gt; </span>
-          <span className="border-t-2 w-16 border-white"></span>
-          <h2 className="font-bold sm:text-5xl text-3xl text-center">
+          <span className="border-t-2 w-20 lg:w-4/12 border-white"></span>
+          <h2 className="font-bold lg:text-5xl text-3xl text-center">
             {translate("craft.title")}
           </h2>
-          <span className="border-t-2 w-16 border-white"></span>
+          <span className="border-t-2 w-20 lg:w-4/12 border-white"></span>
           <span className="text-sm font-bold">&lt;h2/&gt;</span>
         </div>
-        <div className="sm:flex gap-x-5 pt-10">
+        <div className="lg:flex gap-x-5 pt-10">
           <div className="mx-7 pb-16">
-            <p className="  sm:max-w-[40ch] ">
+            <p className="  lg:max-w-[40ch] ">
               <span className="text-xs font-semibold relative bottom-[2px]">
                 &lt;p&gt;
               </span>{" "}
@@ -84,7 +84,7 @@ export default function Works({ translate }: { translate: Function }) {
       </div>
 
       <div style={{ zIndex: 100 }} className="pt-16 ">
-        <h2 className="sm:text-5xl text-lg text-center">Works</h2>
+        <h2 className="lg:text-5xl text-lg text-center">Works</h2>
         <p className="font-[500] text-center text-2xl">
           Some of the good stuff
         </p>
