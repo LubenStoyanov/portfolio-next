@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+mySwiper.swiper-slider {
+}
+
 .swiper,
 .swiper-container {
   padding: 40px !important;
@@ -14,6 +17,12 @@
 .mySwiper .swiper-slide {
   transform: scale(0.85);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 600px;
+
+  @media (max-width: 1024px) {
+    width: 310px;
+  }
 }
 
 .mySwiper .swiper-slide-active {
