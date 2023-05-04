@@ -51,7 +51,7 @@ const CardColor = styled.div`
 export default function Works({ translate }: { translate: Function }) {
   return (
     <section id="works" className="flex flex-col">
-      <div className=" lg:px-80 mx-7 lg:mx-0 bg-[#15141a]">
+      <div className=" lg:px-80  lg:mx-0 bg-[#15141a]">
         <div className=" text-white pt-16 ">
           <div className="flex place-items-center place-content-center gap-x-1 ">
             <span className="text-xs font-bold">&lt;h2&gt; </span>
@@ -105,7 +105,7 @@ export default function Works({ translate }: { translate: Function }) {
         </p>
         <Swiper
           // spaceBetween={10}
-          slidesPerView={1.2}
+          slidesPerView={1.3}
           centeredSlides={true}
           loop={true}
           grabCursor={true}

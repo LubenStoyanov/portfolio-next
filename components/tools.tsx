@@ -3,8 +3,8 @@ import MarqueeDesktop from "./marqueeDesktop";
 
 export default function Tools({ translate }: { translate: Function }) {
   return (
-    <section className="pt-16 mx-7 lg:mx-0 lg:pt-32 ">
-      <div className=" ">
+    <section className="pt-16 lg:pt-32 ">
+      <div className="lg:mx-7 lg:px-80 ">
         <div className="flex place-items-center place-content-center gap-x-1 ">
           <span className="text-xs font-bold">&lt;h2&gt; </span>
           <span className="border-t-2 w-20 lg:w-96 border-black"></span>
