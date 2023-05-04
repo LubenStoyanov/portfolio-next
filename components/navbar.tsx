@@ -20,7 +20,7 @@ export default function Navbar({ translate }: { translate: Function }) {
 
   return (
     <>
-      <nav className="hidden lg:flex justify-between lg:pt-10 lg:px-16 text-lg font-semibold border-t-2 ">
+      <nav className="hidden lg:flex justify-between lg:py-5 lg:px-16 text-lg font-semibold lg:border-b-[1px] lg:border-black lg:mx-7">
         <a
           onClick={scrollToTop}
           className="  hover:text-black hover:underline underline-offset-2 cursor-pointer "
