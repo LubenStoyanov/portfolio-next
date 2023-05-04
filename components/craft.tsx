@@ -1,15 +1,11 @@
-import { useState, useEffect } from "react";
+import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow } from "swiper";
 import { SiGithub } from "react-icons/si";
 
 import "swiper/css";
 import "swiper/css/effect-cards";
-import styled from "styled-components";
-
-function getWindowSize() {
-  const { innerWidth, innerHeight } = window;
-  return { innerWidth, innerHeight };
-}
+import "swiper/css/effect-coverflow";
 
 const ViewSiteButton = styled.button`
   font-size: 14px;
@@ -25,6 +21,9 @@ const CardWrapper = styled.div`
   display: flex;
   height: 500px;
   border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  justify-content: space-between;
 
   box-shadow: rgba(21, 20, 26, 0.1) 0px 30px 60px -12px,
     rgba(21, 20, 26, 0.2) 0px 18px 36px -18px;
@@ -32,39 +31,24 @@ const CardWrapper = styled.div`
   @media (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     height: 560px;
   }
 `;
 
 const CardColor = styled.div`
   background-color: ${(props) => props.color};
-  width: 100%;
-  border-radius: 0 25px 25px 0;
+  width: 40%;
+  border-radius: 25px 0 25px 0;
+  margin-top: 40px;
 
   @media (max-width: 1024px) {
     border-radius: 0 0 25px 25px;
     height: 200px;
+    width: 100%;
   }
 `;
 
 export default function Works({ translate }: { translate: Function }) {
-  const [windowSize, setWindowSize] = useState(getWindowSize());
-
-  useEffect(() => {
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
-  const slidesPerView = windowSize.innerWidth > 1024 ? 2 : 1;
-
   return (
     <section id="works" className="flex flex-col">
       <div className=" lg:px-80 lg:mx-7  bg-[#15141a]">
@@ -114,26 +98,39 @@ export default function Works({ translate }: { translate: Function }) {
         </div>
       </div>
 
-      <div style={{ zIndex: 100 }} className="pt-16 text-black ">
+      <div style={{ zIndex: 100 }} className="pt-16 text-black">
         <h2 className=" text-lg lg:text text-center ">Works</h2>
-        <p className="font-[500] text-center text-2xl lg:text-4xl">
+        <p className="font-[500] text-center text-2xl lg:text-4xl lg:pb-16">
           Some of the good stuff
         </p>
         <Swiper
-          // spaceBetween={-5}
-          slidesPerView={windowSize.innerWidth > 1024 ? 2 : 1}
+          // spaceBetween={10}
+          slidesPerView={1.2}
           centeredSlides={true}
           loop={true}
-          effect="cards"
           grabCursor={true}
+          breakpoints={{
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
+          }}
+          effect="coverflow"
+          coverflowEffect={{
+            modifier: 1,
+            slideShadows: false,
+          }}
+          modules={[EffectCoverflow]}
           className="mySwiper"
         >
-          <SwiperSlide className="card-shadow bg-white rounded-[25px] ">
+          <SwiperSlide className="card-shadow ">
             <CardWrapper>
-              <div className="flex flex-col  items-center">
-                <div>
-                  <h3 className="text-center pt-8">Speech Blender</h3>
-                  <p className="px-5 py-2 text-base font-[500]">
+              <div className="flex flex-col items-center lg:items-start lg:max-w-[40ch] lg:pl-12 lg:pt-20">
+                <div className="flex flex-col items-center lg:items-start">
+                  <h3 className="lg:text-4xl lg:font-[500] text-center pt-8">
+                    Speech Blender
+                  </h3>
+                  <p className="px-5 lg:px-0 py-2 text-base font-[500] lg:text-gray-500 ">
                     A web app for blending multiple audio recordings into a
                     cohesive file, with features for adjusting timing, volume,
                     effects, and more. Perfect for podcasters, language
@@ -156,12 +153,14 @@ export default function Works({ translate }: { translate: Function }) {
               <CardColor color="#262228" />
             </CardWrapper>
           </SwiperSlide>
-          <SwiperSlide className="card-shadow bg-white rounded-[25px]">
+          <SwiperSlide className="card-shadow ">
             <CardWrapper>
-              <div className="flex flex-col items-center">
-                <div>
-                  <h3 className="text-center pt-8">The Fine Art</h3>
-                  <p className="px-5 py-2 text-base font-[500]">
+              <div className="flex flex-col items-center lg:max-w-[40ch] lg:pl-12 lg:pt-20">
+                <div className="flex flex-col items-center lg:items-start">
+                  <h3 className="lg:text-4xl lg:font-[500] text-center pt-8">
+                    The Fine Art
+                  </h3>
+                  <p className="px-5 lg:px-0 py-2 text-base font-[500] lg:text-gray-500 ">
                     Discover inspiring works of art from around the world on the
                     Fine Art Website. Featuring music, visual art, and books,
                     this platform is a go-to destination for art enthusiasts and
@@ -184,12 +183,14 @@ export default function Works({ translate }: { translate: Function }) {
               <CardColor color="#007849" />
             </CardWrapper>
           </SwiperSlide>
-          <SwiperSlide className="card-shadow bg-white rounded-[25px]">
+          <SwiperSlide className="card-shadow">
             <CardWrapper>
-              <div className="flex flex-col items-center">
-                <div>
-                  <h3 className="text-center pt-8">Drum Kit</h3>
-                  <p className="px-5 py-2 text-base font-[500]">
+              <div className="flex flex-col items-center lg:max-w-[40ch] lg:pl-12 lg:pt-20">
+                <div className="flex flex-col items-center lg:items-start">
+                  <h3 className="lg:text-4xl lg:font-[500] text-center pt-8">
+                    Drum Kit
+                  </h3>
+                  <p className="px-5 lg:px-0 py-2 text-base font-[500] lg:text-gray-500 ">
                     The Drum Kit web app is an interactive tool that lets users
                     play virtual drums with a computer keyboard or by clicking
                     on the screen. It&apos;s easy to use and features a variety
@@ -212,12 +213,14 @@ export default function Works({ translate }: { translate: Function }) {
               <CardColor color="#0375b4" />
             </CardWrapper>
           </SwiperSlide>
-          <SwiperSlide className="card-shadow bg-white rounded-[25px]">
+          <SwiperSlide className="card-shadow">
             <CardWrapper>
-              <div className="flex flex-col items-center">
-                <div>
-                  <h3 className="text-center pt-8">Pokèfight</h3>
-                  <p className="px-5 py-2 text-base font-[500]">
+              <div className="flex flex-col items-center lg:max-w-[40ch] lg:pl-12 lg:pt-20">
+                <div className="flex flex-col items-center lg:items-start">
+                  <h3 className="lg:text-4xl lg:font-[500] text-center pt-8">
+                    Pokèfight
+                  </h3>
+                  <p className="px-5 lg:px-0 py-2 text-base font-[500] lg:text-gray-500 ">
                     Pokéfight is a fun web-based card game featuring Pokémon
                     characters and fight animations. Battling your opponents
                     confronts you with different pokémons. With leaderboards you
