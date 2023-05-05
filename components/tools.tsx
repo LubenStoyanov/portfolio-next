@@ -1,7 +1,21 @@
+import { useState, useEffect } from "react";
 import MarqueeMobile from "./marqueeMobile";
 import MarqueeDesktop from "./marqueeDesktop";
 
 export default function Tools({ translate }: { translate: Function }) {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    handleWindowResize();
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => window.removeEventListener("resize", handleWindowResize);
+  });
+
   return (
     <section className="pt-16 lg:pt-32 ">
       <div className="">
@@ -18,8 +32,7 @@ export default function Tools({ translate }: { translate: Function }) {
           <p className="text-center text-xl lg:text-3xl font-[500] pb-16">
             What I use to do the work
           </p>
-          <MarqueeMobile />
-          <MarqueeDesktop />
+          {windowWidth < 1024 ? <MarqueeMobile /> : <MarqueeDesktop />}
         </div>
       </div>
     </section>

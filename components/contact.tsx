@@ -55,9 +55,6 @@ export default function Contact({ translate }: { translate: Function }) {
             </a>
           </button>
         </div>
-        {/* <p className="text-left text-base text-white font-bold mt-10">
-          {translate("contact.connect")}
-        </p> */}
       </div>
     </section>
   );

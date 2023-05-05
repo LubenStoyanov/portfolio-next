@@ -16,11 +16,6 @@ export default function Hero({ translate }: { translate: Function }) {
   return (
     <section className="min-h-[240px] text-5xl pb-16 lg:min-h-[100vh] pt-6 mx-7 lg:px-48">
       <div className="min-h-[240px] lg:min-h-[500px] lg:px-48 lg:pt-36">
-        {/* <small className="hidden lg:block">
-          &lt;-- Desktop version is work in progress. Check out the mobile
-          version instead. <br />
-          Thank you for visiting my website. --&gt;
-        </small> */}
         <div className="lg:min-h-[300px]">
           <span className="text-xs lg:text-xs font-semibold">&lt;h1&gt;</span>
           <span className="lg:text-7xl">

@@ -51,7 +51,6 @@ const CardColor = styled.div`
 export default function SwiperComponent() {
   return (
     <Swiper
-      // spaceBetween={10}
       slidesPerView={1.3}
       centeredSlides={true}
       loop={true}

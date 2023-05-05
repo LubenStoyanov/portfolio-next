@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 export default function Profile({ translate }: { translate: Function }) {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.5,
   });
 
@@ -18,7 +18,6 @@ export default function Profile({ translate }: { translate: Function }) {
       id="about"
       className="flex flex-col py-16 mx-7 lg:px-80 "
     >
-      {/* <div className="lg:px-48"> */}
       <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-xs font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-20 lg:w-96 border-black"></span>
@@ -59,11 +58,9 @@ export default function Profile({ translate }: { translate: Function }) {
             src={profileImage}
             alt="Profile picture of Luben Stoyanov"
             className="w-64 h-64 lg:w-64 lg:h-64 object-cover rounded-2xl grayscale "
-            // style={{ zIndex: -999 }}
           />
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 }

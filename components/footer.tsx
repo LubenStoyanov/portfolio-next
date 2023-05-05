@@ -3,7 +3,6 @@ import * as Scroll from "react-scroll";
 import { SlArrowUpCircle } from "react-icons/sl";
 import styled, { css, keyframes } from "styled-components";
 import { useEffect, useState } from "react";
-import { slidein, slideout } from "./keyframes/footer";
 
 const YEAR = new Date().getFullYear();
 const scrollToTop = () => Scroll.animateScroll.scrollToTop();
@@ -50,6 +49,31 @@ const Attribution = styled.div`
 
   & > small > time {
     margin-right: 4px;
+  }
+`;
+
+const slidein = keyframes`
+  from {
+    opacity: 0;
+    bottom: -100px;
+    transform: translateY(100%);
+  }
+
+  to {
+    bottom: 24px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+const slideout = keyframes`
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100%);
   }
 `;
 
