@@ -4,20 +4,8 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 export default function Profile({ translate }: { translate: Function }) {
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (inView) return;
-  }, []);
-
   return (
-    <section
-      ref={ref}
-      id="about"
-      className="flex flex-col py-16 mx-7 lg:px-80 "
-    >
+    <section id="about" className="flex flex-col py-16 mx-7 lg:px-80 ">
       <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-xs font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-20 lg:w-96 border-black"></span>

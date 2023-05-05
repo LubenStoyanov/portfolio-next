@@ -9,7 +9,6 @@ import Tools from "@/components/tools";
 import Head from "next/head";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Loader from "../components/loader";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
