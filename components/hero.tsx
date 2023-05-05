@@ -11,19 +11,11 @@ const Button = styled.button`
 `;
 
 export default function Hero({ translate }: { translate: Function }) {
-  const hero: string = translate("hero.title");
-
   return (
     <section className="min-h-[240px] text-5xl pb-16 lg:min-h-[100vh] pt-6 mx-7 lg:px-48">
       <div className="min-h-[240px] lg:min-h-[500px] lg:px-48 lg:pt-36">
-        <div className="lg:min-h-[300px]">
-          <span className="text-xs lg:text-xs font-semibold">&lt;h1&gt;</span>
-          <span className="lg:text-7xl">
-            <TypewriterComponent hero={hero} />
-          </span>
-          <span className="text-xs lg:text-xs font-semibold relative bottom-6">
-            &lt;/h1&gt;
-          </span>
+        <div className="lg:min-h-[300px] flex">
+          <TypewriterComponent translate={translate} />
         </div>
         <p className="text-lg pt-5 pb-8 lg:w-[40ch]">
           <span className="text-xs font-semibold relative bottom-[2px]">

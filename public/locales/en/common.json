@@ -5,7 +5,13 @@
   "contactNavLink": "Contact",
 
   "hero": {
-    "title": "I'm<b class='text-[#EF6706]'> Luben</b>, <br/> a <b class='text-[#EF6706]'>web developer</b>.",
+    "title": {
+      "greetings": "Welcome Traveler",
+      "1": "I'm ",
+      "luben": "Luben",
+      "2": " a ",
+      "webDeveloper": "Web Developer."
+    },
     "1": "It fills me with ",
     "joy": "joy",
     "2": " building websites that flourish with ",
