@@ -1,4 +1,4 @@
-// import TypewriterComponent from "./Typewriter";
+import TypewriterComponent from "./Typewriter";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -19,7 +19,7 @@ export default function Hero({ translate }: { translate: Function }) {
         <div className="lg:min-h-[300px]">
           <span className="text-xs lg:text-xs font-semibold">&lt;h1&gt;</span>
           <span className="lg:text-7xl">
-            {/* <TypewriterComponent hero={hero} /> */}
+            <TypewriterComponent hero={hero} />
           </span>
           <span className="text-xs lg:text-xs font-semibold relative bottom-6">
             &lt;/h1&gt;
