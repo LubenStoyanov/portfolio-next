@@ -1,4 +1,4 @@
-import TypewriterComponent from "./Typewriter";
+// import TypewriterComponent from "./Typewriter";
 import styled from "styled-components";
 
 const Button = styled.button`
