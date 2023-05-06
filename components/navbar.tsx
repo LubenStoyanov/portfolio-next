@@ -16,6 +16,7 @@ export default function Navbar({ translate }: { translate: Function }) {
     <>
       <nav className="hidden lg:flex justify-between lg:py-5 lg:px-16 text-lg font-semibold lg:border-b-[1px] lg:border-black lg:mx-7">
         <a
+          href=""
           onClick={scrollToTop}
           className="  hover:text-black hover:underline underline-offset-2 cursor-pointer "
         >
@@ -56,6 +57,7 @@ export default function Navbar({ translate }: { translate: Function }) {
             </Scroll.Link>
           </li>
           <button
+            aria-label="Toggle Language"
             onClick={toggleLanguage}
             className="text-sm hover:text-black hover:underline underline-offset-2 "
           >
@@ -68,6 +70,7 @@ export default function Navbar({ translate }: { translate: Function }) {
           <li></li>
           <li className="justify-self-end">
             <button
+              aria-label="Toggle Language"
               onClick={toggleLanguage}
               className="text-center underline underline-offset-2"
             >

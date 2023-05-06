@@ -47,7 +47,7 @@ const Button = styled.button`
   accent-color: black;
 
   &&:hover {
-    border-color: #ef6706;
+    border-color: #ef6804;
   }
 `;
 
@@ -92,7 +92,7 @@ export default function Hero({ translate }: { translate: Function }) {
   return (
     <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 lg:px-48">
       <div className="lg:px-48 lg:pt-36">
-        <div className="flex mt-10">
+        <div className="flex mt-10 max-w-[40ch]">
           <WindupChildren onFinished={() => setDisplay(true)}>
             <div className="lg:text-7xl">
               <Pace ms={100}>
@@ -118,15 +118,15 @@ export default function Hero({ translate }: { translate: Function }) {
               &lt;p&gt;
             </span>{" "}
             {translate("hero.1")}
-            <span className="text-[#EF6706] font-bold">
+            <span className="text-[#c94900] font-bold">
               {translate("hero.joy")}
             </span>
             {translate("hero.2")}
-            <span className="text-[#EF6706] font-bold">
+            <span className="text-[#c94900] font-bold">
               {translate("hero.great")}
             </span>
             {translate("hero.3")}
-            <span className="text-[#EF6706] font-bold ">
+            <span className="text-[#c94900] font-bold ">
               {translate("hero.meaning")}
             </span>
             {translate("hero.4")}{" "}

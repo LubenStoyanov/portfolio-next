@@ -22,19 +22,19 @@ export default function Profile({ translate }: { translate: Function }) {
               &lt;p&gt;
             </span>{" "}
             {translate("about.1")}
-            <b className="text-[#EF6706]">{translate("about.enthusiastic")}</b>
+            <b className="text-[#c94900]">{translate("about.enthusiastic")}</b>
             {translate("about.2")}
-            <b className="text-[#EF6706]">{translate("about.craft")}</b>
+            <b className="text-[#c94900]">{translate("about.craft")}</b>
             {translate("about.3")}
-            <b className="text-[#EF6706]">{translate("about.grow")}</b>
+            <b className="text-[#c94900]">{translate("about.grow")}</b>
             {translate("about.4")}
-            <b className="text-[#EF6706]">{translate("about.mindset")}</b>
+            <b className="text-[#c94900]">{translate("about.mindset")}</b>
             {translate("about.5")}
-            <b className="text-[#EF6706]">{translate("about.creative")}</b>
+            <b className="text-[#c94900]">{translate("about.creative")}</b>
             {translate("about.6")}
-            <b className="text-[#EF6706]">{translate("about.effective")}</b>
+            <b className="text-[#c94900]">{translate("about.effective")}</b>
             {translate("about.7")}
-            <b className="text-[#EF6706]">{translate("about.joy")}</b>
+            <b className="text-[#c94900]">{translate("about.joy")}</b>
             {translate("about.8")}{" "}
             <span className="text-xs font-semibold relative bottom-[2px]">
               &lt;/p&gt;

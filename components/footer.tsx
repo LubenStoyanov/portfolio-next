@@ -21,7 +21,7 @@ const FooterContainer = styled.footer`
   color: white;
 `;
 
-const LinkList = styled.ul`
+const LinkList = styled.div`
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -121,11 +121,11 @@ export default function Footer() {
           >
             <StyledLink target="_blank">LinkedIn</StyledLink>
           </Link>
-          <span>/</span>
+          /
           <Link legacyBehavior href="https://github.com/LubenStoyanov">
             <StyledLink target="_blank">GitHub</StyledLink>
           </Link>
-          <span>/</span>
+          /
           <Link legacyBehavior href="https://www.twitter.com/luben_stoyanov">
             <StyledLink target="_blank">Twitter</StyledLink>
           </Link>
@@ -147,7 +147,11 @@ export default function Footer() {
           <time>{YEAR}</time> © Luben Stoyanov.
         </small>
       </Attribution>
-      <ScrollToTopButton onClick={scrollToTop} visible={visible}>
+      <ScrollToTopButton
+        aria-label="Scroll to homepage"
+        onClick={scrollToTop}
+        visible={visible}
+      >
         <SlArrowUpCircle />
       </ScrollToTopButton>
     </FooterContainer>

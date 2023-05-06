@@ -37,7 +37,7 @@ export default function Contact({ translate }: { translate: Function }) {
               &lt;/p&gt;
             </span>
           </p>
-          <button className="max-w-fit font-bold mt-10">
+          <button aria-label="Email" className="max-w-fit font-bold mt-10">
             <a
               href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry"
               className="no-underline"

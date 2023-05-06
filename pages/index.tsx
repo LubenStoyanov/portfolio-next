@@ -39,8 +39,7 @@ export default function Home() {
       <div className="relative ">
         <Header translate={translate} />
         <main
-          className={`flex flex-col text-lg lg:w[75ch] text bg-[#F9FAFE]`}
-          style={{ color: "#0D0E13" }}
+          className={`flex flex-col text-lg lg:w[75ch] text-[#0D0E13] bg-[#F9FAFE]`}
         >
           <Hero translate={translate} />
           <Profile translate={translate} />
