@@ -50,9 +50,9 @@ export default function Works({ translate }: { translate: Function }) {
         </div>
       </div>
 
-      <div style={{ zIndex: 100 }} className="pt-16 text-black">
+      <div style={{ zIndex: 100 }} className="py-16 text-black">
         <h2 className=" text-lg md:text text-center ">Works</h2>
-        <p className="font-[500] text-center text-2xl md:text-4xl md:pb-16">
+        <p className="font-[500] text-center text-2xl md:text-4xl pb-16">
           Some of the good stuff
         </p>
         <SwiperComponent />

@@ -94,7 +94,7 @@ export default function Hero({ translate }: { translate: Function }) {
           fontStyle={`${windowWidth < 900 ? 36 : 72}px Inter`}
           width={windowWidth < 900 ? 390 : 900}
         >
-          <div className="md:text-7xl">
+          <div className="font-[500] md:text-7xl">
             <WindupChildren
               key={greetings}
               onFinished={() => setShowInfo(true)}
