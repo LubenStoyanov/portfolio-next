@@ -14,7 +14,7 @@ export default function Navbar({ translate }: { translate: Function }) {
 
   return (
     <>
-      <nav className="hidden lg:flex justify-between lg:py-5 lg:px-16 text-lg font-semibold lg:border-b-[1px] lg:border-black lg:mx-7">
+      <nav className="hidden md:flex justify-between md:py-5 md:px-16 text-lg font-semibold md:border-b-[1px] md:border-black md:mx-7">
         <a
           href=""
           onClick={scrollToTop}
@@ -65,7 +65,7 @@ export default function Navbar({ translate }: { translate: Function }) {
           </button>
         </ul>
       </nav>
-      <nav className="lg:hidden mx-7">
+      <nav className="md:hidden mx-7">
         <ul className="flex justify-between text-sm pt-4">
           <li></li>
           <li className="justify-self-end">

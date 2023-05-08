@@ -71,12 +71,12 @@ export default function SwiperComponent() {
     >
       <SwiperSlide className="card-shadow ">
         <CardWrapper>
-          <div className="flex flex-col items-center lg:items-start lg:max-w-[40ch] lg:pl-12 lg:pt-20">
-            <div className="flex flex-col items-center lg:items-start">
-              <h3 className="lg:text-4xl lg:font-[500] text-center pt-8">
+          <div className="flex flex-col items-center md:items-start md:max-w-[40ch] md:pl-12 md:pt-20">
+            <div className="flex flex-col items-center md:items-start">
+              <h3 className="md:text-4xl md:font-[500] text-center pt-8">
                 Speech Blender
               </h3>
-              <p className="px-5 lg:px-0 py-2 text-base font-[500] lg:text-gray-500 ">
+              <p className="px-5 md:px-0 py-2 text-base font-[500] md:text-gray-500 ">
                 A web app for blending multiple audio recordings into a cohesive
                 file, with features for adjusting timing, volume, effects, and
                 more. Perfect for podcasters, language learners, and content
@@ -101,12 +101,12 @@ export default function SwiperComponent() {
       </SwiperSlide>
       <SwiperSlide className="card-shadow ">
         <CardWrapper>
-          <div className="flex flex-col items-center lg:max-w-[40ch] lg:pl-12 lg:pt-20">
-            <div className="flex flex-col items-center lg:items-start">
-              <h3 className="lg:text-4xl lg:font-[500] text-center pt-8">
+          <div className="flex flex-col items-center md:max-w-[40ch] md:pl-12 md:pt-20">
+            <div className="flex flex-col items-center md:items-start">
+              <h3 className="md:text-4xl md:font-[500] text-center pt-8">
                 The Fine Art
               </h3>
-              <p className="px-5 lg:px-0 py-2 text-base font-[500] lg:text-gray-500 ">
+              <p className="px-5 md:px-0 py-2 text-base font-[500] md:text-gray-500 ">
                 Discover inspiring works of art from around the world on the
                 Fine Art Website. Featuring music, visual art, and books, this
                 platform is a go-to destination for art enthusiasts and
@@ -131,12 +131,12 @@ export default function SwiperComponent() {
       </SwiperSlide>
       <SwiperSlide className="card-shadow">
         <CardWrapper>
-          <div className="flex flex-col items-center lg:max-w-[40ch] lg:pl-12 lg:pt-20">
-            <div className="flex flex-col items-center lg:items-start">
-              <h3 className="lg:text-4xl lg:font-[500] text-center pt-8">
+          <div className="flex flex-col items-center md:max-w-[40ch] md:pl-12 md:pt-20">
+            <div className="flex flex-col items-center md:items-start">
+              <h3 className="md:text-4xl md:font-[500] text-center pt-8">
                 Drum Kit
               </h3>
-              <p className="px-5 lg:px-0 py-2 text-base font-[500] lg:text-gray-500 ">
+              <p className="px-5 md:px-0 py-2 text-base font-[500] md:text-gray-500 ">
                 The Drum Kit web app is an interactive tool that lets users play
                 virtual drums with a computer keyboard or by clicking on the
                 screen. It&apos;s easy to use and features a variety of drum
@@ -161,12 +161,12 @@ export default function SwiperComponent() {
       </SwiperSlide>
       <SwiperSlide className="card-shadow">
         <CardWrapper>
-          <div className="flex flex-col items-center lg:max-w-[40ch] lg:pl-12 lg:pt-20">
-            <div className="flex flex-col items-center lg:items-start">
-              <h3 className="lg:text-4xl lg:font-[500] text-center pt-8">
+          <div className="flex flex-col items-center md:max-w-[40ch] md:pl-12 md:pt-20">
+            <div className="flex flex-col items-center md:items-start">
+              <h3 className="md:text-4xl md:font-[500] text-center pt-8">
                 Pokèfight
               </h3>
-              <p className="px-5 lg:px-0 py-2 text-base font-[500] lg:text-gray-500 ">
+              <p className="px-5 md:px-0 py-2 text-base font-[500] md:text-gray-500 ">
                 Pokéfight is a fun web-based card game featuring Pokémon
                 characters and fight animations. Battling your opponents
                 confronts you with different pokémons. With leaderboards you can

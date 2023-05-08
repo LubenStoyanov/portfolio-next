@@ -3,20 +3,20 @@ import SwiperComponent from "./swiper";
 export default function Works({ translate }: { translate: Function }) {
   return (
     <section id="works" className="flex flex-col">
-      <div className=" lg:px-80  lg:mx-0 bg-[#15141a]">
+      <div className=" md:px-80  md:mx-0 bg-[#15141a]">
         <div className=" text-white pt-16 ">
           <div className="flex place-items-center place-content-center gap-x-1 ">
             <span className="text-xs font-bold ml-7">&lt;h2&gt; </span>
-            <span className="border-t-2 w-[100%] lg:w-96 border-white"></span>
-            <h2 className="font-bold lg:text-5xl text-3xl text-center">
+            <span className="border-t-2 w-[100%] md:w-96 border-white"></span>
+            <h2 className="font-bold md:text-5xl text-3xl text-center">
               {translate("craft.title")}
             </h2>
-            <span className="border-t-2 w-[100%] lg:w-96 border-white"></span>
+            <span className="border-t-2 w-[100%] md:w-96 border-white"></span>
             <span className="text-xs font-bold mr-7">&lt;h2/&gt;</span>
           </div>
-          <div className="lg:flex justify-center gap-x-5 pt-10">
+          <div className="md:flex justify-center gap-x-5 pt-10">
             <div className="mx-7 pb-16">
-              <p className="  lg:max-w-[60ch] ">
+              <p className="  md:max-w-[60ch] ">
                 <span className="text-xs font-semibold relative bottom-[2px]">
                   &lt;p&gt;
                 </span>{" "}
@@ -51,8 +51,8 @@ export default function Works({ translate }: { translate: Function }) {
       </div>
 
       <div style={{ zIndex: 100 }} className="pt-16 text-black">
-        <h2 className=" text-lg lg:text text-center ">Works</h2>
-        <p className="font-[500] text-center text-2xl lg:text-4xl lg:pb-16">
+        <h2 className=" text-lg md:text text-center ">Works</h2>
+        <p className="font-[500] text-center text-2xl md:text-4xl md:pb-16">
           Some of the good stuff
         </p>
         <SwiperComponent />

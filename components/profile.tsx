@@ -5,17 +5,17 @@ import { useEffect } from "react";
 
 export default function Profile({ translate }: { translate: Function }) {
   return (
-    <section id="about" className="flex flex-col py-16 mx-7 lg:px-80 ">
+    <section id="about" className="flex flex-col py-16 mx-7 md:px-80 ">
       <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-xs font-bold">&lt;h2&gt; </span>
-        <span className="border-t-2 w-20 lg:w-96 border-black"></span>
-        <h2 className="font-bold lg:text-5xl text-3xl text-center">
+        <span className="border-t-2 w-20 md:w-96 border-black"></span>
+        <h2 className="font-bold md:text-5xl text-3xl text-center">
           {translate("about.title")}
         </h2>
-        <span className="border-t-2 w-20 lg:w-96 border-black"></span>
+        <span className="border-t-2 w-20 md:w-96 border-black"></span>
         <span className="text-xs font-bold">&lt;h2/&gt;</span>
       </div>
-      <div className="flex flex-col lg:flex-row lg:justify-center pt-10">
+      <div className="flex flex-col md:flex-row md:justify-center pt-10">
         <div>
           <p className=" max-w-[40ch]">
             <span className="text-xs font-semibold relative bottom-[2px]">
@@ -41,11 +41,11 @@ export default function Profile({ translate }: { translate: Function }) {
             </span>
           </p>
         </div>
-        <div className="flex flex-col items-center mt-10 lg:mt-0">
+        <div className="flex flex-col items-center mt-10 md:mt-0">
           <Image
             src={profileImage}
             alt="Profile picture of Luben Stoyanov"
-            className="w-64 h-64 lg:w-64 lg:h-64 object-cover rounded-2xl grayscale "
+            className="w-64 h-64 md:w-64 md:h-64 object-cover rounded-2xl grayscale "
           />
         </div>
       </div>

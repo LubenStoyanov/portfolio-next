@@ -30,7 +30,7 @@ const TechItem = styled.div`
 
 export default function MarqueeDesktop() {
   return (
-    <div className="hidden lg:block">
+    <div className="hidden md:block">
       <Marquee autoFill={true} className="select-none py-12">
         <TechItem className="card-shadow rounded-md ">
           <div className=" flex justify-center">
@@ -74,25 +74,25 @@ export default function MarqueeDesktop() {
           </div>
           <small className="text-sm">Next.js</small>
         </TechItem>
-        <TechItem className="hidden lg:block card-shadow rounded-md">
+        <TechItem className="hidden md:block card-shadow rounded-md">
           <div className=" flex justify-center">
             <Image className="" src={node} alt="nodejs logo" />
           </div>
           <small className="text-sm">Node.js</small>
         </TechItem>
-        <TechItem className="hidden lg:block card-shadow rounded-md">
+        <TechItem className="hidden md:block card-shadow rounded-md">
           <div className=" flex justify-center">
             <Image className="" src={mongodb} alt="mongodb logo" />
           </div>
           <small className="text-sm">MongoDB</small>
         </TechItem>
-        <TechItem className="hidden lg:block card-shadow rounded-md">
+        <TechItem className="hidden md:block card-shadow rounded-md">
           <div className=" flex justify-center">
             <Image className="" src={postgresql} alt="postgresql logo" />
           </div>
           <small className="text-sm">Postgresql</small>
         </TechItem>
-        <TechItem className="hidden lg:block card-shadow rounded-md">
+        <TechItem className="hidden md:block card-shadow rounded-md">
           <div className=" flex justify-center">
             <Image className="" src={git} alt="git logo" />
           </div>

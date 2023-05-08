@@ -1,12 +1,17 @@
+import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { WindupChildren, CharWrapper, Pace } from "windups";
+import { HiOutlineArrowNarrowDown } from "react-icons/hi";
+const LineBreaker = dynamic(() => import("./LineBreaker"), {
+  ssr: false,
+});
 
-interface Paragraph {
-  display: boolean;
+interface InfoI {
+  showInfo: boolean;
 }
 
-interface ScrollDown {
+interface ScrollDownI {
   visible: boolean;
 }
 
@@ -42,6 +47,8 @@ const BoldWords = styled.span`
   animation-iteration-count: 1;
 `;
 
+const normalSpan = styled.span``;
+
 const Button = styled.button`
   transition: 0.3s ease-in-out 100ms;
   accent-color: black;
@@ -51,23 +58,27 @@ const Button = styled.button`
   }
 `;
 
-const Info = styled.div<Paragraph>`
-  display: ${(props) => (props.display ? "block" : "none")};
+const Info = styled.div<InfoI>`
+  display: ${({ showInfo }) => (showInfo ? "block" : "none")};
   animation-name: ${fadeIn};
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
 `;
 
-const ScrollDown = styled.div<ScrollDown>`
-  animation-name: ${pulse};
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
+const ScrollDown = styled.div<ScrollDownI>`
+  letter-spacing: 0em;
+  visibility: ${({ visible }) => (visible ? "visible" : "hidden")};
 `;
 
 export default function Hero({ translate }: { translate: Function }) {
-  const [display, setDisplay] = useState(false);
-  const [visible, setVisible] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [showInfo, setShowInfo] = useState<boolean>(false);
+  const [visible, setVisible] = useState<boolean>(true);
+  const greetings: string = translate("hero.title.greetings");
+  const one: string = translate("hero.title.1");
+  const luben: string = translate("hero.title.luben");
+  const two: string = translate("hero.title.2");
+  const webDeveloper: string = translate("hero.title.webDeveloper");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,75 +89,89 @@ export default function Hero({ translate }: { translate: Function }) {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      setWindowWidth(window.innerWidth);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const greetings: string = translate("hero.title.greetings");
-  const one: string = translate("hero.title.1");
-  const luben: string = translate("hero.title.luben");
-  const two: string = translate("hero.title.2");
-  const webDeveloper: string = translate("hero.title.webDeveloper");
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [greetings]);
 
   return (
-    <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 lg:px-48">
-      <div className="lg:px-48 lg:pt-36">
-        <div className="flex mt-10 max-w-[40ch]">
-          <WindupChildren onFinished={() => setDisplay(true)}>
-            <div className="lg:text-7xl">
+    <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 md:pt-24 lg:px-80">
+      <div className="flex mt-10 max-w-[40ch]">
+        <LineBreaker
+          fontStyle={`${windowWidth < 900 ? 36 : 72}px Inter`}
+          width={windowWidth < 900 ? 390 : 900}
+        >
+          <div className="md:text-7xl">
+            <WindupChildren
+              key={greetings}
+              onFinished={() => setShowInfo(true)}
+            >
               <Pace ms={100}>
-                <span className="text-xs lg:text-sm font-semibold  relative bottom-2 lg:bottom-4">
+                <span className="text-xs md:text-sm font-semibold relative bottom-2">
                   &lt;h1&gt;
-                </span>{" "}
-                {greetings}, {one}
-                <CharWrapper element={BoldWords}>{luben}</CharWrapper>
-                {two}
-                <CharWrapper element={BoldWords}>
-                  {webDeveloper}
-                </CharWrapper>{" "}
-                <span className="text-xs text-[#0D0E13] lg:text-sm font-semibold relative bottom-2 lg:bottom-4">
-                  &lt;/h1&gt;
                 </span>
+                <br className="p-0 m-0" />
+                <CharWrapper element={normalSpan}>{greetings},</CharWrapper>
+                <br className="p-0 m-0" />
+                <div className="flex mb-0">
+                  <CharWrapper element={normalSpan}>{one}</CharWrapper>
+                  <CharWrapper element={BoldWords}>{luben}</CharWrapper>
+                </div>
+                <CharWrapper element={normalSpan}>{two}</CharWrapper>
+                <CharWrapper element={BoldWords}>{webDeveloper}</CharWrapper>
+                <div className="text-xs text-[#0D0E13] md:text-sm font-semibold relative top-1 md:top-4">
+                  &lt;/h1&gt;
+                </div>
               </Pace>
-            </div>
-          </WindupChildren>
-        </div>
-        <Info display={display} className="mt-20">
-          <p className="text-lg pt-5 pb-8 lg:w-[40ch]">
-            <span className="text-xs font-semibold relative bottom-[2px]">
-              &lt;p&gt;
-            </span>{" "}
-            {translate("hero.1")}
-            <span className="text-[#c94900] font-bold">
-              {translate("hero.joy")}
-            </span>
-            {translate("hero.2")}
-            <span className="text-[#c94900] font-bold">
-              {translate("hero.great")}
-            </span>
-            {translate("hero.3")}
-            <span className="text-[#c94900] font-bold ">
-              {translate("hero.meaning")}
-            </span>
-            {translate("hero.4")}{" "}
-            <span className="text-xs font-semibold relative bottom-[2px]">
-              &lt;/p&gt;
-            </span>
-          </p>
-          <Button className="text-sm font-semibold border-2 lg:border-[3px] border-black max-w-fit rounded-3xl px-5 py-3 lg:px-10 lg:py-4">
-            <a href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry">
-              {translate("hero.cat-button")}
-            </a>
-          </Button>
-          <ScrollDown
-            visible={visible}
-            className="absolute bottom-6 lg:bottom-12 right-0 text-sm animate-pulse"
-          >
-            Scroll Down
-          </ScrollDown>
-        </Info>
+            </WindupChildren>
+          </div>
+        </LineBreaker>
       </div>
+      <Info showInfo={showInfo} className="mt-20">
+        <p className="text-lg pt-5 pb-8 md:w-[40ch]">
+          <span className="text-xs font-semibold relative bottom-[2px]">
+            &lt;p&gt;
+          </span>{" "}
+          {translate("hero.1")}
+          <span className="text-[#c94900] font-bold">
+            {translate("hero.joy")}
+          </span>
+          {translate("hero.2")}
+          <span className="text-[#c94900] font-bold">
+            {translate("hero.great")}
+          </span>
+          {translate("hero.3")}
+          <span className="text-[#c94900] font-bold ">
+            {translate("hero.meaning")}
+          </span>
+          {translate("hero.4")}{" "}
+          <span className="text-xs font-semibold relative bottom-[2px]">
+            &lt;/p&gt;
+          </span>
+        </p>
+        <Button className="text-sm font-semibold border-2 md:border-[3px] border-black max-w-fit rounded-3xl px-5 py-3 md:px-10 md:py-4">
+          <a href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry">
+            {translate("hero.cat-button")}
+          </a>
+        </Button>
+      </Info>
+      <ScrollDown
+        visible={visible}
+        className="absolute bottom-1 md:bottom-8 -right-5 md:right-0 text-sm animate-bounce"
+      >
+        <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
+        <HiOutlineArrowNarrowDown />
+      </ScrollDown>
+      <ScrollDown
+        visible={visible}
+        className="absolute bottom-1 md:bottom-8 -left-5 md:left-0 text-sm animate-bounce"
+      >
+        <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
+        <HiOutlineArrowNarrowDown />
+      </ScrollDown>
     </section>
   );
 }
