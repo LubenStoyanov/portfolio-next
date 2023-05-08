@@ -25,20 +25,6 @@ const fadeIn = keyframes`
   }
 `;
 
-const pulse = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  75% {
-    opacity: 0.75;
-  }
-
-  to {
-    opacity: 0;
-  }
-`;
-
 const BoldWords = styled.span`
   color: #ef6706;
   font-weight: 700;
@@ -72,8 +58,8 @@ const ScrollDown = styled.div<ScrollDownI>`
 
 export default function Hero({ translate }: { translate: Function }) {
   const [windowWidth, setWindowWidth] = useState(0);
-  const [showInfo, setShowInfo] = useState<boolean>(false);
-  const [visible, setVisible] = useState<boolean>(true);
+  const [showInfo, setShowInfo] = useState(false);
+  const [visible, setVisible] = useState(true);
   const greetings: string = translate("hero.title.greetings");
   const one: string = translate("hero.title.1");
   const luben: string = translate("hero.title.luben");
@@ -95,6 +81,10 @@ export default function Hero({ translate }: { translate: Function }) {
 
       return () => window.removeEventListener("scroll", handleScroll);
     }
+  }, [showInfo]);
+
+  useEffect(() => {
+    setShowInfo(false);
   }, [greetings]);
 
   return (
@@ -120,8 +110,10 @@ export default function Hero({ translate }: { translate: Function }) {
                   <CharWrapper element={normalSpan}>{one}</CharWrapper>
                   <CharWrapper element={BoldWords}>{luben}</CharWrapper>
                 </div>
-                <CharWrapper element={normalSpan}>{two}</CharWrapper>
-                <CharWrapper element={BoldWords}>{webDeveloper}</CharWrapper>
+                <div className="flex mb-0">
+                  <CharWrapper element={normalSpan}>{two}</CharWrapper>
+                  <CharWrapper element={BoldWords}>{webDeveloper}</CharWrapper>
+                </div>
                 <div className="text-xs text-[#0D0E13] md:text-sm font-semibold relative top-1 md:top-4">
                   &lt;/h1&gt;
                 </div>
