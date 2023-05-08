@@ -1,7 +1,5 @@
 import Image from "next/image";
 import profileImage from "../public/images/profile-white.png";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
 export default function Profile({ translate }: { translate: Function }) {
   return (

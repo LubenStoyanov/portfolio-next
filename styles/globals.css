@@ -6,30 +6,7 @@
   overflow-x: visible !important;
 }
 
-.swiper {
-  width: 50vw;
-  height: 50vh;
-
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  @media (max-width: 900px) {
-    width: 80%;
-    height: 70vh;
-  }
-}
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.swiper-slide:nth-child(1n) {
+/* .swiper-slide:nth-child(1n) {
   background-color: rgb(206, 17, 17);
 }
 
@@ -39,35 +16,8 @@
 
 .swiper-slide:nth-child(3n) {
   background-color: #f76808;
-  /* background-color: rgb(10, 184, 111); */
 }
 
 .swiper-slide:nth-child(4n) {
-  /* background-color: rgb(211, 122, 7); */
-  /* background-color: #c94900; */
   background-color: #f76808;
-}
-
-.swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
-}
-
-.swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
-}
-
-.swiper-slide:nth-child(7n) {
-  background-color: rgb(35, 99, 19);
-}
-
-.swiper-slide:nth-child(8n) {
-  background-color: rgb(0, 68, 255);
-}
-
-.swiper-slide:nth-child(9n) {
-  background-color: rgb(218, 12, 218);
-}
-
-.swiper-slide:nth-child(10n) {
-  background-color: rgb(54, 94, 77);
-}
+} */

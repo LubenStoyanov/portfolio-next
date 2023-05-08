@@ -1,4 +1,4 @@
-import SwiperComponent from "./swiper";
+import SwiperComponent from "./projects";
 
 export default function Works({ translate }: { translate: Function }) {
   return (
@@ -49,12 +49,13 @@ export default function Works({ translate }: { translate: Function }) {
           </div>
         </div>
       </div>
-
-      <div style={{ zIndex: 100 }} className="py-16 text-black">
+      <div className="py-8 bg-[#F9FAFE]">
         <h2 className=" text-lg md:text text-center ">Works</h2>
-        <p className="font-[500] text-center text-2xl md:text-4xl pb-16">
+        <p className="font-[500] text-center text-2xl md:text-4xl ">
           Some of the good stuff
         </p>
+      </div>
+      <div className="flex flex-col items-center bg-[#F9FAFE] mb-16 ">
         <SwiperComponent />
       </div>
     </section>
