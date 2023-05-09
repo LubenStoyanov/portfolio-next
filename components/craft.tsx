@@ -1,4 +1,8 @@
+import { motion } from "framer-motion";
 import Projects from "./projects";
+import styled from "styled-components";
+
+const NormalText = styled(motion.span)``;
 
 export default function Works({ translate }: { translate: Function }) {
   return (
@@ -20,27 +24,93 @@ export default function Works({ translate }: { translate: Function }) {
                 <span className="text-xs font-semibold relative bottom-[2px]">
                   &lt;p&gt;
                 </span>{" "}
-                {translate("craft.1")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.1")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.work")}</b>
-                {translate("craft.2")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.2")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.ideas")}</b>
-                {translate("craft.3")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.3")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.concepts")}</b>
-                {translate("craft.4")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.4")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.exploring")}</b>
-                {translate("craft.5")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.5")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.learning")}</b>
-                {translate("craft.6")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.6")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.building")}</b>
-                {translate("craft.7")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.7")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.creating")}</b>
-                {translate("craft.8")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.8")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.thought")}</b>
-                {translate("craft.9")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.9")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.ux")}</b>
-                {translate("craft.10")}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.10")}
+                </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.intuitive")}</b>
-                {translate("craft.11")}{" "}
+                <NormalText
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                >
+                  {translate("craft.11")}{" "}
+                </NormalText>
                 <span className="text-xs font-semibold relative bottom-[2px]">
                   &lt;/p&gt;
                 </span>

@@ -26,37 +26,17 @@ const fadeIn = keyframes`
   }
 `;
 
-const bubble = keyframes`
-  from {
-    scale: 1;
-  }
-
-  to {
-    scale: 1.2;
-  }
-`;
-
-const spin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
 const BoldSpan = styled.span`
   color: #ef6706;
   font-weight: 700;
   animation-name: ${fadeIn};
   animation-duration: 1s;
   animation-iteration-count: 1;
-  transition: scale 0.1s ease-in-out;
-  /* transform: rotate(0deg); */
+  transition: scale 0.3s cubic-bezier(0, 0.71, 0.2, 1.01),
+    transform 0.3s cubic-bezier(0, 0.71, 0.2, 1.01);
 
   &:hover {
-    scale: 1.2;
-    /* animation: ${spin} 1s linear infinite; */
+    transform: scale(1.5);
   }
 `;
 
@@ -113,7 +93,7 @@ export default function Hero({ translate }: { translate: Function }) {
 
   return (
     <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 md:pt-24 lg:px-80">
-      <div className="flex mt-10 max-w-[40ch]">
+      <div className="flex max-w-[40ch]">
         <LineBreaker
           fontStyle={`${windowWidth < 900 ? 36 : 72}px Inter`}
           width={windowWidth < 900 ? 390 : 900}
@@ -146,7 +126,7 @@ export default function Hero({ translate }: { translate: Function }) {
           </div>
         </LineBreaker>
       </div>
-      <Info showInfo={showInfo} className="mt-20">
+      <Info showInfo={showInfo} className="mt-5 md:mt-20">
         <p className="text-lg pt-5 pb-8 md:w-[40ch]">
           <span className="text-xs font-semibold relative bottom-[2px]">
             &lt;p&gt;
