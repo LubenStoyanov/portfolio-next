@@ -15,7 +15,7 @@ const ViewSiteButton = styled.button`
 const CardColor = styled.div`
   background-color: ${(props) => props.color};
   border-radius: 25px 0 25px 0;
-  height: 200px;
+  height: 100%;
   width: 100%;
 
   @media (max-width: 900px) {
@@ -44,10 +44,10 @@ const ProjectWrapper = styled.div`
   background-color: white;
 `;
 
-export default function Project() {
+export default function Projects() {
   return (
     <>
-      <ProjectWrapper className="flex flex-col items-center md:items-start  md:pl-12 md:pt-20 bg-[#f76808]">
+      <ProjectWrapper className="flex flex-col items-center md:items-start md:pl-12 md:pt-10 bg-[#f76808]">
         <div className="flex flex-col items-center  md:items-start">
           <h3 className="md:text-4xl text-3xl font-[600] text-center pt-8">
             Speech Blender
@@ -78,10 +78,10 @@ export default function Project() {
             </a>
           </ViewSiteButton>
         </div>
-        <CardColor className="md:pl-0" color="rgb(0, 140, 255)" />
+        <CardColor className="md:pl-0 md:" color="rgb(0, 140, 255)" />
       </ProjectWrapper>
 
-      <ProjectWrapper className="flex flex-col items-center md:items-start md:pl-12 md:pt-20">
+      <ProjectWrapper className="flex flex-col items-center md:items-start md:pl-12 md:pt-10">
         <div className="flex flex-col  items-center md:items-start">
           <h3 className="md:text-4xl text-3xl font-[600] text-center pt-8">
             The Fine Art
@@ -115,7 +115,7 @@ export default function Project() {
         <CardColor className="md:pl-0" color="#46a758" />
       </ProjectWrapper>
 
-      <ProjectWrapper className="flex flex-col items-center md:items-start md:pl-12 md:pt-20">
+      <ProjectWrapper className="flex flex-col items-center md:items-start md:pl-12 md:pt-10">
         <div className="flex flex-col items-center md:items-start">
           <h3 className="md:text-4xl text-3xl font-[600] text-center pt-8">
             Pokèfight

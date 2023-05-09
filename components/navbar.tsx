@@ -1,7 +1,6 @@
 // import { useState } from "react";
 import * as Scroll from "react-scroll";
 import { useRouter } from "next/router";
-// import { SlClose } from "react-icons/sl";
 const scrollToTop = () => Scroll.animateScroll.scrollToTop();
 
 export default function Navbar({ translate }: { translate: Function }) {
@@ -18,7 +17,7 @@ export default function Navbar({ translate }: { translate: Function }) {
         <a
           href=""
           onClick={scrollToTop}
-          className="  hover:text-black hover:underline underline-offset-2 cursor-pointer "
+          className="  hover:text-[#ef6706] hover:underline underline-offset-2 cursor-pointer "
         >
           Luben Stoyanov
         </a>
@@ -29,7 +28,7 @@ export default function Navbar({ translate }: { translate: Function }) {
               smooth={true}
               offset={-50}
               href="#about"
-              className="hover:text-black hover:underline underline-offset-2 "
+              className="hover:text-[#ef6706] hover:underline underline-offset-2 "
             >
               {translate("aboutNavLink")}
             </Scroll.Link>
@@ -40,7 +39,7 @@ export default function Navbar({ translate }: { translate: Function }) {
               smooth={true}
               offset={-50}
               href="#works"
-              className=" hover:text-black hover:underline underline-offset-2 "
+              className=" hover:text-[#ef6706] hover:underline underline-offset-2 "
             >
               {translate("worksNavLink")}
             </Scroll.Link>
@@ -51,7 +50,7 @@ export default function Navbar({ translate }: { translate: Function }) {
               smooth={true}
               offset={-100}
               href="#contact"
-              className=" hover:text-black hover:underline underline-offset-2 "
+              className=" hover:text-[#ef6706] hover:underline underline-offset-2 "
             >
               {translate("contactNavLink")}
             </Scroll.Link>
@@ -59,7 +58,7 @@ export default function Navbar({ translate }: { translate: Function }) {
           <button
             aria-label="Toggle Language"
             onClick={toggleLanguage}
-            className="text-sm hover:text-black hover:underline underline-offset-2 "
+            className="text-sm hover:text-[#ef6706] hover:underline underline-offset-2 "
           >
             {locale === "en" ? "DE" : "EN"}
           </button>

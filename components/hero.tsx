@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 import { WindupChildren, CharWrapper, Pace } from "windups";
 import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 const LineBreaker = dynamic(() => import("./LineBreaker"), {
@@ -25,26 +26,49 @@ const fadeIn = keyframes`
   }
 `;
 
-const BoldWords = styled.span`
+const bubble = keyframes`
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.2;
+  }
+`;
+
+const spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const BoldSpan = styled.span`
   color: #ef6706;
   font-weight: 700;
   animation-name: ${fadeIn};
   animation-duration: 1s;
   animation-iteration-count: 1;
+  transition: scale 0.1s ease-in-out;
+  /* transform: rotate(0deg); */
+
+  &:hover {
+    scale: 1.2;
+    animation: ${spin} 1s linear infinite;
+  }
 `;
 
-const normalSpan = styled.span``;
+const NormalSpan = styled.span``;
 
-const Button = styled.button`
-  transition: 0.3s ease-in-out 100ms;
-  accent-color: black;
-
+const Button = styled(motion.button)`
   &&:hover {
     border-color: #ef6804;
   }
 `;
 
-const Info = styled.div<InfoI>`
+const Info = styled(motion.div)<InfoI>`
   display: ${({ showInfo }) => (showInfo ? "block" : "none")};
   animation-name: ${fadeIn};
   animation-duration: 3s;
@@ -104,15 +128,15 @@ export default function Hero({ translate }: { translate: Function }) {
                   &lt;h1&gt;
                 </span>
                 <br className="p-0 m-0" />
-                <CharWrapper element={normalSpan}>{greetings},</CharWrapper>
+                <CharWrapper element={NormalSpan}>{greetings},</CharWrapper>
                 <br className="p-0 m-0" />
                 <div className="flex mb-0">
-                  <CharWrapper element={normalSpan}>{one}</CharWrapper>
-                  <CharWrapper element={BoldWords}>{luben}</CharWrapper>
+                  <CharWrapper element={NormalSpan}>{one}</CharWrapper>
+                  <CharWrapper element={BoldSpan}>{luben}</CharWrapper>
                 </div>
                 <div className="flex mb-0">
-                  <CharWrapper element={normalSpan}>{two}</CharWrapper>
-                  <CharWrapper element={BoldWords}>{webDeveloper}</CharWrapper>
+                  <CharWrapper element={NormalSpan}>{two}</CharWrapper>
+                  <CharWrapper element={BoldSpan}>{webDeveloper}</CharWrapper>
                 </div>
                 <div className="text-xs text-[#0D0E13] md:text-sm font-semibold relative top-1 md:top-4">
                   &lt;/h1&gt;
@@ -144,7 +168,11 @@ export default function Hero({ translate }: { translate: Function }) {
             &lt;/p&gt;
           </span>
         </p>
-        <Button className="text-sm font-semibold border-2 md:border-[3px] border-black max-w-fit rounded-3xl px-5 py-3 md:px-10 md:py-4">
+        <Button
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          className="text-sm font-semibold border-2 md:border-[3px] border-black max-w-fit rounded-3xl px-5 py-3 md:px-10 md:py-4"
+        >
           <a href="mailto:luben.stoyanov.ls@gmail.com?subject=Inquiry">
             {translate("hero.cat-button")}
           </a>

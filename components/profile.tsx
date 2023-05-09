@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 import profileImage from "../public/images/profile-white.png";
 
 export default function Profile({ translate }: { translate: Function }) {
   return (
-    <section id="about" className="flex flex-col py-16 mx-7 md:px-80 ">
+    <motion.section id="about" className="flex flex-col py-16 mx-7 md:px-80 ">
       <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-xs font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-20 md:w-96 border-black"></span>
@@ -47,6 +48,6 @@ export default function Profile({ translate }: { translate: Function }) {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,4 +1,4 @@
-import SwiperComponent from "./projects";
+import Projects from "./projects";
 
 export default function Works({ translate }: { translate: Function }) {
   return (
@@ -56,7 +56,7 @@ export default function Works({ translate }: { translate: Function }) {
         </p>
       </div>
       <div className="flex flex-col items-center bg-[#F9FAFE] mb-16 ">
-        <SwiperComponent />
+        <Projects />
       </div>
     </section>
   );
