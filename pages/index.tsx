@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import Profile from "@/components/profile";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
@@ -47,17 +46,6 @@ export default function Home() {
         <main
           className={`flex flex-col text-lg md:w[75ch] text-[#0D0E13] bg-[#F9FAFE]`}
         >
-          <motion.div
-            ref={ref}
-            className="md:w-8 md:h-8 rounded-[50%] bg-[#ef6804]"
-            animate={{ x, y }}
-            transition={{
-              type: "spring",
-              damping: 3,
-              stiffness: 50,
-              restDelta: 0.001,
-            }}
-          />
           <Hero translate={translate} />
           <Profile translate={translate} />
           <Tools translate={translate} />

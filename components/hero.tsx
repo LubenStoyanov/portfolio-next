@@ -56,7 +56,7 @@ const BoldSpan = styled.span`
 
   &:hover {
     scale: 1.2;
-    animation: ${spin} 1s linear infinite;
+    /* animation: ${spin} 1s linear infinite; */
   }
 `;
 

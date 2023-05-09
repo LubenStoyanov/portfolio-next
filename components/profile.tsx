@@ -4,7 +4,16 @@ import profileImage from "../public/images/profile-white.png";
 
 export default function Profile({ translate }: { translate: Function }) {
   return (
-    <motion.section id="about" className="flex flex-col py-16 mx-7 md:px-80 ">
+    <motion.section
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+      id="about"
+      className="flex flex-col py-16 mx-7 md:px-80 "
+    >
       <div className="flex place-items-center place-content-center gap-x-1">
         <span className="text-xs font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-20 md:w-96 border-black"></span>
