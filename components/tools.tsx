@@ -19,7 +19,7 @@ export default function Tools({ translate }: { translate: Function }) {
 
   return (
     <motion.section
-      initial={{ opacity: 0, scale: 0.5 }}
+      initial={{ opacity: 0, scale: 0.75 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 0.8,

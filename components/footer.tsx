@@ -99,7 +99,7 @@ export default function Footer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 2600) {
+      if (window.scrollY > 4000) {
         setVisible(true);
       } else {
         setVisible(false);

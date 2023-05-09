@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import * as Scroll from "react-scroll";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 const scrollToTop = () => Scroll.animateScroll.scrollToTop();
 
 export default function Navbar({ translate }: { translate: Function }) {
@@ -14,15 +15,40 @@ export default function Navbar({ translate }: { translate: Function }) {
   return (
     <>
       <nav className="hidden md:flex justify-between md:py-5 md:px-16 text-lg font-semibold md:border-b-[1px] md:border-black md:mx-7">
-        <a
-          href=""
+        <motion.a
+          initial={{ scale: 1 }}
+          whileHover={{ scale: 1.2 }}
+          transition={{
+            duration: 0.3,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001,
+            },
+          }}
+          href="/"
           onClick={scrollToTop}
           className="  hover:text-[#ef6706] hover:underline underline-offset-2 cursor-pointer "
         >
           Luben Stoyanov
-        </a>
+        </motion.a>
         <ul className="flex z-100 gap-x-4">
-          <li>
+          <motion.li
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.2 }}
+            transition={{
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001,
+              },
+            }}
+          >
             <Scroll.Link
               to="about"
               smooth={true}
@@ -32,8 +58,21 @@ export default function Navbar({ translate }: { translate: Function }) {
             >
               {translate("aboutNavLink")}
             </Scroll.Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.2 }}
+            transition={{
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001,
+              },
+            }}
+          >
             <Scroll.Link
               to="works"
               smooth={true}
@@ -43,8 +82,21 @@ export default function Navbar({ translate }: { translate: Function }) {
             >
               {translate("worksNavLink")}
             </Scroll.Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.2 }}
+            transition={{
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001,
+              },
+            }}
+          >
             <Scroll.Link
               to="contact"
               smooth={true}
@@ -54,7 +106,7 @@ export default function Navbar({ translate }: { translate: Function }) {
             >
               {translate("contactNavLink")}
             </Scroll.Link>
-          </li>
+          </motion.li>
           <button
             aria-label="Toggle Language"
             onClick={toggleLanguage}
@@ -67,7 +119,21 @@ export default function Navbar({ translate }: { translate: Function }) {
       <nav className="md:hidden mx-7">
         <ul className="flex justify-between text-sm pt-4">
           <li></li>
-          <li className="justify-self-end">
+          <motion.li
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.2 }}
+            transition={{
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001,
+              },
+            }}
+            className="justify-self-end"
+          >
             <button
               aria-label="Toggle Language"
               onClick={toggleLanguage}
@@ -75,7 +141,7 @@ export default function Navbar({ translate }: { translate: Function }) {
             >
               {locale === "en" ? "DE" : "EN"}
             </button>
-          </li>
+          </motion.li>
         </ul>
       </nav>
     </>

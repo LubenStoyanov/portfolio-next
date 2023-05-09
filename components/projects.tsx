@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { SiGithub } from "react-icons/si";
 
 const ViewSiteButton = styled.button`
@@ -30,7 +31,7 @@ const Badges = styled.small`
   font-weight: 500;
 `;
 
-const ProjectWrapper = styled.div`
+const ProjectWrapper = styled(motion.div)`
   box-shadow: rgba(21, 20, 26, 0.1) 0px 30px 60px -12px,
     rgba(21, 20, 26, 0.2) 0px 18px 36px -18px;
   height: 590px;

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Profile from "@/components/profile";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
@@ -9,7 +9,6 @@ import Head from "next/head";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navbar from "@/components/navbar";
-import { useFollowPointer } from "@/components/hooks/useFollowPointer";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -22,8 +21,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
 export default function Home() {
   const { t: translate } = useTranslation("common");
   const [mounted, setMounted] = useState(false);
-  const ref = useRef(null);
-  const { x, y } = useFollowPointer(ref);
 
   useEffect(() => setMounted(true), []);
 
@@ -40,7 +37,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="relative ">
-        <header>
+        <header className="bg-[#F9FAFE] min-h-[5vh]">
           <Navbar translate={translate} />
         </header>
         <main
