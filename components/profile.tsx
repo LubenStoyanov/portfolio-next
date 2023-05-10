@@ -34,6 +34,7 @@ export default function Profile({ translate }: { translate: Function }) {
           duration: 1,
           ease: [0, 0.71, 0.2, 1.01],
         }}
+        viewport={{ once: true }}
         className="flex place-items-center place-content-center gap-x-1"
       >
         <span className="text-xs font-bold">&lt;h2&gt; </span>
@@ -51,6 +52,7 @@ export default function Profile({ translate }: { translate: Function }) {
           duration: 1,
           ease: [0, 0.71, 0.2, 1.01],
         }}
+        viewport={{ once: true }}
         className="flex flex-col md:flex-row md:justify-center pt-10"
       >
         <div>

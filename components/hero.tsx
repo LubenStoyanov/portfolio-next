@@ -93,7 +93,7 @@ export default function Hero({ translate }: { translate: Function }) {
 
   return (
     <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 md:pt-24 lg:px-80">
-      <div className="flex max-w-[40ch]">
+      <div className="flex max-w-[40ch] mt-10">
         <LineBreaker
           fontStyle={`${windowWidth < 900 ? 36 : 72}px Inter`}
           width={windowWidth < 900 ? 390 : 900}
@@ -126,7 +126,7 @@ export default function Hero({ translate }: { translate: Function }) {
           </div>
         </LineBreaker>
       </div>
-      <Info showInfo={showInfo} className="mt-5 md:mt-20">
+      <Info showInfo={showInfo} className="mt-10 md:mt-20">
         <p className="text-lg pt-5 pb-8 md:w-[40ch]">
           <span className="text-xs font-semibold relative bottom-[2px]">
             &lt;p&gt;
@@ -158,20 +158,22 @@ export default function Hero({ translate }: { translate: Function }) {
           </a>
         </Button>
       </Info>
-      <ScrollDown
-        visible={visible}
-        className="absolute bottom-1 md:bottom-8 -right-5 md:right-0 text-sm animate-bounce"
-      >
-        <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
-        <HiOutlineArrowNarrowDown />
-      </ScrollDown>
-      <ScrollDown
-        visible={visible}
-        className="absolute bottom-1 md:bottom-8 -left-5 md:left-0 text-sm animate-bounce"
-      >
-        <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
-        <HiOutlineArrowNarrowDown />
-      </ScrollDown>
+      <div>
+        <ScrollDown
+          visible={visible}
+          className="absolute bottom-20 md:bottom-8 -right-5 md:right-0 text-sm animate-bounce"
+        >
+          <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
+          <HiOutlineArrowNarrowDown />
+        </ScrollDown>
+        <ScrollDown
+          visible={visible}
+          className="absolute bottom-20 md:bottom-8 -left-5 md:left-0 text-sm animate-bounce"
+        >
+          <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
+          <HiOutlineArrowNarrowDown />
+        </ScrollDown>
+      </div>
     </section>
   );
 }
