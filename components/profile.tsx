@@ -28,10 +28,10 @@ export default function Profile({ translate }: { translate: Function }) {
   return (
     <section id="about" className="flex flex-col py-16 mx-7 md:px-80 ">
       <motion.div
-        initial={{ y: 200, opacity: 0, scale: 0.5 }}
-        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        initial={{ y: 300 }}
+        whileInView={{ y: 0 }}
         transition={{
-          duration: 1,
+          duration: 0.4,
           ease: [0, 0.71, 0.2, 1.01],
         }}
         viewport={{ once: true }}
@@ -46,10 +46,10 @@ export default function Profile({ translate }: { translate: Function }) {
         <span className="text-xs font-bold">&lt;h2/&gt;</span>
       </motion.div>
       <motion.div
-        initial={{ y: 100, opacity: 0, scale: 0.5 }}
-        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        initial={{ y: 300 }}
+        whileInView={{ y: 0 }}
         transition={{
-          duration: 1,
+          duration: 0.4,
           ease: [0, 0.71, 0.2, 1.01],
         }}
         viewport={{ once: true }}

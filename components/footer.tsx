@@ -69,11 +69,13 @@ const slidein = keyframes`
 const slideout = keyframes`
   from {
     opacity: 1;
+    bottom: 24px;
     transform: translateY(0);
   }
 
   to {
     opacity: 0;
+    bottom: -100px;
     transform: translateY(100%);
   }
 `;
