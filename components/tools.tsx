@@ -19,12 +19,13 @@ export default function Tools({ translate }: { translate: Function }) {
 
   return (
     <motion.section
-      initial={{ opacity: 0, scale: 0.75 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ y: 300 }}
+      whileInView={{ y: 0 }}
       transition={{
-        duration: 0.8,
+        duration: 0.4,
         ease: [0, 0.71, 0.2, 1.01],
       }}
+      viewport={{ once: true }}
       className="pt-16 md:pt-32 "
     >
       <div className="">

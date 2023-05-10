@@ -26,17 +26,48 @@ const fadeIn = keyframes`
   }
 `;
 
+const wobble = keyframes`
+    0%, 100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        -webkit-transform: translateX(-32px) rotate(-10deg);
+        transform: translateX(-32px) rotate(-10deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(calc(32px / 2)) rotate(10deg);
+        transform: translateX(calc(32px / 2)) rotate(10deg);
+    }
+
+    45% {
+        -webkit-transform: translateX(calc(-32px / 2)) rotate(calc(-10deg / 1.8));
+        transform: translateX(calc(-32px / 2)) rotate(calc(-10deg / 1.8));
+    }
+
+    60% {
+        -webkit-transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
+        transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
+    }
+
+    75% {
+        -webkit-transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
+        transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
+    }
+`;
+
 const BoldSpan = styled.span`
   color: #ef6706;
   font-weight: 700;
-  animation-name: ${fadeIn};
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  transition: scale 0.3s cubic-bezier(0, 0.71, 0.2, 1.01),
-    transform 0.3s cubic-bezier(0, 0.71, 0.2, 1.01);
+  animation: ${wobble} 1s ease-in-out;
+  transition: scale 0.3s cubic-bezier(0, 0.71, 0.2, 1.01);
 
-  &:hover {
-    transform: scale(1.5);
+  &&:hover {
+    scale: 1.5;
   }
 `;
 
@@ -50,9 +81,7 @@ const Button = styled(motion.button)`
 
 const Info = styled(motion.div)<InfoI>`
   display: ${({ showInfo }) => (showInfo ? "block" : "none")};
-  animation-name: ${fadeIn};
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
+  animation: ${fadeIn} 1s ease-in-out;
 `;
 
 const ScrollDown = styled.div<ScrollDownI>`
@@ -93,7 +122,7 @@ export default function Hero({ translate }: { translate: Function }) {
 
   return (
     <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 md:pt-24 lg:px-80">
-      <div className="flex max-w-[40ch]">
+      <div className="flex max-w-[40ch] mt-10">
         <LineBreaker
           fontStyle={`${windowWidth < 900 ? 36 : 72}px Inter`}
           width={windowWidth < 900 ? 390 : 900}
@@ -103,7 +132,7 @@ export default function Hero({ translate }: { translate: Function }) {
               key={greetings}
               onFinished={() => setShowInfo(true)}
             >
-              <Pace ms={100}>
+              <Pace ms={75}>
                 <span className="text-xs md:text-sm font-semibold relative bottom-2">
                   &lt;h1&gt;
                 </span>
@@ -126,7 +155,7 @@ export default function Hero({ translate }: { translate: Function }) {
           </div>
         </LineBreaker>
       </div>
-      <Info showInfo={showInfo} className="mt-5 md:mt-20">
+      <Info showInfo={showInfo} className="mt-10 md:mt-20">
         <p className="text-lg pt-5 pb-8 md:w-[40ch]">
           <span className="text-xs font-semibold relative bottom-[2px]">
             &lt;p&gt;
@@ -158,20 +187,22 @@ export default function Hero({ translate }: { translate: Function }) {
           </a>
         </Button>
       </Info>
-      <ScrollDown
-        visible={visible}
-        className="absolute bottom-1 md:bottom-8 -right-5 md:right-0 text-sm animate-bounce"
-      >
-        <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
-        <HiOutlineArrowNarrowDown />
-      </ScrollDown>
-      <ScrollDown
-        visible={visible}
-        className="absolute bottom-1 md:bottom-8 -left-5 md:left-0 text-sm animate-bounce"
-      >
-        <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
-        <HiOutlineArrowNarrowDown />
-      </ScrollDown>
+      <div>
+        <ScrollDown
+          visible={visible}
+          className="absolute bottom-20 md:bottom-8 -right-5 md:right-0 text-sm animate-bounce"
+        >
+          <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
+          <HiOutlineArrowNarrowDown />
+        </ScrollDown>
+        <ScrollDown
+          visible={visible}
+          className="absolute bottom-20 md:bottom-8 -left-5 md:left-0 text-sm animate-bounce"
+        >
+          <span style={{ writingMode: "vertical-rl" }}> scroll down</span>
+          <HiOutlineArrowNarrowDown />
+        </ScrollDown>
+      </div>
     </section>
   );
 }

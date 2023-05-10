@@ -31,7 +31,7 @@ const TechItem = styled.div`
 export default function MarqueeMobile() {
   return (
     <>
-      <div className="md:hidden">
+      <div>
         <Marquee
           play={true}
           style={{ overflow: "visible" }}
@@ -81,7 +81,7 @@ export default function MarqueeMobile() {
           </TechItem>
         </Marquee>
       </div>
-      <div className="md:hidden">
+      <div>
         <Marquee direction="right" className=" select-none text-[48px] py-10">
           <TechItem className="card-shadow rounded-md">
             <div className="flex justify-center">

@@ -17,7 +17,7 @@ export default function Navbar({ translate }: { translate: Function }) {
       <nav className="hidden md:flex justify-between md:py-5 md:px-16 text-lg font-semibold md:border-b-[1px] md:border-black md:mx-7">
         <motion.a
           initial={{ scale: 1 }}
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.2, letterSpacing: "0.2rem" }}
           transition={{
             duration: 0.3,
             ease: [0, 0.71, 0.2, 1.01],
@@ -37,7 +37,7 @@ export default function Navbar({ translate }: { translate: Function }) {
         <ul className="flex z-100 gap-x-4">
           <motion.li
             initial={{ scale: 1 }}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.2, letterSpacing: "0.2rem" }}
             transition={{
               duration: 0.3,
               ease: [0, 0.71, 0.2, 1.01],
@@ -61,7 +61,7 @@ export default function Navbar({ translate }: { translate: Function }) {
           </motion.li>
           <motion.li
             initial={{ scale: 1 }}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.2, letterSpacing: "0.2rem" }}
             transition={{
               duration: 0.3,
               ease: [0, 0.71, 0.2, 1.01],
@@ -85,7 +85,7 @@ export default function Navbar({ translate }: { translate: Function }) {
           </motion.li>
           <motion.li
             initial={{ scale: 1 }}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.2, letterSpacing: "0.2rem" }}
             transition={{
               duration: 0.3,
               ease: [0, 0.71, 0.2, 1.01],
@@ -107,21 +107,9 @@ export default function Navbar({ translate }: { translate: Function }) {
               {translate("contactNavLink")}
             </Scroll.Link>
           </motion.li>
-          <button
-            aria-label="Toggle Language"
-            onClick={toggleLanguage}
-            className="text-sm hover:text-[#ef6706] hover:underline underline-offset-2 "
-          >
-            {locale === "en" ? "DE" : "EN"}
-          </button>
-        </ul>
-      </nav>
-      <nav className="md:hidden mx-7">
-        <ul className="flex justify-between text-sm pt-4">
-          <li></li>
           <motion.li
             initial={{ scale: 1 }}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.2, letterSpacing: "0.2rem" }}
             transition={{
               duration: 0.3,
               ease: [0, 0.71, 0.2, 1.01],
@@ -132,8 +120,18 @@ export default function Navbar({ translate }: { translate: Function }) {
                 restDelta: 0.001,
               },
             }}
-            className="justify-self-end"
+            aria-label="Toggle Language"
+            onClick={toggleLanguage}
+            className="text-sm hover:text-[#ef6706] hover:underline underline-offset-2 self-center"
           >
+            {locale === "en" ? "DE" : "EN"}
+          </motion.li>
+        </ul>
+      </nav>
+      <nav className="md:hidden mx-7">
+        <ul className="flex justify-between text-sm pt-4">
+          <li></li>
+          <li className="justify-self-end">
             <button
               aria-label="Toggle Language"
               onClick={toggleLanguage}
@@ -141,7 +139,7 @@ export default function Navbar({ translate }: { translate: Function }) {
             >
               {locale === "en" ? "DE" : "EN"}
             </button>
-          </motion.li>
+          </li>
         </ul>
       </nav>
     </>

@@ -26,17 +26,17 @@ const NormalText = styled(motion.span)`
 
 export default function Profile({ translate }: { translate: Function }) {
   return (
-    <motion.section
-      initial={{ scale: 0.75 }}
-      whileInView={{ scale: 1 }}
-      transition={{
-        duration: 0.8,
-        ease: [0, 0.71, 0.2, 1.01],
-      }}
-      id="about"
-      className="flex flex-col py-16 mx-7 md:px-80 "
-    >
-      <div className="flex place-items-center place-content-center gap-x-1">
+    <section id="about" className="flex flex-col py-16 mx-7 md:px-80 ">
+      <motion.div
+        initial={{ y: 300 }}
+        whileInView={{ y: 0 }}
+        transition={{
+          duration: 0.4,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        viewport={{ once: true }}
+        className="flex place-items-center place-content-center gap-x-1"
+      >
         <span className="text-xs font-bold">&lt;h2&gt; </span>
         <span className="border-t-2 w-20 md:w-96 border-black"></span>
         <h2 className="font-bold md:text-5xl text-3xl text-center">
@@ -44,8 +44,17 @@ export default function Profile({ translate }: { translate: Function }) {
         </h2>
         <span className="border-t-2 w-20 md:w-96 border-black"></span>
         <span className="text-xs font-bold">&lt;h2/&gt;</span>
-      </div>
-      <div className="flex flex-col md:flex-row md:justify-center pt-10">
+      </motion.div>
+      <motion.div
+        initial={{ y: 300 }}
+        whileInView={{ y: 0 }}
+        transition={{
+          duration: 0.4,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        viewport={{ once: true }}
+        className="flex flex-col md:flex-row md:justify-center pt-10"
+      >
         <div>
           <p className=" max-w-[40ch]">
             <span className="text-xs font-semibold relative bottom-[2px]">
@@ -54,7 +63,7 @@ export default function Profile({ translate }: { translate: Function }) {
             <NormalText
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, ease: [0, 0.71, 0.2, 1.01] }}
+              transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
             >
               {translate("about.1")}
             </NormalText>
@@ -64,7 +73,7 @@ export default function Profile({ translate }: { translate: Function }) {
             <NormalText
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, ease: [0, 0.71, 0.2, 1.01] }}
+              transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
             >
               {translate("about.2")}
             </NormalText>
@@ -74,7 +83,7 @@ export default function Profile({ translate }: { translate: Function }) {
             <NormalText
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, ease: [0, 0.71, 0.2, 1.01] }}
+              transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
             >
               {translate("about.3")}
             </NormalText>
@@ -84,7 +93,7 @@ export default function Profile({ translate }: { translate: Function }) {
             <NormalText
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, ease: [0, 0.71, 0.2, 1.01] }}
+              transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
             >
               {translate("about.4")}
             </NormalText>
@@ -94,7 +103,7 @@ export default function Profile({ translate }: { translate: Function }) {
             <NormalText
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, ease: [0, 0.71, 0.2, 1.01] }}
+              transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
             >
               {translate("about.5")}
             </NormalText>
@@ -104,7 +113,7 @@ export default function Profile({ translate }: { translate: Function }) {
             <NormalText
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, ease: [0, 0.71, 0.2, 1.01] }}
+              transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
             >
               {translate("about.6")}
             </NormalText>
@@ -114,7 +123,7 @@ export default function Profile({ translate }: { translate: Function }) {
             <NormalText
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, ease: [0, 0.71, 0.2, 1.01] }}
+              transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
             >
               {translate("about.7")}
             </NormalText>
@@ -124,7 +133,7 @@ export default function Profile({ translate }: { translate: Function }) {
             <NormalText
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 3, ease: [0, 0.71, 0.2, 1.01] }}
+              transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
             >
               {translate("about.8")}{" "}
             </NormalText>
@@ -155,7 +164,7 @@ export default function Profile({ translate }: { translate: Function }) {
             />
           </motion.div>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }

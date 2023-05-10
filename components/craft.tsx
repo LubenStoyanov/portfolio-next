@@ -27,7 +27,7 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.1")}
                 </NormalText>
@@ -35,7 +35,7 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.2")}
                 </NormalText>
@@ -43,15 +43,15 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
-                  {translate("craft.3")}
+                  {translate("craft.3")}{" "}
                 </NormalText>
                 <b className="text-[#EF6706]">{translate("craft.concepts")}</b>
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.4")}
                 </NormalText>
@@ -59,7 +59,7 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.5")}
                 </NormalText>
@@ -67,7 +67,7 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.6")}
                 </NormalText>
@@ -75,7 +75,7 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.7")}
                 </NormalText>
@@ -83,7 +83,7 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.8")}
                 </NormalText>
@@ -91,7 +91,7 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.9")}
                 </NormalText>
@@ -99,7 +99,7 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.10")}
                 </NormalText>
@@ -107,7 +107,7 @@ export default function Works({ translate }: { translate: Function }) {
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 7, ease: [0, 0.71, 0.2, 1.01] }}
+                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
                 >
                   {translate("craft.11")}{" "}
                 </NormalText>
