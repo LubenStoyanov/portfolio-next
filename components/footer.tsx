@@ -65,6 +65,7 @@ const slidein = keyframes`
     transform: translateY(0);
   }
 `;
+
 const slideout = keyframes`
   from {
     opacity: 1;
