@@ -132,7 +132,7 @@ export default function Hero({ translate }: { translate: Function }) {
               key={greetings}
               onFinished={() => setShowInfo(true)}
             >
-              <Pace ms={50}>
+              <Pace ms={75}>
                 <span className="text-xs md:text-sm font-semibold relative bottom-2">
                   &lt;h1&gt;
                 </span>
