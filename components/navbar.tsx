@@ -145,7 +145,7 @@ export default function Navbar({ translate }: { translate: Function }) {
             }}
             aria-label="Toggle Language"
             onClick={toggleLanguage}
-            className="text-sm hover:text-[#ef6706] hover:underline underline-offset-2 self-center"
+            className="text-sm hover:text-[#ef6706] hover:underline underline-offset-2 self-center  cursor-pointer"
           >
             {locale === "en" ? "DE" : "EN"}
           </motion.li>

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 import { WindupChildren, CharWrapper, Pace } from "windups";
-import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 const LineBreaker = dynamic(() => import("./LineBreaker"), {
   ssr: false,
 });
@@ -47,6 +46,7 @@ const BoldSpan = styled.span`
   font-weight: 700;
   animation: ${wobble} 1s ease-in-out;
   transition: scale 0.3s cubic-bezier(0, 0.71, 0.2, 1.01);
+  white-space: pre-wrap;
 
   &&:hover {
     scale: 1.5;
@@ -92,8 +92,8 @@ export default function Hero({ translate }: { translate: Function }) {
     <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 md:pt-24 lg:px-80">
       <div className="flex">
         <LineBreaker
-          fontStyle={`${windowWidth < 900 ? 36 : 72}px Inter`}
-          width={windowWidth < 900 ? 300 : 900}
+          fontStyle={`${windowWidth < 1024 ? 36 : 72}px Inter`}
+          width={windowWidth < 1024 ? 360 : 1200}
         >
           <div className="font-[500] md:text-7xl">
             <WindupChildren
@@ -103,7 +103,7 @@ export default function Hero({ translate }: { translate: Function }) {
               <Pace ms={75}>
                 <br className="p-0 m-0" />
                 <CharWrapper element={NormalSpan}>
-                  {translate("hero.title.greetings")},
+                  {translate("hero.title.greetings")}
                 </CharWrapper>
                 <br className="p-0 m-0" />
                 <div className="flex mb-0">
@@ -113,14 +113,13 @@ export default function Hero({ translate }: { translate: Function }) {
                   <CharWrapper element={BoldSpan}>
                     {translate("hero.title.luben")}
                   </CharWrapper>
-                  ,
                 </div>
                 <div className="flex mb-0">
                   <CharWrapper element={NormalSpan}>
                     {translate("hero.title.2")}
                   </CharWrapper>
                   <CharWrapper element={BoldSpan}>
-                    {translate("hero.title.webDeveloper")}
+                    {translate("hero.title.web_developer")}
                   </CharWrapper>
                 </div>
               </Pace>

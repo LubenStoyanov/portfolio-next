@@ -6,11 +6,11 @@
 
   "hero": {
     "title": {
-      "greetings": "Willkommen Reisender",
+      "greetings": "Willkommen",
       "1": "ich bin ",
-      "luben": " Luben",
-      "2": "ein",
-      "webDeveloper": " Webentwickler"
+      "luben": "Luben",
+      "2": "ein ",
+      "web_developer": "Webentwickler"
     },
 
     "1": "Sind Sie auf der Suche nach einem ",
