@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 import { WindupChildren, CharWrapper, Pace } from "windups";
-import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 const LineBreaker = dynamic(() => import("./LineBreaker"), {
   ssr: false,
 });
@@ -104,7 +103,7 @@ export default function Hero({ translate }: { translate: Function }) {
               <Pace ms={75}>
                 <br className="p-0 m-0" />
                 <CharWrapper element={NormalSpan}>
-                  {translate("hero.title.greetings")},
+                  {translate("hero.title.greetings")}
                 </CharWrapper>
                 <br className="p-0 m-0" />
                 <div className="flex mb-0">
@@ -114,7 +113,6 @@ export default function Hero({ translate }: { translate: Function }) {
                   <CharWrapper element={BoldSpan}>
                     {translate("hero.title.luben")}
                   </CharWrapper>
-                  ,
                 </div>
                 <div className="flex mb-0">
                   <CharWrapper element={NormalSpan}>

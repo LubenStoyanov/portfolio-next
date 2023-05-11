@@ -6,9 +6,9 @@
 
   "hero": {
     "title": {
-      "greetings": "Willkommen Reisender",
+      "greetings": "Willkommen",
       "1": "ich bin ",
-      "luben": " Luben",
+      "luben": "Luben",
       "2": "ein ",
       "web_developer": "Webentwickler"
     },
