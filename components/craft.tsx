@@ -146,8 +146,9 @@ export default function Works({ translate }: { translate: Function }) {
           Some of the good stuff
         </motion.p>
       </motion.div>
-
-      <Projects />
+      <div className="flex flex-col items-center bg-[#F9FAFE] mb-16 ">
+        <Projects />
+      </div>
     </section>
   );
 }

@@ -45,24 +45,13 @@ const ProjectWrapper = styled(motion.div)`
   background-color: white;
 `;
 
-const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 100 },
-  visible,
-};
-
 export default function Projects() {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-      viewport={{ once: true }}
-      className="flex flex-col items-center bg-[#F9FAFE] mb-16 "
-    >
+    <>
       <ProjectWrapper
-        variants={itemVariants}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+        viewport={{ once: true }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10 bg-[#f76808]"
       >
         <div className="flex flex-col items-center  md:items-start">
@@ -99,7 +88,9 @@ export default function Projects() {
       </ProjectWrapper>
 
       <ProjectWrapper
-        variants={itemVariants}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+        viewport={{ once: true }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
         <div className="flex flex-col  items-center md:items-start">
@@ -136,7 +127,9 @@ export default function Projects() {
       </ProjectWrapper>
 
       <ProjectWrapper
-        variants={itemVariants}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+        viewport={{ once: true }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
         <div className="flex flex-col items-center md:items-start">
@@ -173,6 +166,6 @@ export default function Projects() {
         </div>
         <CardColor className="md:pl-0" color="#f76808" />
       </ProjectWrapper>
-    </motion.div>
+    </>
   );
 }
