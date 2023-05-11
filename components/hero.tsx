@@ -77,10 +77,6 @@ export default function Hero({ translate }: { translate: Function }) {
   const [windowWidth, setWindowWidth] = useState(0);
   const [showinfo, setShowInfo] = useState(false);
   const greetings: string = translate("hero.title.greetings");
-  const one: string = translate("hero.title.1");
-  const luben: string = translate("hero.title.luben");
-  const two: string = translate("hero.title.2");
-  const webDeveloper: string = translate("hero.title.webDeveloper");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -106,15 +102,26 @@ export default function Hero({ translate }: { translate: Function }) {
             >
               <Pace ms={75}>
                 <br className="p-0 m-0" />
-                <CharWrapper element={NormalSpan}>{greetings},</CharWrapper>
+                <CharWrapper element={NormalSpan}>
+                  {translate("hero.title.greetings")},
+                </CharWrapper>
                 <br className="p-0 m-0" />
                 <div className="flex mb-0">
-                  <CharWrapper element={NormalSpan}>{one}</CharWrapper>
-                  <CharWrapper element={BoldSpan}>{luben}</CharWrapper>
+                  <CharWrapper element={NormalSpan}>
+                    {translate("hero.title.1")}
+                  </CharWrapper>
+                  <CharWrapper element={BoldSpan}>
+                    {translate("hero.title.luben")}
+                  </CharWrapper>
+                  ,
                 </div>
                 <div className="flex mb-0">
-                  <CharWrapper element={NormalSpan}>{two} </CharWrapper>
-                  <CharWrapper element={BoldSpan}>{webDeveloper}</CharWrapper>
+                  <CharWrapper element={NormalSpan}>
+                    {translate("hero.title.2")}
+                  </CharWrapper>
+                  <CharWrapper element={BoldSpan}>
+                    {translate("hero.title.webDeveloper")}
+                  </CharWrapper>
                 </div>
               </Pace>
             </WindupChildren>
@@ -134,12 +141,24 @@ export default function Hero({ translate }: { translate: Function }) {
             className="text-lg pt-5 pb-8 md:w-[40ch]"
           >
             {translate("hero.1")}
-            <SmallTextBoldSpan>{translate("hero.joy")}</SmallTextBoldSpan>
+            <SmallTextBoldSpan>
+              {translate("hero.industrious")}
+            </SmallTextBoldSpan>
             {translate("hero.2")}
-            <SmallTextBoldSpan>{translate("hero.great")}</SmallTextBoldSpan>
+            <SmallTextBoldSpan>{translate("hero.talented")}</SmallTextBoldSpan>
             {translate("hero.3")}
-            <SmallTextBoldSpan>{translate("hero.meaning")}</SmallTextBoldSpan>
+            <SmallTextBoldSpan>{translate("hero.clean")}</SmallTextBoldSpan>
             {translate("hero.4")}{" "}
+            <SmallTextBoldSpan>
+              {translate("hero.performant")}
+            </SmallTextBoldSpan>
+            {translate("hero.5")}
+            <SmallTextBoldSpan>
+              {translate("hero.accessible")}
+            </SmallTextBoldSpan>
+            {translate("hero.6")}
+            <SmallTextBoldSpan>{translate("hero.inovative")}</SmallTextBoldSpan>
+            {translate("hero.7")}
           </motion.p>
           <Button
             variants={itemVariants}

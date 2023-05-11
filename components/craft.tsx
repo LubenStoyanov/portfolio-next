@@ -16,7 +16,7 @@ export default function Works({ translate }: { translate: Function }) {
           </div>
           <div className="md:flex justify-center gap-x-5 pt-10">
             <div className="mx-7 pb-16">
-              <p className="  md:max-w-[60ch] ">
+              <p className="md:max-w-[60ch] ">
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}

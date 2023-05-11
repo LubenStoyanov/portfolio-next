@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import * as Scroll from "react-scroll";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -17,7 +16,7 @@ export default function Navbar({ translate }: { translate: Function }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
 
       setIsNavbarVisible(
         prevScrollPos > currentScrollPos || currentScrollPos < 10
