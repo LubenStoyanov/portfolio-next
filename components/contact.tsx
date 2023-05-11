@@ -9,19 +9,12 @@ export default function Contact({ translate }: { translate: Function }) {
     >
       <div className=" mx-7 md:px-80 ">
         <div className="flex place-items-center place-content-center gap-x-1 md:px-20">
-          <span className="text-xs font-bold ml-7">&lt;h2&gt; </span>
-          <span className="border-t-2 w-20 md:w-96 border-white"></span>
           <h2 className="font-bold md:text-5xl text-3xl text-center">
             {translate("contact.title")}
           </h2>
-          <span className="border-t-2 w-20 md:w-96 border-white"></span>
-          <span className="text-xs font-bold mr-7">&lt;h2/&gt;</span>
         </div>
         <div className="md:flex md:flex-col md:items-center">
           <p className="pt-10  md:max-w-[60ch]">
-            <span className="text-xs font-semibold relative bottom-[2px]">
-              &lt;p&gt;
-            </span>{" "}
             {translate("contact.1")}
             <b className="text-[#EF6706]">{translate("contact.passionate")}</b>
             {translate("contact.2")}
@@ -33,9 +26,6 @@ export default function Contact({ translate }: { translate: Function }) {
             {translate("contact.4")}
             <b className="text-[#EF6706]">{translate("contact.vision")}</b>
             {translate("contact.5")}{" "}
-            <span className="text-xs font-semibold relative bottom-[2px]">
-              &lt;/p&gt;
-            </span>
           </p>
           <button aria-label="Email" className="max-w-fit font-bold mt-10">
             <a
