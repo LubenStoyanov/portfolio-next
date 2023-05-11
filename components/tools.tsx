@@ -30,6 +30,7 @@ export default function Tools({ translate }: { translate: Function }) {
       whileInView="visible"
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+      viewport={{ once: true }}
       className="pt-16 md:pt-32 "
     >
       <motion.div
