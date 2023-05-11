@@ -25,7 +25,7 @@ export default function Profile({ translate }: { translate: Function }) {
         whileInView="visible"
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
         viewport={{ once: true }}
-        className="flex flex-col md:flex-row items-center"
+        className="flex flex-col md:flex-row md:justify-center items-center"
       >
         <motion.div>
           <motion.div
@@ -40,117 +40,115 @@ export default function Profile({ translate }: { translate: Function }) {
             variants={itemVariants}
             className="flex flex-col md:flex-row md:justify-center pt-10 gap-x-5"
           >
-            <div>
-              <p className=" max-w-[60ch]">
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.1")}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.joy")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.2")}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.great")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.3")}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.meaning")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.4")}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.enthusiastic")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.5")}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.craft")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.6")}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.grow")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.7")}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.mindset")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.8")}{" "}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.creative")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.9")}{" "}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.effective")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.10")}{" "}
-                </NormalText>
-                <BoldWord className="text-[#c94900]">
-                  {translate("about.enjoyable")}
-                </BoldWord>
-                <NormalText
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
-                >
-                  {translate("about.11")}{" "}
-                </NormalText>
-              </p>
-            </div>
+            <p className="max-w-[60ch]">
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.1")}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.joy")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.2")}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.great")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.3")}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.meaning")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.4")}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.enthusiastic")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.5")}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.craft")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.6")}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.grow")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.7")}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.mindset")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.8")}{" "}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.creative")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.9")}{" "}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.effective")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.10")}{" "}
+              </NormalText>
+              <BoldWord className="text-[#c94900]">
+                {translate("about.enjoyable")}
+              </BoldWord>
+              <NormalText
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+              >
+                {translate("about.11")}{" "}
+              </NormalText>
+            </p>
           </motion.div>
         </motion.div>
         <motion.div
