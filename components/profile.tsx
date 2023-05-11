@@ -1,49 +1,31 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import profileImage from "../public/images/profile-white.png";
 import styled, { keyframes } from "styled-components";
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
 
 const BoldWord = styled(motion.b)`
   color: #c94900;
   opacity: 1;
 `;
 
-const NormalText = styled(motion.span)`
-  /* animation-name: ${fadeIn};
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out; */
-`;
+const NormalText = styled(motion.span)``;
 
 export default function Profile({ translate }: { translate: Function }) {
   return (
     <section id="about" className="flex flex-col py-16 mx-7 md:px-80 ">
       <motion.div
-        initial={{ y: 300 }}
+        initial={{ y: 100 }}
         whileInView={{ y: 0 }}
         transition={{
-          duration: 0.4,
-          ease: [0, 0.71, 0.2, 1.01],
+          duration: 0.6,
+          ease: easeInOut,
         }}
         viewport={{ once: true }}
         className="flex place-items-center place-content-center gap-x-1"
       >
-        <span className="text-xs font-bold">&lt;h2&gt; </span>
-        <span className="border-t-2 w-20 md:w-96 border-black"></span>
         <h2 className="font-bold md:text-5xl text-3xl text-center">
           {translate("about.title")}
         </h2>
-        <span className="border-t-2 w-20 md:w-96 border-black"></span>
-        <span className="text-xs font-bold">&lt;h2/&gt;</span>
       </motion.div>
       <motion.div
         initial={{ y: 300 }}
@@ -57,9 +39,6 @@ export default function Profile({ translate }: { translate: Function }) {
       >
         <div>
           <p className=" max-w-[40ch]">
-            <span className="text-xs font-semibold relative bottom-[2px]">
-              &lt;p&gt;
-            </span>{" "}
             <NormalText
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -137,9 +116,6 @@ export default function Profile({ translate }: { translate: Function }) {
             >
               {translate("about.8")}{" "}
             </NormalText>
-            <span className="text-xs font-semibold relative bottom-[2px]">
-              &lt;/p&gt;
-            </span>
           </p>
         </div>
         <div className="flex flex-col items-center mt-10 md:mt-0">

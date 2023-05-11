@@ -1,10 +1,13 @@
 // import { useState } from "react";
 import * as Scroll from "react-scroll";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 const scrollToTop = () => Scroll.animateScroll.scrollToTop();
 
 export default function Navbar({ translate }: { translate: Function }) {
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const { locale, push } = useRouter();
 
   const toggleLanguage = () => {
@@ -12,9 +15,30 @@ export default function Navbar({ translate }: { translate: Function }) {
     if (locale === "de") return push("/", undefined, { locale: "en" });
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      setIsNavbarVisible(
+        prevScrollPos > currentScrollPos || currentScrollPos < 10
+      );
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
     <>
-      <nav className="hidden md:flex justify-between md:py-5 md:px-16 text-lg font-semibold md:border-b-[1px] md:border-black md:mx-7">
+      <nav
+        className={`hidden md:fixed  md:flex top-0 left-0 right-0 z-10  transition-opacity ${
+          isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+        }
+        } md:justify-between md:py-5 md:px-16 text-lg font-semibold md:border-b-[1px] md:border-black md:mx-7 bg-[#F9FAFE]`}
+      >
         <motion.a
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.2, letterSpacing: "0.2rem" }}

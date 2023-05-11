@@ -10,20 +10,13 @@ export default function Works({ translate }: { translate: Function }) {
       <div className=" md:px-80  md:mx-0 bg-[#15141a]">
         <div className=" text-white pt-16 ">
           <div className="flex place-items-center place-content-center gap-x-1 ">
-            <span className="text-xs font-bold ml-7">&lt;h2&gt; </span>
-            <span className="border-t-2 w-[100%] md:w-96 border-white"></span>
             <h2 className="font-bold md:text-5xl text-3xl text-center">
               {translate("craft.title")}
             </h2>
-            <span className="border-t-2 w-[100%] md:w-96 border-white"></span>
-            <span className="text-xs font-bold mr-7">&lt;h2/&gt;</span>
           </div>
           <div className="md:flex justify-center gap-x-5 pt-10">
             <div className="mx-7 pb-16">
               <p className="  md:max-w-[60ch] ">
-                <span className="text-xs font-semibold relative bottom-[2px]">
-                  &lt;p&gt;
-                </span>{" "}
                 <NormalText
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -111,9 +104,6 @@ export default function Works({ translate }: { translate: Function }) {
                 >
                   {translate("craft.11")}{" "}
                 </NormalText>
-                <span className="text-xs font-semibold relative bottom-[2px]">
-                  &lt;/p&gt;
-                </span>
               </p>
             </div>
           </div>
