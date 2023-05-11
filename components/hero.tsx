@@ -94,7 +94,7 @@ export default function Hero({ translate }: { translate: Function }) {
       <div className="flex">
         <LineBreaker
           fontStyle={`${windowWidth < 900 ? 36 : 72}px Inter`}
-          width={windowWidth < 900 ? 360 : 900}
+          width={windowWidth < 900 ? 360 : 1024}
         >
           <div className="font-[500] md:text-7xl">
             <WindupChildren
