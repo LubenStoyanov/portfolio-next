@@ -47,6 +47,7 @@ const BoldSpan = styled.span`
   font-weight: 700;
   animation: ${wobble} 1s ease-in-out;
   transition: scale 0.3s cubic-bezier(0, 0.71, 0.2, 1.01);
+  white-space: pre-wrap;
 
   &&:hover {
     scale: 1.5;
@@ -93,7 +94,7 @@ export default function Hero({ translate }: { translate: Function }) {
       <div className="flex">
         <LineBreaker
           fontStyle={`${windowWidth < 900 ? 36 : 72}px Inter`}
-          width={windowWidth < 900 ? 300 : 900}
+          width={windowWidth < 900 ? 360 : 900}
         >
           <div className="font-[500] md:text-7xl">
             <WindupChildren
@@ -120,7 +121,7 @@ export default function Hero({ translate }: { translate: Function }) {
                     {translate("hero.title.2")}
                   </CharWrapper>
                   <CharWrapper element={BoldSpan}>
-                    {translate("hero.title.webDeveloper")}
+                    {translate("hero.title.web_developer")}
                   </CharWrapper>
                 </div>
               </Pace>
