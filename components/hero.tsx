@@ -90,7 +90,7 @@ export default function Hero({ translate }: { translate: Function }) {
 
   return (
     <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 md:pt-24 lg:px-80">
-      <div className="flex mt-10">
+      <div className="flex">
         <LineBreaker
           fontStyle={`${windowWidth < 900 ? 36 : 72}px Inter`}
           width={windowWidth < 900 ? 300 : 900}
