@@ -52,7 +52,7 @@ export default function Projects() {
         whileInView={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.3, delay: 0.5 },
+          transition: { duration: 0.5, delay: 0.5 },
         }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10 bg-[#f76808]"
       >
@@ -94,7 +94,7 @@ export default function Projects() {
         whileInView={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.3, delay: 0.5 },
+          transition: { duration: 0.5, delay: 0.5 },
         }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
@@ -136,7 +136,7 @@ export default function Projects() {
         whileInView={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.3, delay: 0.5 },
+          transition: { duration: 0.5, delay: 0.5 },
         }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
