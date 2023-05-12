@@ -51,7 +51,7 @@ export default function Projects() {
       <ProjectWrapper
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        viewport={{ once: true }}
+        viewport={{ amount: 0.5 }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10 bg-[#f76808]"
       >
         <div className="flex flex-col items-center  md:items-start">
@@ -90,7 +90,7 @@ export default function Projects() {
       <ProjectWrapper
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        viewport={{ once: true }}
+        viewport={{ amount: 0.5 }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
         <div className="flex flex-col  items-center md:items-start">
@@ -129,7 +129,7 @@ export default function Projects() {
       <ProjectWrapper
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        viewport={{ once: true }}
+        viewport={{ amount: 0.5 }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
         <div className="flex flex-col items-center md:items-start">

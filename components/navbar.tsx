@@ -33,7 +33,7 @@ export default function Navbar({ translate }: { translate: Function }) {
   return (
     <>
       <nav
-        className={`hidden md:fixed  md:flex top-0 left-0 right-0 z-10  transition-opacity ${
+        className={`hidden md:fixed lg:flex top-0 left-0 right-0 z-10  transition-opacity ${
           isNavbarVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }
         } md:justify-between md:py-5 md:px-16 text-lg font-semibold md:border-b-[1px] md:border-black md:mx-7 bg-[#F9FAFE]`}
@@ -151,7 +151,7 @@ export default function Navbar({ translate }: { translate: Function }) {
           </motion.li>
         </ul>
       </nav>
-      <nav className="md:hidden mx-7">
+      <nav className="lg:hidden mx-7">
         <ul className="flex justify-between text-sm pt-4">
           <li></li>
           <li className="justify-self-end">

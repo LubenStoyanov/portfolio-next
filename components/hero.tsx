@@ -89,13 +89,13 @@ export default function Hero({ translate }: { translate: Function }) {
   }, [greetings]);
 
   return (
-    <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 md:pt-24 lg:px-80">
+    <section className="relative text-4xl pb-16 min-h-[95vh] pt-6 mx-7 md:pt-24 md:px-20 lg:px-80">
       <div className="flex">
         <LineBreaker
-          fontStyle={`${windowWidth < 1024 ? 36 : 72}px Inter`}
-          width={windowWidth < 1024 ? 360 : 1200}
+          fontStyle={`${windowWidth < 1024 ? 36 : 96}px Inter`}
+          width={windowWidth < 1024 ? 360 : 1600}
         >
-          <div className="font-[500] md:text-7xl">
+          <div className="font-[500] md:text-7xl lg:text-8xl">
             <WindupChildren
               key={greetings}
               onFinished={() => setShowInfo(true)}
@@ -133,7 +133,7 @@ export default function Hero({ translate }: { translate: Function }) {
           animate="visible"
           exit={{ opacity: 0, transition: { duration: 1 } }}
           variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-          className="mt-10 md:mt-20"
+          className="mt-10 md:mt-10"
         >
           <motion.p
             variants={itemVariants}
