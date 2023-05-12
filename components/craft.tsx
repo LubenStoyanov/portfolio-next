@@ -7,7 +7,7 @@ const NormalText = styled(motion.span)``;
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 100 },
+  hidden: { opacity: 0, y: 50 },
   visible,
 };
 
@@ -18,8 +18,8 @@ export default function Works({ translate }: { translate: Function }) {
         initial="hidden"
         whileInView="visible"
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-        viewport={{ once: true }}
-        className=" md:px-80  text-white pt-16 md:mx-0 bg-[#15141a]"
+        viewport={{ amount: 0.5 }}
+        className=" lg:px-80  text-white pt-16 md:mx-0 bg-[#15141a]"
       >
         <motion.div
           variants={itemVariants}
@@ -130,7 +130,7 @@ export default function Works({ translate }: { translate: Function }) {
         initial="hidden"
         whileInView="visible"
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-        viewport={{ once: true }}
+        // viewport={{ once: true }}
         className="py-8 bg-[#F9FAFE]"
       >
         <motion.h2

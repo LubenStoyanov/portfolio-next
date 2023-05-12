@@ -36,7 +36,6 @@ const ProjectWrapper = styled(motion.div)`
     rgba(21, 20, 26, 0.2) 0px 18px 36px -18px;
   height: 590px;
   @media (max-width: 900px) {
-    /* width: 300px; */
     width: 90vw;
   }
   width: 700px;
@@ -49,9 +48,12 @@ export default function Projects() {
   return (
     <>
       <ProjectWrapper
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, delay: 0.5 },
+        }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10 bg-[#f76808]"
       >
         <div className="flex flex-col items-center  md:items-start">
@@ -88,9 +90,12 @@ export default function Projects() {
       </ProjectWrapper>
 
       <ProjectWrapper
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, delay: 0.5 },
+        }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
         <div className="flex flex-col  items-center md:items-start">
@@ -127,9 +132,12 @@ export default function Projects() {
       </ProjectWrapper>
 
       <ProjectWrapper
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, delay: 0.5 },
+        }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
         <div className="flex flex-col items-center md:items-start">

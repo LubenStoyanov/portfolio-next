@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { easeInOut, motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import profileImage from "../public/images/profile-white.png";
 import styled, { keyframes } from "styled-components";
 
@@ -13,32 +13,32 @@ const NormalText = styled(motion.span)``;
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 100 },
+  hidden: { opacity: 0, y: 50 },
   visible,
 };
 
 export default function Profile({ translate }: { translate: Function }) {
   return (
-    <section id="about" className="flex flex-col py-16 mx-7 md:px-80 ">
+    <section id="about" className="flex flex-col py-16 mx-7 lg:px-80 ">
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-        viewport={{ once: true }}
-        className="flex flex-col md:flex-row md:justify-center items-center"
+        viewport={{ amount: 0.5 }}
+        className="flex flex-col lg:flex-row lg:justify-center items-center"
       >
         <motion.div>
           <motion.div
             variants={itemVariants}
             className="flex place-items-center place-content-center gap-x-1"
           >
-            <h2 className="font-bold md:text-5xl text-3xl text-center">
+            <h2 className="font-bold lg:text-5xl text-3xl text-center">
               {translate("about.title")}
             </h2>
           </motion.div>
           <motion.div
             variants={itemVariants}
-            className="flex flex-col md:flex-row md:justify-center pt-10 gap-x-5"
+            className="flex flex-col lg:flex-row lg:justify-center pt-10 gap-x-5"
           >
             <p className="max-w-[60ch]">
               <NormalText
@@ -165,7 +165,7 @@ export default function Profile({ translate }: { translate: Function }) {
               restDelta: 0.001,
             },
           }}
-          className="self-center md:self-end mt-10 md:mt-0"
+          className="self-center lg:self-end mt-10 md:mt-0"
         >
           <Image
             src={profileImage}
