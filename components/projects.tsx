@@ -54,6 +54,7 @@ export default function Projects() {
           y: 0,
           transition: { duration: 0.5, delay: 0.3 },
         }}
+        viewport={{ once: true }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10 bg-[#f76808]"
       >
         <div className="flex flex-col items-center  md:items-start">
@@ -96,6 +97,7 @@ export default function Projects() {
           y: 0,
           transition: { duration: 0.5, delay: 0.3 },
         }}
+        viewport={{ once: true }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
         <div className="flex flex-col  items-center md:items-start">
@@ -138,6 +140,7 @@ export default function Projects() {
           y: 0,
           transition: { duration: 0.5, delay: 0.3 },
         }}
+        viewport={{ once: true }}
         className="flex flex-col items-center md:items-start md:pl-12 md:pt-10"
       >
         <div className="flex flex-col items-center md:items-start">
