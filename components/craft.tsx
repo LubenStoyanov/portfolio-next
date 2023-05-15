@@ -18,7 +18,7 @@ export default function Works({ translate }: { translate: Function }) {
         initial="hidden"
         whileInView="visible"
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-        viewport={{ amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         className=" lg:px-80  text-white pt-16 md:mx-0 bg-[#15141a]"
       >
         <motion.div

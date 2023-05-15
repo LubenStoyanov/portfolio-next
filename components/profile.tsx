@@ -24,6 +24,7 @@ export default function Profile({ translate }: { translate: Function }) {
         initial="hidden"
         whileInView="visible"
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+        viewport={{ once: true }}
         className="flex flex-col lg:flex-row lg:justify-center items-center"
       >
         <motion.div>
