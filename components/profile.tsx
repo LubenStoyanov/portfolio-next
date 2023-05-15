@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import profileImage from "../public/images/profile-white.png";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const BoldWord = styled(motion.b)`
   color: #c94900;
@@ -24,7 +24,6 @@ export default function Profile({ translate }: { translate: Function }) {
         initial="hidden"
         whileInView="visible"
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-        viewport={{ amount: 0.5 }}
         className="flex flex-col lg:flex-row lg:justify-center items-center"
       >
         <motion.div>
